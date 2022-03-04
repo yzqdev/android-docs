@@ -41,7 +41,7 @@
   | **Context.startService()**  | Intent对象将传递给此方法以启动服务或将新指令传递给正在进行的服务。 |
   | **Context.sendBroadcast()** | Intent对象将传递给此方法，以将消息传递给所有感兴趣的广播接收者。   |
   
-- **
+
   
   ## Indent 对象
   
@@ -106,7 +106,7 @@
   
   这个可选字段是一个android ComponentName对象，代表Activity，Service或BroadcastReceiver类。如果已设置，则将Intent对象传递到指定类的实例，否则Android使用Intent对象中的其他信息来定位合适的目标。组件名称由setComponent()，setClass()或setClassName()设置，并由getComponent()读取。
   
-- **
+
   
   ## Indent 类型
   
@@ -162,7 +162,7 @@
   
   复制
   
-- **
+
   
   ## 示例
   
@@ -350,7 +350,7 @@ public class MainActivity extends Activity {
 
 ![indent](https://www.jc2182.com/images/android/indent4.png)
 
-- **
+
   
   ## 意图过滤器
   

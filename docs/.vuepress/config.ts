@@ -1,11 +1,17 @@
 import { defineUserConfig } from "vuepress";
 import type { DefaultThemeOptions } from "@vuepress/theme-default";
+import { defineHopeConfig } from "vuepress-theme-hope";
 import { path } from "@vuepress/utils";
 import { navbar } from "./navbar";
 import { sidebar } from "./sidebar";
-export default defineUserConfig<DefaultThemeOptions>({
+export default defineHopeConfig({
     base: "/android-docs/",
-
+    locales: {
+        "/": {
+            // 设置正在使用的语言
+            lang: "zh-CN",
+        },
+    },
     head: [
         [
             "link",
@@ -25,11 +31,13 @@ export default defineUserConfig<DefaultThemeOptions>({
                 href: `/images/icons/favicon-32x32.png`,
             },
         ],
-        ["link", { rel: "manifest", href: "/manifest.webmanifest" }],
-        ["meta", { name: "application-name", content: "VuePress" }],
-        ["meta", { name: "apple-mobile-web-app-title", content: "VuePress" }],
-        ["meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }],
-        ["link", { rel: "apple-touch-icon", href: `/images/icons/apple-touch-icon.png` }],
+        [
+            "link",
+            {
+                rel: "stylesheet",
+                href: "//at.alicdn.com/t/font_2410206_mfj6e1vbwo.css",
+            },
+        ],
         [
             "link",
             {
@@ -54,7 +62,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         // repo: "vuepress/vuepress-next",
 
         docsDir: "docs",
-
+        iconPrefix: "iconfont icon-",
         // theme-level locales config
 
         // navbar
@@ -62,7 +70,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         selectLanguageName: "简体中文",
         selectLanguageText: "选择语言",
         selectLanguageAriaLabel: "选择语言",
-
+        themeColor: false,
         // sidebar
         sidebar: sidebar,
 
@@ -136,12 +144,6 @@ export default defineUserConfig<DefaultThemeOptions>({
             },
         ],
 
-        [
-            "vuepress-plugin-clipboard",
-            {
-                align: "top",
-            },
-        ],
         [
             "@vuepress/plugin-register-components",
             {

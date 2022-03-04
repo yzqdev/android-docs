@@ -41,7 +41,7 @@
   
   复制
   
-- **
+
   
   ## Android 布局类型
   
@@ -57,7 +57,7 @@
   | [列表视图](https://www.jc2182.com/android/android-listview-show.html)       | **ListView**是一个视图组，显示可滚动项的列表。                             |
   | [网格视图](https://www.jc2182.com/android/android-gridview-show.html)       | **GridView**是一个**ViewGroup**，它在二维可滚动网格中显示项目。            |
   
-- **
+
   
   ## 布局属性
   
@@ -106,7 +106,7 @@
   | **start**             | 0x00800003 | 将object推到其容器的开头，但不改变其大小。                                                                                                                 |
   | **end**               | 0x00800005 | 将对象推到其容器的末端，而不改变其大小。                                                                                                                   |
   
-- **
+
   
   ## 视图标识符
   

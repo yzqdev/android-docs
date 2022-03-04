@@ -1,7 +1,7 @@
 # activity
 
 
-- ## Android Activity
+# Android Activity
   
   > Activity 代表具有用户界面的单个屏幕，就像Java的窗口或框架一样。Android Activity是ContextThemeWrapper类的子类。
   
@@ -21,7 +21,7 @@
   | **onDestroy()** | 在Activity销毁系统之前，将调用此回调。                                                                             |
   | **onRestart()** | Activity停止后重新启动时，将调用此回调。                                                                           |
   
-- **
+
   
   ## 实例
   

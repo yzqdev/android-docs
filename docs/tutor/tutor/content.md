@@ -17,7 +17,7 @@
   
   复制
   
-- **
+
   
   ## 内容URI
   
@@ -38,7 +38,7 @@
   | **data_type** | 这表明该特定提供程序提供的数据类型。 例如，如果您要从“联系人”内容提供者获取所有联系人，则数据路径将为“people”，而URI看起来应为 content://contacts/people |
   | **id**        | 这指定了请求的特定记录。 例如，如果您要在“联系人”内容提供者中查找联系人号码5，则URI看起来应类似于此 content://contacts/people/5                          |
   
-- **
+
   
   ## 创建内容提供者
   
@@ -58,7 +58,7 @@
   - **delete()** - 此方法从内容提供者删除现有记录。
   - **update()** - 此方法更新内容提供者提供的现有记录。
   - **getType()** - 此方法返回给定URI处数据的MIME类型。
-- **
+
   
   ## 示例
   
@@ -73,7 +73,7 @@
   
   以下是修改后的主activity文件src/com.jc2182.helloworld/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。我们添加了两个新方法onClickAddName()和onClickRetrieveStudents()来处理用户与应用程序的交互。
   
-  ```java
+```java
   package com.jc2182.helloworld;
   
   import androidx.appcompat.app.AppCompatActivity;
@@ -124,13 +124,13 @@
           }
       }
   }
-  ```
+ ```
   
   复制
   
   在com.jc2182.helloworld包下创建新文件StudentsProvider.java ，以下是src/com.jc2182.helloworld/StudentsProvider.java的内容 -
   
-  ```java
+```java
   package com.jc2182.helloworld;
   
   import android.content.ContentProvider;
@@ -313,13 +313,13 @@
           }
       }
   }
-  ```
+```
   
   复制
   
   以下将修改AndroidManifest.xml文件的内容 。在这里，我们添加了<provider ... />标签以包括我们的内容提供者：
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.jc2182.helloworld">
@@ -345,13 +345,13 @@
       </application>
   
   </manifest>
-  ```
+```
   
   复制
   
   以下是res/layout/activity_main.xml文件的内容 -
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:tools="http://schemas.android.com/tools"

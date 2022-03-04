@@ -6,7 +6,7 @@
   
   ![](https://www.jc2182.com/images/android/customcomponents.jpg)
   
-- **
+
   
   ## 创建一个简单的自定义组件
   
