@@ -1,4 +1,9 @@
-# 对单个项目生效，在项目中的build.gradle修改内容
+#  gradle 配置
+
+:::tip 
+对单个项目生效，在项目中的build.gradle修改内容
+:::
+
 ```groovy
 buildscript {
     repositories {

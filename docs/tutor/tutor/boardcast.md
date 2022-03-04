@@ -1,9 +1,10 @@
 # 广播接收器
  
  ## Android 广播接收器（Broadcast Receivers）
-  
-  > **广播接收器（Broadcast Receivers）**仅响应来自其他应用程序或系统本身的广播消息。这些消息有时称为事件或indent。例如，应用程序还可以启动广播，以使其他应用程序知道某些数据已下载到设备并可供他们使用，因此，这是广播接收器，它将拦截此通信并启动适当的操作。
-  
+
+:::tip
+ **广播接收器（Broadcast Receivers）**仅响应来自其他应用程序或系统本身的广播消息。这些消息有时称为事件或indent。例如，应用程序还可以启动广播，以使其他应用程序知道某些数据已下载到设备并可供他们使用，因此，这是广播接收器，它将拦截此通信并启动适当的操作。
+:::
   要使**Broadcast Receiver**用于系统的广播意图，需要执行以下两个重要步骤-
   
   - 创建广播接收器
@@ -26,7 +27,7 @@
   }
   ```
   
-  复制
+  
   
 
   
@@ -52,7 +53,7 @@
   </application>
   ```
   
-  复制
+  
   
   现在，每当您的Android设备启动时，它都会被BroadcastReceiver MyReceiver拦截，并且将执行onReceive()中的已实现逻辑。在Intent类中，有几个系统生成的事件定义为最终静态字段。下表列出了一些重要的系统事件。
   
@@ -82,7 +83,7 @@
   }
   ```
   
-  复制
+  
   
   这个意图com.jc2182.demo.CUSTOM_INTENT也可以通过类似于我们重新注册系统生成的意图的方式进行注册。
   
@@ -102,7 +103,7 @@
   </application>
   ```
   
-  复制
+  
   
 
   
@@ -157,7 +158,7 @@
 }
 
 ````
-复制
+
 
 以下是MyReceiver.java的内容：
 
@@ -179,7 +180,7 @@ public class MyReceiver extends BroadcastReceiver {
 }
 ````
 
-复制
+
 
 以下将修改AndroidManifest.xml文件的内容 。在这里，我们添加了<receiver ... />标签以包括我们的广播接收器：
 
@@ -215,7 +216,7 @@ public class MyReceiver extends BroadcastReceiver {
 </manifest>
 ```
 
-复制
+
 
 以下是res/layout/activity_main.xml文件的内容，其中包括广播我们的自定义意图的按钮-
 
@@ -273,7 +274,7 @@ public class MyReceiver extends BroadcastReceiver {
 </RelativeLayout>
 ```
 
-复制
+
 
 让我们尝试运行修改后的Hello World！我们刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后点击Android StudioRun图标工具栏中的“运行” 图标。Android Studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

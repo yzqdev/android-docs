@@ -23,7 +23,7 @@
   }
   ```
   
-  复制
+  
   
 
   
@@ -36,7 +36,7 @@
   SGD = new ScaleGestureDetector(this,new ScaleListener());
   ```
   
-  复制
+  
   
   第一个参数是上下文，第二个参数是事件侦听器。我们必须定义事件侦听器，并重写函数OnTouchEvent使其起作用。其语法如下-
   
@@ -55,7 +55,7 @@
   }
   ```
   
-  复制
+  
   
   除了捏合手势外，还有其他方法可以通知更多有关触摸事件的信息。它们在下面列出-
   
@@ -82,9 +82,8 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。
   
-  ```java
+```java
   package com.jc2182.demo;
-  ```
   
 
 import android.app.Activity;
@@ -99,8 +98,6 @@ public class MainActivity extends Activity {
  private Matrix matrix = new Matrix();
  private float scale = 1f;
  private ScaleGestureDetector SGD;
-
-```
   @Override
   protected void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
@@ -127,12 +124,11 @@ public class MainActivity extends Activity {
           return true;
       }
   }
-```
 
 }
 
-````
-复制
+```
+
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -179,7 +175,7 @@ public class MainActivity extends Activity {
 </RelativeLayout>
 ````
 
-复制
+
 
 让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

@@ -12,7 +12,7 @@
   Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.myanimation);
   ```
   
-  复制
+  
   
   注意第二个参数。这是我们的动画xml文件的名称。您必须在res目录下创建一个名为anim的新文件夹，并在anim文件夹下创建一个xml文件。这个动画类具有许多有用的功能，在下面列出-
   
@@ -31,7 +31,7 @@
   image.startAnimation(animation);
   ```
   
-  复制
+  
   
 
   
@@ -48,7 +48,7 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。
   
-  ```java
+```java
   package com.jc2182.demo;
   
   import android.app.Activity;
@@ -57,7 +57,6 @@
   import android.view.animation.Animation;
   import android.view.animation.AnimationUtils;
   import android.widget.ImageView;
-  ```
   
 
 public class MainActivity extends Activity {
@@ -67,7 +66,6 @@ public class MainActivity extends Activity {
  setContentView(R.layout.activity_main);
  }
 
-```
   public void clockwise(View view){
       ImageView image = (ImageView)findViewById(R.id.imageView);
       Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.myanimation);
@@ -103,12 +101,11 @@ public class MainActivity extends Activity {
       Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide);
       image.startAnimation(animation1);
   }
-```
 
 }
 
-````
-复制
+```
+
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -225,7 +222,7 @@ public class MainActivity extends Activity {
 </RelativeLayout>
 ````
 
-复制
+
 
 这是res/anim/myanimation.xml的代码。
 
@@ -257,7 +254,7 @@ public class MainActivity extends Activity {
 </set>
 ```
 
-复制
+
 
 这是res/anim/clockwise.xml的代码。
 
@@ -285,7 +282,7 @@ public class MainActivity extends Activity {
 </set>
 ```
 
-复制
+
 
 这是res/anim/fade.xml的代码。
 
@@ -310,7 +307,7 @@ public class MainActivity extends Activity {
 </set>
 ```
 
-复制
+
 
 这是res/anim/blink.xml的代码。
 
@@ -326,7 +323,7 @@ public class MainActivity extends Activity {
 </set>
 ```
 
-复制
+
 
 这是res/anim/move.xml的代码。
 
@@ -344,7 +341,7 @@ public class MainActivity extends Activity {
 </set>
 ```
 
-复制
+
 
 这是res/anim/slide.xml的代码。
 
@@ -363,7 +360,7 @@ public class MainActivity extends Activity {
 </set>
 ```
 
-复制
+
 
 让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

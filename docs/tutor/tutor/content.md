@@ -1,13 +1,15 @@
 # 内容提供者
 
  ## Android 内容提供者（Content Providers）
-  
-  > **内容提供者（Content Providers）**组件应要求将数据从一个应用程序提供给其他应用程序。此类请求由ContentResolver类的方法处理。内容提供者可以使用不同的方式来存储其数据，并且数据可以存储在数据库中，文件中，甚至可以通过网络存储。
-  
+
+
+:::tip
+`内容提供者(Content Providers)`组件应要求将数据从一个应用程序提供给其他应用程序。此类请求由ContentResolver类的方法处理。内容提供者可以使用不同的方式来存储其数据，并且数据可以存储在数据库中，文件中，甚至可以通过网络存储。
+:::
   ![service](https://www.jc2182.com/images/android/contentproviders.jpg)
   
-  > 有时需要跨应用程序共享数据。这是内容提供者（Content Providers）组件变得非常有用的地方。
-  
+  有时需要跨应用程序共享数据。这是内容提供者（Content Providers）组件变得非常有用的地方。
+
   内容提供者（Content Providers）可让您将内容集中在一个地方，并有许多不同的应用程序根据需要对其进行访问。内容提供者的行为与数据库非常相似，您可以在其中查询，编辑其内容以及使用insert()，update()，delete()和query()方法添加或删除内容。在大多数情况下，此数据存储在SQlite数据库中。内容提供程序作为**ContentProvider**类的子类实现，并且必须实现一组标准的API，这些API可使其他应用程序执行事务。
   
   ```java
@@ -15,7 +17,7 @@
   }
   ```
   
-  复制
+  
   
 
   
@@ -27,7 +29,7 @@
   <prefix>://<authority>/<data_type>/<id>
   ```
   
-  复制
+  
   
   这是URI各个部分的详细信息-
   
@@ -126,7 +128,7 @@
   }
  ```
   
-  复制
+  
   
   在com.jc2182.helloworld包下创建新文件StudentsProvider.java ，以下是src/com.jc2182.helloworld/StudentsProvider.java的内容 -
   
@@ -315,7 +317,7 @@
   }
 ```
   
-  复制
+  
   
   以下将修改AndroidManifest.xml文件的内容 。在这里，我们添加了<provider ... />标签以包括我们的内容提供者：
   
@@ -347,7 +349,7 @@
   </manifest>
 ```
   
-  复制
+  
   
   以下是res/layout/activity_main.xml文件的内容 -
   
@@ -476,7 +478,7 @@
 </RelativeLayout>
   ```
 
-复制
+
 
 让我们尝试运行修改后的Hello World！我们刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后点击Android StudioRun图标工具栏中的“运行” 图标。Android Studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

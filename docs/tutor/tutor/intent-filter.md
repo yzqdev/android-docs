@@ -2,8 +2,9 @@
   
   Android Intent(意图)是要执行的操作的抽象描述。它可以与startActivity一起使用来启动一个Activity，可以将broadcastIntent发送到任何感兴趣的BroadcastReceiver组件，也可以与**startService（Intent）**或**bindService（Intent，ServiceConnection，int）**一起与后台Service通信。
   
-  > 意图本身（一个**Indent**对象）是一个被动数据结构，其中包含要执行的操作的抽象描述。
-  
+:::tip
+意图本身（一个**Indent**对象）是一个被动数据结构，其中包含要执行的操作的抽象描述。
+:::
   例如，假设您有一个Activity，该Activity需要启动电子邮件客户端并使用Android设备发送电子邮件。为此，您的“Activity”会将ACTION_SEND和相应的选择器一起发送到Android Intent解析器。指定的选择器为用户提供适当的界面，以选择如何发送您的电子邮件数据。
   
   ```java

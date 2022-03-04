@@ -29,7 +29,7 @@
   }
   ```
   
-  复制
+  
   
   在这些情况下，您可以执行任何喜欢的计算。例如缩放，缩小等为了获得X和Y轴的坐标，可以调用getX()和getY()方法。其语法如下-
   
@@ -38,7 +38,7 @@
   final float y = ev.getY();
   ```
   
-  复制
+  
   
   除了这些方法之外，此MotionEvent类还提供了其他方法，可以更好地处理多点触摸。这些方法在下面列出-
   
@@ -66,7 +66,7 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。
   
-  ```java
+```java
   package com.jc2182.demo;
   
   import android.app.Activity;
@@ -75,7 +75,6 @@
   import android.view.View;
   import android.widget.EditText;
   import android.widget.TextView;
-  ```
 
   public class MainActivity extends Activity {
 
@@ -141,7 +140,7 @@
   }
 
 ```
-复制
+
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -260,7 +259,7 @@
 </RelativeLayout>
 ```
 
-  复制
+  
 
   让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

@@ -72,7 +72,14 @@ export const sidebar = {
         {
             text: "技巧",
             collapsable: true,
-            children: ["/tips/as插件.md", "/tips/gradle配置.md", "/tips/androidx迁移.md", "/tips/faqs.md", "/tips/常用安卓软件下载.md", "/tips/常用网站.md"],
+            children: ["/tips/as-plugins.md", "/tips/gradle-conf.md", "/tips/migrate-to-androidx.md", "/tips/faqs.md", "/tips/software.md", "/tips/sites.md"],
+        },
+    ],
+    "/hack/": [
+        {
+            text: "hack",
+            collapsable: true,
+            children: ["/hack/phone-flash.md"],
         },
     ],
 };

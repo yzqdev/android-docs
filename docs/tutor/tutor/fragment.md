@@ -2,8 +2,9 @@
 
 ## Android 片段（Fragment）
   
-  > **片段（Fragment）**是activity的一部分，这使得拥有更多的模块化activity设计。如果我们说片段（Fragment）是一种子Activity，那是没有错的。
-  
+ :::tip
+  片段（Fragment） 是activity的一部分，这使得拥有更多的模块化activity设计。如果我们说片段（Fragment）是一种子Activity，那是没有错的。
+  :::
   以下是有关片段(Fragment)的重点-
   
   - 片段具有自己的布局和行为，以及自己的生命周期回调。

@@ -14,7 +14,7 @@
   Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
   ```
   
-  复制
+  
   
   除上述内容外，MediaStore还提供其他可用的Intent。它们列出如下
   
@@ -33,7 +33,7 @@
   startActivityForResult(intent,0)
   ```
   
-  复制
+  
   
   该方法已在Activity类中定义。我们从主要活动中调用它。在活动类中定义的方法具有相同的作用，但是在您不是从活动而是从其他地方进行调用时使用。它们在下面列出
   
@@ -61,7 +61,7 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。
   
-  ```java
+```java
   package com.jc2182.demo;
   
   import android.Manifest;
@@ -77,7 +77,6 @@
   import android.provider.Settings;
   import androidx.core.app.ActivityCompat;
   import androidx.core.content.ContextCompat;
-  ```
   
 
 public class MainActivity extends Activity {
@@ -85,7 +84,6 @@ public class MainActivity extends Activity {
  public static final String ALLOW_KEY = "ALLOWED";
  public static final String CAMERA_PREF = "camera_pref";
 
-```
   @Override
   protected void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
@@ -228,12 +226,11 @@ public class MainActivity extends Activity {
       Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
       startActivity(intent);
   }
-```
 
 }
 
-````
-复制
+```
+
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -248,7 +245,7 @@ public class MainActivity extends Activity {
 </RelativeLayout>
 ````
 
-复制
+
 
 以下是AndroidManifest.xml文件的内容-
 
@@ -279,6 +276,6 @@ public class MainActivity extends Activity {
 </manifest>
 ```
 
-复制
+
 
 在真实的设备上测试您的demo。
