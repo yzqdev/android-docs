@@ -1,0 +1,1 @@
+const e={key:"v-c6cff52a",path:"/tips/sites.html",title:"\u7F51\u7AD9",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{createdTime:1646402471e3,updatedTime:1646402471e3,contributors:[{name:"yzqdev",email:"yzqdev@outlook.com",commits:1}]},readingTime:{minutes:.4,words:120},filePathRelative:"tips/sites.md"};export{e as data};

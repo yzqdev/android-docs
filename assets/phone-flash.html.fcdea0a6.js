@@ -1,0 +1,1 @@
+const e={key:"v-9a467f06",path:"/hack/phone-flash.html",title:"\u624B\u673A\u5237\u673A\u6559\u7A0B",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{createdTime:1646402471e3,updatedTime:1646402471e3,contributors:[{name:"yzqdev",email:"yzqdev@outlook.com",commits:1}]},readingTime:{minutes:.12,words:35},filePathRelative:"hack/phone-flash.md"};export{e as data};

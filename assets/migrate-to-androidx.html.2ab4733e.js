@@ -1,0 +1,1 @@
+const t={key:"v-ba8a9584",path:"/tips/migrate-to-androidx.html",title:"androidx\u8FC1\u79FB",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{createdTime:1646402471e3,updatedTime:1646402471e3,contributors:[{name:"yzqdev",email:"yzqdev@outlook.com",commits:1}]},readingTime:{minutes:2.66,words:798},filePathRelative:"tips/migrate-to-androidx.md"};export{t as data};

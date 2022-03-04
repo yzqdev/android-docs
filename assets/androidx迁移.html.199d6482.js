@@ -1,1 +1,0 @@
-const e={key:"v-0fa73b5e",path:"/tips/androidx%E8%BF%81%E7%A7%BB.html",title:"androidx\u8FC1\u79FB",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{createdTime:1646368752e3,updatedTime:1646368752e3,contributors:[{name:"yzqdev",email:"yzqdev@outlook.com",commits:1}]},readingTime:{minutes:2.66,words:798},filePathRelative:"tips/androidx\u8FC1\u79FB.md"};export{e as data};
