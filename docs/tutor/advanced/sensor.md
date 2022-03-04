@@ -1,4 +1,4 @@
-# 进度圈
+# 传感器
   
   大多数android设备都有内置的传感器，可以测量运动，方向和各种环境条件。android平台支持三大类传感器。
   
@@ -80,9 +80,8 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。
   
-  ```java
+```java
   package com.jc2182.helloworld;
-  ```
 
   import android.app.Activity;
   import android.hardware.Sensor;

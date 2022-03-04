@@ -1,9 +1,10 @@
 import type { SidebarConfig } from "@vuepress/theme-default";
 
-export const sidebar: SidebarConfig = {
+export const sidebar = {
     "/tutor/": [
         {
             text: "指南",
+            collapsable: true,
             children: [
                 "/tutor/tutor/application.md",
                 "/tutor/tutor/helloworld.md",
@@ -22,10 +23,12 @@ export const sidebar: SidebarConfig = {
         },
         {
             text: "界面",
+            collapsable: true,
             children: ["/tutor/interface/ui.md", "/tutor/interface/controls.md", "/tutor/interface/events.md", "/tutor/interface/styles.md", "/tutor/interface/custom-components.md"],
         },
         {
             text: "高级",
+            collapsable: true,
             children: [
                 "/tutor/advanced/drag-and-drop.md",
                 "/tutor/advanced/notification.md",
@@ -68,7 +71,8 @@ export const sidebar: SidebarConfig = {
     "/tips/": [
         {
             text: "技巧",
-            children: ["/tips/as插件.md", "/tips/gradle配置.md", "/tips/常见问题.md", "/tips/androidx迁移.md", "/tips/编译出错常见问题.md", "/tips/常用安卓软件下载.md", "/tips/常用网站.md"],
+            collapsable: true,
+            children: ["/tips/as插件.md", "/tips/gradle配置.md", "/tips/androidx迁移.md", "/tips/faqs.md", "/tips/常用安卓软件下载.md", "/tips/常用网站.md"],
         },
     ],
 };

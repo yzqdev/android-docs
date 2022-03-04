@@ -59,7 +59,7 @@ export default defineHopeConfig({
     themeConfig: {
         logo: "/images/hero.png",
 
-        // repo: "vuepress/vuepress-next",
+        repo: "yzqbooks/android-docs",
 
         docsDir: "docs",
         iconPrefix: "iconfont icon-",

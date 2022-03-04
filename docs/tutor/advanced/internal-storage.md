@@ -77,9 +77,8 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。
   
-  ```java
+```java
   package com.jc2182.demo;
-  ```
 
   import android.app.Activity;
   import android.os.Bundle;
@@ -151,7 +150,6 @@
   }
 
 ```
-复制
 
 以下是res/layout/activity_main.xml文件的内容-
 
