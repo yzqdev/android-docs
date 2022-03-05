@@ -2,27 +2,27 @@
   
   在android中，您可以为应用程序中的字符串定义自己的自定义字体。您只需要从Internet下载所需的字体，然后将其放在assets/font文件夹中即可，您可以通过Typeface类在Java代码中访问它。首先，获取代码中文本视图的引用。其语法如下-
   
-  ```java
+```java
   TextView tx = (TextView)findViewById(R.id.textview1);
-  ```
+```
   
-  复制
+  
   
   您需要做的下一件事是调用**Typeface**类**createFromAsset()**的静态方法以从资产中获取自定义字体。其语法如下-
   
-  ```java
+```java
   Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/font name.ttf");
-  ```
+```
   
-  复制
+  
   
   您需要做的最后一件事是将此自定义字体对象设置为TextView Typeface属性。您需要调用setTypeface()方法来执行此操作。其语法如下-
   
-  ```java
+```java
   tx.setTypeface(custom_font);
-  ```
+```
   
-  复制
+  
   
   除了这些方法之外，Typeface类中还定义了其他方法，可用于更有效地处理字体。
   
@@ -52,9 +52,9 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。
   
-  ```java
+```java
   package com.jc2182.demo;
-  ```
+  
   
 
 import android.app.Activity;
@@ -65,7 +65,6 @@ import android.app.Activity;
 public class MainActivity extends Activity {
  TextView tv1,tv2;
 
-```
   protected void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       setContentView(R.layout.activity_main);
@@ -79,12 +78,11 @@ public class MainActivity extends Activity {
       Typeface face1= Typeface.createFromAsset(getAssets(), "font/hybjhyt.ttf");
       tv2.setTypeface(face1);
   }
-```
 
 }
 
-````
-复制
+```
+
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -146,7 +144,7 @@ public class MainActivity extends Activity {
 </RelativeLayout>
 ````
 
-复制
+
 
 让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

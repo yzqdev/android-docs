@@ -7,13 +7,13 @@
 :::
   例如，假设您有一个Activity，该Activity需要启动电子邮件客户端并使用Android设备发送电子邮件。为此，您的“Activity”会将ACTION_SEND和相应的选择器一起发送到Android Intent解析器。指定的选择器为用户提供适当的界面，以选择如何发送您的电子邮件数据。
   
-  ```java
+```java
   Intent email = new Intent(Intent.ACTION_SEND, Uri.parse("mailto:"));
   email.putExtra(Intent.EXTRA_EMAIL, recipients);
   email.putExtra(Intent.EXTRA_SUBJECT, subject.getText().toString());
   email.putExtra(Intent.EXTRA_TEXT, body.getText().toString());
   startActivity(Intent.createChooser(email, "Choose an email client from..."));
-  ```
+```
   
   复制
   
@@ -23,12 +23,12 @@
   
   例如，假设您有一个Activity，需要在Android设备上的网络浏览器中打开URL。为此，您的“Activity”会将ACTION_WEB_SEARCH Intent发送到Android Intent Resolver，以在网络浏览器中打开给定的URL。Intent解析器将解析一系列活动，然后选择与您的Intent最匹配的Activity（在本例中为Web Browser Activity）。然后，Intent Resolver将您的网页传递到Web浏览器并启动Web浏览器活动。
   
-  ```java
+```java
   String q = "蝴蝶教程";
   Intent intent = new Intent(Intent.ACTION_WEB_SEARCH );
   intent.putExtra(SearchManager.QUERY, q);
   startActivity(intent);
-  ```
+```
   
   复制
   
@@ -123,13 +123,13 @@
   
   这些意图通过名称来指定目标组件，它们通常用于应用程序内部消息-例如启动下属服务或启动同级活动的活动。例如-
   
-  ```java
+```java
   // 通过指定其类名来显式意图
   Intent i = new Intent(FirstActivity.this, SecondActivity.class);
   
   // 启动目标 Activity
   startActivity(i);
-  ```
+```
   
   复制
   
@@ -137,12 +137,12 @@
   
   这些意图不会命名目标，并且组件名称的字段保留为空白。隐式意图通常用于激活其他应用程序中的组件。例如-
   
-  ```java
+```java
   Intent read1=new Intent();
   read1.setAction(android.content.Intent.ACTION_VIEW);
   read1.setData(ContactsContract.Contacts.CONTENT_URI);
   startActivity(read1);
-  ```
+```
   
   复制
   
@@ -152,14 +152,14 @@
   
   接收到意图的目标组件可以使用**getExtras()**方法获取源组件发送的额外数据。例如-
   
-  ```java
+```java
   // 在代码中的适当位置获取包对象
   Bundle extras = getIntent().getExtras();
   
   // 使用传递的key提取数据
   String value1 = extras.getString("Key1");
   String value2 = extras.getString("Key2");
-  ```
+```
   
   复制
   
@@ -176,7 +176,7 @@
   
   以下是修改后的主要活动文件src/com.jc2182.helloworld/MainActivity.java的内容。
   
-  ```java
+```java
   package com.jc2182.helloworld;
   
   import android.app.Activity;
@@ -185,7 +185,7 @@
   import android.os.Bundle;
   import android.view.View;
   import android.widget.Button;
-  ```
+```
   
 
 public class MainActivity extends Activity {
@@ -357,7 +357,7 @@ public class MainActivity extends Activity {
   
   您已经了解了如何使用Intent调用另一个活动(activity)。Android OS使用过滤器来确定活动，服务和广播接收器的集合，这些接收器可以在指定的一组动作，类别和与Intent相关的数据方案的帮助下处理Intent。您将在清单文件中使用`<intent-filter>`元素列出与任何活动，服务或广播接收者关联的动作，类别和数据类型。以下是AndroidManifest.xml文件的一部分示例，用于指定活动com.jc2182.helloworld.CustomActivity，可以通过上述两个操作（一个类别和一个数据）之一来调用该活动-
   
-  ```xml
+```xml
   <activity android:name=".MainActivity">
       <intent-filter tools:ignore="AppLinkUrlError">
           <action android:name="android.intent.action.VIEW" />
@@ -366,7 +366,7 @@ public class MainActivity extends Activity {
           <data android:scheme="https" />
       </intent-filter>
   </activity>
-  ```
+```
   
   复制
   
@@ -390,7 +390,7 @@ public class MainActivity extends Activity {
   
   以下是修改后的主要活动文件src/MainActivity.java的内容。
   
-  ```java
+```java
   package com.jc2182.helloworld;
   
   import android.app.Activity;
@@ -399,7 +399,7 @@ public class MainActivity extends Activity {
   import android.os.Bundle;
   import android.view.View;
   import android.widget.Button;
-  ```
+```
   
 
 public class MainActivity extends Activity {

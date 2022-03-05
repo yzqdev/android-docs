@@ -32,7 +32,7 @@
   
   以下框架服务演示了每种生命周期方法
   
-  ```java
+```java
   package com.jc2182.helloworld;
   
   import android.app.Service;
@@ -85,7 +85,7 @@
   
       }
   }
-  ```
+```
   
    
   
@@ -101,7 +101,7 @@
   
   以下是修改后的主要活动文件MainActivity.java的内容。该文件可以包括每个基本生命周期方法。我们添加了startService()和stopService()方法来启动和停止服务。
   
-  ```java
+```java
   package com.jc2182.helloworld;
   
   import androidx.appcompat.app.AppCompatActivity;
@@ -132,12 +132,12 @@
           stopService(new Intent(getBaseContext(), HelloService.class));
       }
   }
-  ```
+```
   
   
   以下是HellowService.java的内容。该文件可以根据要求实现与服务相关联的一种或多种方法。现在，我们将仅实现两种方法onStartCommand()和onDestroy() -
   
-  ```java
+```java
   package com.jc2182.helloworld;
   
   import android.app.Service;
@@ -167,11 +167,11 @@
           Toast.makeText(this, "服务销毁。", Toast.LENGTH_LONG).show();
       }
   }
-  ```
+```
   
   以下将修改AndroidManifest.xml文件的内容。在这里我们添加了`<service ... />`标签以包括我们的服务-
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.jc2182.helloworld">
@@ -198,12 +198,12 @@
       </application>
   
   </manifest>
-  ```
+```
   
   
 以下是res/layout/activity_main.xml文件的内容，其中包括两个按钮-
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:tools="http://schemas.android.com/tools"
@@ -293,7 +293,7 @@
  
 
 </RelativeLayout>
-  ```
+```
 
 
 让我们尝试运行修改后的Hello World！我们刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后点击Android StudioRun图标工具栏中的“运行” 图标。Android Studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-

@@ -4,29 +4,29 @@
   
   **SmsManager API**
   
-  ```java
+```java
   SmsManager smsManager = SmsManager.getDefault();
   smsManager.sendTextMessage("phoneNo", null, "sms message", null, null);
-  ```
+```
   
   复制
   
   *内置短信应用*
   
-  ```java
+```java
   Intent sendIntent = new Intent(Intent.ACTION_VIEW);
   sendIntent.putExtra("短信体", "默认内容"); 
   sendIntent.setType("vnd.android-dir/mms-sms");
   startActivity(sendIntent);
-  ```
+```
   
   复制
   
   当然，两者都需要**SEND_SMS**权限。
   
-  ```xml
+```xml
   <uses-permission android:name="android.permission.SEND_SMS" />
-  ```
+```
   
   复制
   
@@ -269,9 +269,9 @@ public class MainActivity extends Activity {
   
   您将使用 ACTION_VIEW 操作启动安装在Android设备上的SMS客户端。以下是使用 ACTION_VIEW 操作创建意图的简单语法。
   
-  ```java
+```java
   Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-  ```
+```
   
   复制
   
@@ -279,10 +279,10 @@ public class MainActivity extends Activity {
   
   要发送短信，您需要使用setData() 方法将smsto ：指定为URI，并且使用setType() 方法将数据类型设置为vnd.android-dir/mms-sms，如下所示-
   
-  ```java
+```java
   smsIntent.setData(Uri.parse("smsto:"));
   smsIntent.setType("vnd.android-dir/mms-sms");
-  ```
+```
   
   复制
   
@@ -290,10 +290,10 @@ public class MainActivity extends Activity {
   
   Android内置支持添加电话号码和短信以发送短信，如下所示：
   
-  ```java
+```java
   smsIntent.putExtra("address"  , new String("0123456789;3393993300"));
   smsIntent.putExtra("sms_body"  , "Test SMS to Angilla");
-  ```
+```
   
   复制
   

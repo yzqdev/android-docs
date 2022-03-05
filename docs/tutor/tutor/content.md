@@ -12,10 +12,10 @@
 
   内容提供者（Content Providers）可让您将内容集中在一个地方，并有许多不同的应用程序根据需要对其进行访问。内容提供者的行为与数据库非常相似，您可以在其中查询，编辑其内容以及使用insert()，update()，delete()和query()方法添加或删除内容。在大多数情况下，此数据存储在SQlite数据库中。内容提供程序作为**ContentProvider**类的子类实现，并且必须实现一组标准的API，这些API可使其他应用程序执行事务。
   
-  ```java
+```java
   public class My Application extends  ContentProvider {
   }
-  ```
+```
   
   
   
@@ -25,9 +25,9 @@
   
   要查询内容提供者，您可以以URI的形式指定查询字符串，其格式如下：
   
-  ```xml
+```xml
   <prefix>://<authority>/<data_type>/<id>
-  ```
+```
   
   
   
@@ -476,7 +476,7 @@
       android:text="检索学生" />
 
 </RelativeLayout>
-  ```
+```
 
 
 

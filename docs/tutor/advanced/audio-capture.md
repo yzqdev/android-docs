@@ -2,29 +2,29 @@
   
   Android具有内置麦克风，您可以通过它捕获音频并将其存储或在手机中播放。有很多方法可以做到这一点，但是最常见的方法是通过MediaRecorder类。Android提供了MediaRecorder类来记录音频或视频。为了使用MediaRecorder类，您将首先创建MediaRecorder类的实例。其语法如下。
   
-  ```java
+```java
   MediaRecorder myAudioRecorder = new MediaRecorder();
-  ```
+```
   
   复制
   
   现在，您将设置source，输出和编码格式以及输出文件。它们的语法在下面给出。
   
-  ```java
+```java
   myAudioRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
   myAudioRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
   myAudioRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
   myAudioRecorder.setOutputFile(outputFile);
-  ```
+```
   
   复制
   
   在指定音频源和格式及其输出文件之后，我们可以调用两种基本方法准备并开始开始录制音频。
   
-  ```java
+```java
   myAudioRecorder.prepare();
   myAudioRecorder.start();
-  ```
+```
   
   复制
   
@@ -54,7 +54,7 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。
   
-  ```java
+```java
   package com.jc2182.demo;
   
   import android.app.Activity;
@@ -237,13 +237,13 @@
           return result == PackageManager.PERMISSION_GRANTED &&  result1 == PackageManager.PERMISSION_GRANTED;
       }
   }
-  ```
+```
   
   复制
   
   以下是res/layout/activity_main.xml文件的内容-
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
       android:layout_width="match_parent"
@@ -293,13 +293,13 @@
           android:layout_marginTop="10dp"
           android:text="停止播放录音 " />
   </RelativeLayout>
-  ```
+```
   
   复制
   
   这是 AndroidManifest.xml 的代码。
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.jc2182.demo">
@@ -325,7 +325,7 @@
       </application>
   
   </manifest>
-  ```
+```
   
   复制
   

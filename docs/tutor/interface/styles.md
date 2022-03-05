@@ -14,7 +14,7 @@
   
   在XML资源中定义了一种样式，该样式与指定布局的XML分开。此XML文件位于项目的res/values/目录下，并将`<resources>`作为根节点，这是样式文件所必需的。XML文件的名称是任意的，但必须使用.xml扩展名。您可以使用`<style>`标签为每个文件定义多种样式，但是每种样式都有其名称，该名称可以唯一地标识样式。Android样式属性使用`<item>`标记设置，如下所示-
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <resources>
      <style name="CustomFontStyle">
@@ -26,7 +26,7 @@
         <item name="android:textColor">#00FF00</item>/> 
      </style>
   </resources>
-  ```
+```
   
   复制
   
@@ -38,7 +38,7 @@
   
   定义样式后，可以使用style属性在XML布局文件中使用它，如下所示：
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
      android:layout_width="fill_parent"
@@ -51,7 +51,7 @@
         android:text="@string/hello_world" />
   
   </LinearLayout>
-  ```
+```
   
   复制
   
@@ -63,7 +63,7 @@
   
   Android支持样式继承的方式与网页设计中级联样式表的方式非常相似。您可以使用它继承现有样式的属性，然后仅定义要更改或添加的属性。要实现自定义主题，请创建或编辑MyAndroidApp/res/values/themes.xml并添加以下内容-
   
-  ```xml
+```xml
   <resources>
      ...
      <style name="MyCustomTheme" parent="android:style/Theme">
@@ -71,19 +71,19 @@
      </style>
      ...
   </resources>
-  ```
+```
   
   复制
   
   在您的AndroidManifest.xml中，将主题应用于您要设置样式的活动-
   
-  ```xml
+```xml
   <activity
      android:name="com.myapp.MyActivity"
      ...
      android:theme="@style/MyCustomTheme"
      />
-  ```
+```
   
   复制
   
@@ -97,7 +97,7 @@
   
   然后，可以通过将`<item>`元素添加到自定义主题，将颜色资源应用于某些主题属性，例如窗口背景和主文本颜色。这些属性在styles.xml文件中定义。例如，要将自定义颜色应用于窗口背景，请在MyAndroidApp/res/values/styles.xml文件中定义的自定义主题中添加以下两个`<item>`元素：
   
-  ```xml
+```xml
   <resources>
      ...
      <style name="MyCustomTheme" ...>
@@ -106,7 +106,7 @@
      </style>
      ...
   </resources>
-  ```
+```
   
   复制
   
@@ -124,7 +124,7 @@
   
   定义新样式
   
-  ```xml
+```xml
   <resources>
      ...
         <style name="MyCustomButton" parent="android:Widget.Button">
@@ -132,13 +132,13 @@
         </style>
      ...
   </resources>
-  ```
+```
   
   复制
   
   套用主题
   
-  ```xml
+```xml
   <resources>
      ...
         <style name="MyCustomTheme" parent=...>
@@ -147,7 +147,7 @@
         </style>
      ...
   </resources>
-  ```
+```
   
   复制
   
@@ -157,27 +157,27 @@
   
   希望您了解样式的概念，所以现在让我们尝试了解什么是主题。主题不过是应用于整个活动或应用程序而不是单个视图的Android样式。因此，将样式用作主题时，活动或应用程序中的每个视图都将应用其支持的每个样式属性。例如，您可以将相同的CustomFontStyle样式用作Activity的主题，然后该Activity内的所有文本将具有绿色等宽字体。要为应用程序的所有活动设置主题，请打开AndroidManifest.xml文件，然后编辑`<application>`标记，以包含带有样式名称的android:theme属性。例如-
   
-  ```xml
+```xml
   <application android:theme="@style/CustomFontStyle">
-  ```
+```
   
   复制
   
   但是，如果要将主题仅应用到应用程序中的一个Activity，则将android：theme属性仅添加到`<activity>`标签。例如-
   
-  ```xml
+```xml
   <activity android:theme="@style/CustomFontStyle">
-  ```
+```
   
   复制
   
   Android定义了许多默认主题，您可以直接使用它们，也可以使用parent属性继承它们，如下所示：
   
-  ```xml
+```xml
   <style name="CustomTheme" parent="android:Theme.Light">
      ...
   </style>
-  ```
+```
   
   复制
   
@@ -193,7 +193,7 @@
   
   上面的布局是基于style.xml文件设计的，其中放置在res/values/
   
-  ```xml
+```xml
   <resource>
      <style name="AppTheme" parent="android:Theme.Material">        
         <item name ="android:color/primary">@color/primary</item>
@@ -201,7 +201,7 @@
         <item name ="android:colorAccent/primary">@color/accent</item>
      </style>
   <resource>
-  ```
+```
   
   复制
   

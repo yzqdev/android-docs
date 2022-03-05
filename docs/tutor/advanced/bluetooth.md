@@ -8,19 +8,19 @@
   
   Android提供了**BluetoothAdapter**类来与蓝牙通信。通过调用静态方法**getDefaultAdapter()**创建此调用的对象。其语法如下。
   
-  ```java
+```java
   private BluetoothAdapter BA;
   BA = BluetoothAdapter.getDefaultAdapter(); 
-  ```
+```
   
   复制
   
   为了启用设备的蓝牙，请使用以下蓝牙常量**ACTION_REQUEST_ENABLE**调用该意图。它的语法是。。
   
-  ```java
+```java
   Intent turnOn = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
   startActivityForResult(turnOn, 0);       
-  ```
+```
   
   复制
   
@@ -34,10 +34,10 @@
   
   启用蓝牙后，可以通过调用**getBondedDevices()**方法获取已配对设备的列表。它返回一组蓝牙设备。它的语法是。
   
-  ```java
+```java
   private Set<BluetoothDevice>pairedDevices;
   pairedDevices = BA.getBondedDevices();
-  ```
+```
   
   复制
   

@@ -12,7 +12,7 @@
   
   因此，为了检测上述任何事件，您需要重写onTouchEvent()方法并手动检查这些事件。其语法如下-
   
-  ```java
+```java
   public boolean onTouchEvent(MotionEvent ev){
      final int actionPeformed = ev.getAction();
   
@@ -27,16 +27,16 @@
         return true;
      }
   }
-  ```
+```
   
   
   
   在这些情况下，您可以执行任何喜欢的计算。例如缩放，缩小等为了获得X和Y轴的坐标，可以调用getX()和getY()方法。其语法如下-
   
-  ```java
+```java
   final float x = ev.getX();
   final float y = ev.getY();
-  ```
+```
   
   
   

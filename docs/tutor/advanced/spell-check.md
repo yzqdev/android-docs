@@ -2,7 +2,7 @@
   
   Android平台提供了拼写检查器框架，可让您在应用程序中实施和访问拼写检查。为了使用拼写检查器，您需要实现**SpellCheckerSessionListener**接口并覆盖其方法。其语法如下-
   
-  ```java
+```java
   public class HelloSpellCheckerActivity extends Activity implements SpellCheckerSessionListener {
      @Override
      public void onGetSuggestions(final SuggestionsInfo[] arg0) {
@@ -14,28 +14,28 @@
         // TODO Auto-generated method stub
      }
   }
-  ```
+```
   
-  复制
+  
   
   接下来，您需要创建一个**SpellCheckerSession**类的对象。可以通过调用**TextServicesManager**类的**newSpellCheckerSession**方法来实例化此对象。此类处理应用程序和文本服务之间的交互。您需要请求系统服务以实例化它。其语法如下-
   
-  ```java
+```java
   private SpellCheckerSession mScs;
   final TextServicesManager tsm = (TextServicesManager) getSystemService(
   Context.TEXT_SERVICES_MANAGER_SERVICE);
   mScs = tsm.newSpellCheckerSession(null, null, this, true);   
-  ```
+```
   
-  复制
+  
   
   您需要做的最后一件事是调用**getSuggestions**方法以获取您想要的任何文本的建议。这些建议将传递到**onGetSuggestions**方法上，您可以在其中执行任何所需的操作。
   
-  ```java
+```java
   mScs.getSuggestions(new TextInfo(editText1.getText().toString()), 3);  
-  ```
+```
   
-  复制
+  
   
   此方法有两个参数。第一个参数是文本信息对象形式的字符串，第二个参数是用于区分建议的cookie编号。除了这些方法外，SpellCheckerSession类还提供了其他方法，可以更好地处理建议。这些方法在下面列出-
   
@@ -60,7 +60,7 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。
   
-  ```java
+```java
   package com.jc2182.demo;
   
   import android.app.Activity;
@@ -76,7 +76,6 @@
   import android.widget.EditText;
   import android.widget.TextView;
   import android.widget.Toast;
-  ```
 
   public class MainActivity extends Activity implements SpellCheckerSession.SpellCheckerSessionListener {
       Button b1;
@@ -147,7 +146,7 @@
   }
 
 ```
-复制
+
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -228,7 +227,7 @@
 </RelativeLayout>
 ```
 
-  复制
+  
 
   让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

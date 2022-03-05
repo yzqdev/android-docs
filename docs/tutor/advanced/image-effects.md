@@ -2,42 +2,42 @@
   
   Android允许您通过在图像上添加不同种类的效果来操纵图像。您可以轻松地应用图像处理技术在图像上添加某些种类的效果。效果可能是亮度，暗度，灰度转换等，Android提供了**Bitmap**类来处理图像。可以在android.graphics.bitmap下找到。您可以通过多种方式实例化位图。我们正在从imageView创建图像的位图。
   
-  ```java
+```java
   private Bitmap bmp;
   private ImageView img;
   img = (ImageView)findViewById(R.id.imageView1);
   BitmapDrawable  abmp = (BitmapDrawable)img.getDrawable();
-  ```
+```
   
-  复制
+  
   
   现在，我们将通过调用**BitmapDrawable**类的**getBitmap()**函数来创建位图。其语法如下-
   
-  ```java
+```java
   bmp = abmp.getBitmap();
-  ```
+```
   
-  复制
+  
   
   图像不过是二维矩阵。用同样的方式处理位图。图像由像素组成。因此，您将从该位图中获取像素并对其进行处理。它的语法如下-
   
-  ```java
+```java
   for(int i=0; i < bmp.getWidth(); i++){
      for(int j=0; j < bmp.getHeight(); j++){
         int p = bmp.getPixel(i, j);
      }
   }
-  ```
+```
   
-  复制
+  
   
   getWidth()和getHeight()函数返回矩阵的高度和宽度。getPixel()方法返回指定索引处的像素。一旦获得像素，就可以根据需要轻松地对其进行操作。除了这些方法之外，还有其他方法可以帮助我们更好地处理图像。
   
-  /tr>
+   
   
   | 方法                                                                                  | 说明                                                |
   | ------------------------------------------------------------------------------------- | --------------------------------------------------- |
-  | **copy(Bitmap.Config config, boolean isMutable)**                                     | 此方法将此位图的像素复制到新的位图中                |
+  | **copy(Bitmap.Config config, boolean isMutable)**                                     | 此方法将此位图的像素到新的位图中                    |
   | **createBitmap(DisplayMetrics display, int width, int height, Bitmap.Config config)** | 返回具有指定宽度和高度的可变位图                    |
   | **createBitmap(int width, int height, Bitmap.Config config)**                         | 返回具有指定宽度和高度的可变位图                    |
   | **createBitmap(Bitmap src)**                                                          | 从源位图返回一个不变的位图                          |
@@ -61,9 +61,8 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。
   
-  ```java
+```java
   package com.jc2182.demo;
-  ```
   
 
 import android.app.Activity;
@@ -79,7 +78,6 @@ public class MainActivity extends Activity {
  Button b1, b2, b3;
  ImageView im;
 
-```
   private Bitmap bmp;
   private Bitmap operation;
 
@@ -223,12 +221,11 @@ public class MainActivity extends Activity {
       }
       im.setImageBitmap(operation);
   }
-```
 
 }
 
-````
-复制
+```
+
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -353,7 +350,7 @@ public class MainActivity extends Activity {
 </RelativeLayout>
 ````
 
-复制
+
 
 让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

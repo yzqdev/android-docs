@@ -10,9 +10,9 @@
   
   为了创建数据库，您只需要使用数据库名称和模式作为参数调用openOrCreateDatabase方法。它返回一个SQLite数据库实例，您必须在自己的对象中接收它的语法如下所示
   
-  ```java
+```java
   SQLiteDatabase mydatabase = openOrCreateDatabase("your database name",MODE_PRIVATE,null);
-  ```
+```
   
   
   
@@ -29,10 +29,10 @@
   
   我们可以使用SQLiteDatabase类中定义的execSQL方法创建表或将数据插入表中。其语法如下
   
-  ```java
+```java
   mydatabase.execSQL("CREATE TABLE IF NOT EXISTS Jc2182(Username VARCHAR,Password VARCHAR);");
   mydatabase.execSQL("INSERT INTO Jc2182 VALUES('admin','admin');");
-  ```
+```
   
   
   
@@ -46,12 +46,12 @@
   
   我们可以使用**Cursor**类的对象从数据库检索任何内容。我们将调用此类的一个名为rawQuery的方法，它将返回一个结果集，其中光标指向该表。我们可以向前移动光标并检索数据。
   
-  ```java
+```java
   Cursor resultSet = mydatbase.rawQuery("Select * from Jc2182",null);
   resultSet.moveToFirst();
   String username = resultSet.getString(0);
   String password = resultSet.getString(1);
-  ```
+```
   
   
   
@@ -71,7 +71,7 @@
   
   为了管理与数据库有关的所有操作，已提供了一个帮助程序类，称为**SQLiteOpenHelper**。它自动管理数据库的创建和更新。其语法如下
   
-  ```java
+```java
   public class DBHelper extends SQLiteOpenHelper {
      public DBHelper(){
         super(context,DATABASE_NAME,null,1);
@@ -79,7 +79,7 @@
      public void onCreate(SQLiteDatabase db) {}
      public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {}
   }
-  ```
+```
   
   
 

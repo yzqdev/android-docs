@@ -2,26 +2,26 @@
   
   Android提供了许多方法来控制音频/视频文件和流的播放。一种方法是通过称为**MediaPlayer**的类。Android提供了MediaPlayer类来访问内置的媒体播放器服务，例如播放音频，视频等。为了使用**MediaPlayer**，我们必须调用此类的静态方法**create()**。此方法返回**MediaPlayer**类的实例。它的语法如下-
   
-  ```java
+```java
   MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.media);
-  ```
+```
   
   
   
   第二个参数是您要播放的媒体资源。您必须在项目下创建一个名为raw的新文件夹，并将媒体资源文件放入其中。创建Mediaplayer对象后，您可以调用一些方法来启动或停止播放。这些方法在下面列出。
   
-  ```java
+```java
   mediaPlayer.start();
   mediaPlayer.pause();
-  ```
+```
   
   
   
   在调用start()方法时，音乐将从头开始播放。如果在pause()方法之后再次调用此方法，则音乐将从左端开始播放，而不是从头开始。为了从头开始播放音乐，您必须调用reset()方法。其语法如下。
   
-  ```java
+```java
   mediaPlayer.reset();
-  ```
+```
   
   
   

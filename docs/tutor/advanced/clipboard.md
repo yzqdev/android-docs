@@ -2,10 +2,10 @@
   
   Android提供了剪贴板框架，用于和粘贴不同类型的数据。数据可以是文本，图像，二进制流数据或其他复杂的数据类型。Android提供了**ClipboardManager**库，ClipData库和ClipData.item库来使用和粘贴框架。要使用剪贴板框架，需要将数据放入clip对象，然后将该对象放入系统范围的剪贴板。为了使用剪贴板，您需要通过调用getSystemService()方法实例化ClipboardManager的对象。其语法如下-
   
-  ```java
+```java
   ClipboardManager myClipboard;
   myClipboard = (ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
-  ```
+```
   
   
   
@@ -15,12 +15,12 @@
   
   您需要做的下一件事是通过调用ClipData类的相应数据方法类型来实例化ClipData对象。对于文本数据，将调用**newPlainText**方法。之后，您必须将该数据设置为Clipboard Manager对象的剪辑，其语法如下所示-
   
-  ```java
+```java
   ClipData myClip;
   String text = "hello world";
   myClip = ClipData.newPlainText("text", text);
   myClipboard.setPrimaryClip(myClip);
-  ```
+```
   
   
   
@@ -38,11 +38,11 @@
   
   为了粘贴数据，我们将首先通过调用getPrimaryClip()方法获取剪贴板。然后从该单击中，我们将在ClipData.Item对象中获得该项目。然后从对象中获取数据。其语法如下-
   
-  ```java
+```java
   ClipData abc = myClipboard.getPrimaryClip();
   ClipData.Item item = abc.getItemAt(0);
   String text = item.getText().toString();
-  ```
+```
   
   
   
@@ -70,8 +70,8 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。
   
- ```java
-  package com.jc2182.demo;
+```java
+package com.jc2182.demo;
  
   
 

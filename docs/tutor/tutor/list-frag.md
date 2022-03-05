@@ -22,7 +22,7 @@
   
   在开始编码之前，我将在res/values目录下的string.xml文件中初始化字符串常量。
   
-  ```xml
+```xml
   <resources>
       <string name="app_name">HelloWorld</string>
       <!-- TODO: Remove or change this placeholder text -->
@@ -42,7 +42,7 @@
           <item>海王星</item>
       </string-array>
   </resources>
-  ```
+```
   
   复制
   

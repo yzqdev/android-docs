@@ -56,10 +56,10 @@
   
   1,使用keytool生成私钥
   
-  ```t4
+```t4
   $ keytool -genkey -v -keystore my-release-key.keystore
   -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
-  ```
+```
   
   复制
   
@@ -67,23 +67,23 @@
   
   3,使用[jarsigner](https://docs.oracle.com/javase/6/docs/technotes/tools/windows/jarsigner.html)使用私钥对应用程序签名
   
-  ```t4
+```t4
   $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1
   -keystore my-release-key.keystore my_application.apk alias_name
-  ```
+```
   
   复制
   
   4,确认您的APK已签名。例如-
   
-  ```t4
+```t4
   $ jarsigner -verify -verbose -certs my_application.apk
-  ```
+```
   
   复制
   
   5,使用[zipalign](https://developer.android.com/studio/command-line/zipalign)对齐最终的APK包。
   
-  ```t4
+```t4
   $ zipalign -v 4 your_project_name-unaligned.apk your_project_name.apk![](https://www.jc2182.com/images/android/call2.png)
-  ```
+```

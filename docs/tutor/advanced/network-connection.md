@@ -2,11 +2,11 @@
   
   Android使您的应用程序连接到Internet或任何其他本地网络，并允许您执行网络操作。设备可以具有各种类型的网络连接。本章重点介绍使用Wi-Fi或移动网络连接。
   
-  ```xml
+```xml
   android:parentActivityName = "com.example.test.MainActivity" 
-  ```
+```
   
-  复制
+  
 
 
   
@@ -14,32 +14,32 @@
   
   在执行任何网络操作之前​​，必须首先检查是否已连接到该网络或Internet等。为此android提供**ConnectivityManager**类。您需要通过调用**getSystemService()**方法来实例化此类的对象。其语法如下-
   
-  ```java
+```java
   ConnectivityManager check = (ConnectivityManager) 
   this.context.getSystemService(Context.CONNECTIVITY_SERVICE); 
-  ```
+```
   
-  复制
+  
   
   实例化**ConnectivityManager**类的对象后，就可以使用**getAllNetworkInfo**方法获取所有网络的信息。此方法返回**NetworkInfo**数组。因此，您必须像这样接收它。
   
-  ```java
+```java
   NetworkInfo[] info = check.getAllNetworkInfo();
-  ```
+```
   
-  复制
+  
   
   您需要做的最后一件事是检查网络的连接状态。其语法如下-
   
-  ```java
+```java
   for (int i = 0; i < info.length; i++){
      if (info[i].getState() == NetworkInfo.State.CONNECTED){
         Toast.makeText(context, "网络已连接",Toast.LENGTH_SHORT).show();
      }
   }
-  ```
+```
   
-  复制
+  
   
   除了**CONNECTED**连接状态之外，网络还可以实现其他状态。它们在下面列出-
   
@@ -57,25 +57,25 @@
   
   检查您已连接到Internet后，您可以执行任何网络操作。在这里，我们从网址获取网站的html。Android提供**HttpURLConnection**和**URL**类来处理这些操作。您需要通过提供网站链接来实例化URL类的对象。它的语法如下-
   
-  ```java
+```java
   String link = "https://www.baidu.com";
   URL url = new URL(link);   
-  ```
+```
   
-  复制
+  
   
   之后，您需要调用URL类的**openConnection**方法并将其接收到**HttpURLConnection**对象中。之后，您需要调用**HttpURLConnection**类的**connect**方法。
   
-  ```java
+```java
   HttpURLConnection conn = (HttpURLConnection) url.openConnection();
   conn.connect();  
-  ```
+```
   
-  复制
+  
   
   最后，您需要做的就是从网站获取HTML。为此，您将使用**InputStream**和**BufferedReader**类。其语法如下-
   
-  ```java
+```java
   InputStream is = conn.getInputStream();
   BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
   String webPage = "",data="";
@@ -83,9 +83,9 @@
   while ((data = reader.readLine()) != null){
      webPage += data + "\n";
   }
-  ```
+```
   
-  复制
+  
   
   除了此connect方法之外，**HttpURLConnection**类中还有其他可用的方法。它们在下面列出-
   
@@ -111,7 +111,7 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。
   
-  ```java
+```java
   package com.jc2182.demo;
   
   import android.app.Activity;
@@ -135,7 +135,6 @@
   import java.net.MalformedURLException;
   import java.net.URL;
   import java.net.URLConnection;
-  ```
 
   public class MainActivity extends Activity {
 
@@ -254,7 +253,7 @@
   }
 
 ```
-复制
+
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -307,7 +306,7 @@
 </RelativeLayout>
 ```
 
-  复制
+  
 
   以下是AndroidManifest.xml文件的内容-
 
@@ -340,7 +339,7 @@
 </manifest>
 ```
 
-  复制
+  
 
   让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

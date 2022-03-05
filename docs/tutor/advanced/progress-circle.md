@@ -2,19 +2,19 @@
   
   进行进度圈的最简单方法是使用名为**ProgressDialog**的类。加载栏也可以通过该类制作。条形和圆形之间唯一的逻辑区别是，当您知道等待特定任务的总时间时使用前者，而当您不知道等待时间时使用后者。为此，您需要实例化此类的对象。它的语法是。
   
-  ```java
+```java
   ProgressDialog progress = new ProgressDialog(this);
-  ```
+```
   
   
   
   现在，您可以设置此对话框的某些属性。例如，其样式，其文字等
   
-  ```java
+```java
   progress.setMessage("Downloading Music :) ");
   progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
   progress.setIndeterminate(true);
-  ```
+```
   
   
   

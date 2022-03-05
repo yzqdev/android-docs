@@ -3,20 +3,20 @@
 
 - 对话框是一个小窗口，提示用户做出决定或输入其他信息。在您的应用程序中，有时候，如果您想让用户根据用户采取的任何特定操作，在是或否之间做出决定，方法是保留在同一活动中而不更改屏幕，则可以使用“警告对话框”。为了创建警报对话框，您需要创建一个**AlertDialogBu​​ilder**对象，该对象是**AlertDialog**的内部类。其语法如下
   
-  ```java
+```java
   AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-  ```
+```
   
   复制
   
   现在，您必须使用AlertDialogBu​​ilder类的对象设置正（是）或负（否）按钮。它的语法是
   
-  ```java
+```java
   alertDialogBuilder.setPositiveButton(CharSequence text, 
      DialogInterface.OnClickListener listener)
   alertDialogBuilder.setNegativeButton(CharSequence text, 
      DialogInterface.OnClickListener listener)
-  ```
+```
   
   复制
   
@@ -33,10 +33,10 @@
   
   创建并设置对话框构建器之后，您将通过调用构建器类的create()方法来创建警报对话框。它的语法是
   
-  ```java
+```java
   AlertDialog alertDialog = alertDialogBuilder.create();
   alertDialog.show();
-  ```
+```
   
   复制
   
@@ -48,7 +48,7 @@
   
   在进入示例之前，我们需要了解对话框片段。对话框片段是可以在对话框中显示片段的片段
   
-  ```java
+```java
   public class DialogFragment extends DialogFragment {
      @Override
      public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -68,7 +68,7 @@
         }
      }
   }
-  ```
+```
   
   复制
   
@@ -78,7 +78,7 @@
   
   它用于在对话框中显示项目列表。假设用户需要选择一个项目列表，或者需要从多个项目列表中单击一个项目，在这种情况下，我们可以使用列表对话框。
   
-  ```java
+```java
   public Dialog onCreateDialog(Bundle savedInstanceState) {
      AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
      builder.setTitle(Pick a Color).setItems(R.array.colors_array, new DialogInterface.OnClickListener() {
@@ -88,7 +88,7 @@
      });
      return builder.create();
   }
-  ```
+```
   
   复制
   
@@ -98,7 +98,7 @@
   
   它曾经用来在对话框中添加单选列表。我们可以根据用户的选择进行选择或取消选择。
   
-  ```java
+```java
   public Dialog onCreateDialog(Bundle savedInstanceState) {
      mSelectedItems = new ArrayList();
      AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -139,7 +139,7 @@
      });
      return builder.create();
   }
-  ```
+```
   
   复制
   

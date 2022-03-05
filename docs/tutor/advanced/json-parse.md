@@ -2,7 +2,7 @@
   
   [JSON](https://www.jc2182.com/json/javascript-json-intro.html)代表JavaScript Object Notation，它是一种独立的数据交换格式，是[XML](https://www.jc2182.com/xml/xml-jiaocheng.html)的最佳替代方案。本章介绍如何解析JSON文件并从中提取必要的信息。Android提供了四个不同的类来处理JSON数据。这些类是JSONArray，JSONObject，JSONStringer和JSONTokenizer。第一步是识别JSON数据中您感兴趣的字段。例如。在下面给出的JSON中，我们只想获取温度。
   
-  ```json
+```json
   {
      "sys":
      {
@@ -25,7 +25,7 @@
         "pressure":1009,
      }
   }
-  ```
+```
   
   复制
 
@@ -35,13 +35,13 @@
   
   为了解析JSON对象，我们将创建一个**JSONObject**类的对象，并指定一个包含JSON数据的字符串。它的语法是-
   
-  ```java
+```java
   JSONObject sys  = reader.getJSONObject("sys");
   country = sys.getString("country");
   
   JSONObject main  = reader.getJSONObject("main");
   temperature = main.getString("temp");
-  ```
+```
   
   复制
   

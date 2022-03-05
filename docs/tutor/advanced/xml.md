@@ -2,7 +2,7 @@
   
   [XML](https://www.jc2182.com/xml/xml-jiaocheng.html)表示可扩展标记语言。XML是一种非常流行的格式，通常用于在Internet上共享数据。本章说明如何解析XML文件并从中提取必要的信息。Android提供了三种类型的XML解析器，分别是DOM，SAX和XMLPullParser。在所有这些之中，android推荐**XMLPullParser**，因为它高效且易于使用。因此，我们将使用XMLPullParser来解析XML。第一步是识别XML数据中您感兴趣的字段。例如。在下面给出的XML中，我们仅对获取温度感兴趣。
   
-  ```xml
+```xml
   <?xml version="1.0"?>
   <current>
   
@@ -16,7 +16,7 @@
      <humidity value="77" unit="%"/>
      <pressure value="1025" unit="hPa"/>
   </current>
-  ```
+```
   
   复制
 
@@ -26,24 +26,24 @@
   
   在下一步中，我们将创建XMLPullParser对象，但是为了创建该对象，我们将首先创建XmlPullParserFactory对象，然后调用其newPullParser()方法创建XMLPullParser。其语法如下-
   
-  ```java
+```java
   private XmlPullParserFactory xmlFactoryObject = XmlPullParserFactory.newInstance();
   private XmlPullParser myparser = xmlFactoryObject.newPullParser();
-  ```
+```
   
   复制
   
   下一步涉及为XmlPullParser指定包含XML的文件。它可以是文件，也可以是流。在我们的例子中它是一个流，其语法如下-
   
-  ```java
+```java
   myparser.setInput(stream, null);
-  ```
+```
   
   复制
   
   最后一步是解析XML。XML文件包含事件，名称，文本，AttributesValue等，因此XMLPullParser具有用于解析XML文件的每个组件的单独功能。其语法如下-
   
-  ```java
+```java
   int event = myParser.getEventType();
   while (event != XmlPullParser.END_DOCUMENT)  {
      String name=myParser.getName();
@@ -59,7 +59,7 @@
      }             
      event = myParser.next();                                     
   }
-  ```
+```
   
   复制
   
@@ -92,7 +92,7 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。
   
-  ```java
+```java
   package com.jc2182.demo;
   
   import android.app.Activity;
@@ -153,13 +153,13 @@
           return node.getNodeValue();
       }
   }
-  ```
+```
   
   复制
   
   以下是res/layout/activity_main.xml文件的内容-
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:tools="http://schemas.android.com/tools"
@@ -172,13 +172,13 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content" />
   </RelativeLayout>
-  ```
+```
   
   复制
   
   以下是assets/file.xml文件的内容-
   
-  ```xml
+```xml
   <?xml version="1.0"?>
   <records>
       <employee>
@@ -200,7 +200,7 @@
       </employee>
   
   </records>
-  ```
+```
   
   复制
   

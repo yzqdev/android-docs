@@ -2,7 +2,7 @@
   
   Android提供了特殊类型的触摸屏事件，例如捏，双击，滚动，长按和退格。这些都称为手势。Android提供了**GestureDetector**类来接收手势事件，并告诉我们这些事件是否与手势相对应。要使用它，您需要创建一个**GestureDetector**对象，然后使用**GestureDetector.SimpleOnGestureListener**扩展另一个类以充当侦听器并重写某些方法。其语法如下
   
-  ```java
+```java
   GestureDetector myG;
   myG = new GestureDetector(this,new Gesture());
   
@@ -21,7 +21,7 @@
      float velocityY) {
      }
   }
-  ```
+```
   
   
   
@@ -31,16 +31,16 @@
   
   Android提供了**ScaleGestureDetector**类来处理诸如捏等的手势。要使用它，您需要实例化此类的对象。它的语法如下-
   
-  ```java
+```java
   ScaleGestureDetector SGD;
   SGD = new ScaleGestureDetector(this,new ScaleListener());
-  ```
+```
   
   
   
   第一个参数是上下文，第二个参数是事件侦听器。我们必须定义事件侦听器，并重写函数OnTouchEvent使其起作用。其语法如下-
   
-  ```java
+```java
   public boolean onTouchEvent(MotionEvent ev) {
      SGD.onTouchEvent(ev);
      return true;
@@ -53,7 +53,7 @@
         return true;
      }
   }
-  ```
+```
   
   
   

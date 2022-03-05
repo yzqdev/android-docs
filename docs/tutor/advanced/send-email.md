@@ -12,10 +12,10 @@
   
   要发送电子邮件，您需要使用setData()方法将mailto：指定为URI，并且使用setType()方法将数据类型转换为text/plain，如下所示-
   
-  ```java
+```java
   emailIntent.setData(Uri.parse("mailto:"));
   emailIntent.setType("text/plain");
-  ```
+```
   
   复制
   
@@ -25,9 +25,9 @@
   
   您将使用**ACTION_SEND**操作启动安装在Android设备上的电子邮件客户端。以下是使用ACTION_SEND操作创建意图的简单语法。
   
-  ```java
+```java
   Intent emailIntent = new Intent(Intent.ACTION_SEND);
-  ```
+```
   
   复制
   
@@ -49,11 +49,11 @@
   
   这是一个示例，向您展示如何为意图分配额外的数据-
   
-  ```java
+```java
   emailIntent.putExtra(Intent.EXTRA_EMAIL  , new String[]{"Recipient"});
   emailIntent.putExtra(Intent.EXTRA_SUBJECT, "subject");
   emailIntent.putExtra(Intent.EXTRA_TEXT   , "Message Body");
-  ```
+```
   
   复制
   

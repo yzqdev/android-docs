@@ -98,7 +98,7 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。
   
-  ```java
+```java
   package com.jc2182.demo;
   
   import android.Manifest;
@@ -110,7 +110,7 @@
   import android.widget.Toast;
   
   import androidx.core.app.ActivityCompat;
-  ```
+```
 
 public class MainActivity extends Activity {
  Button btnShowLocation;

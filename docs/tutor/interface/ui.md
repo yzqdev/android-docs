@@ -6,7 +6,7 @@
   
   本教程更多关于基于XML文件中定义的布局创建GUI。布局可以包含任何类型的小部件，例如按钮，标签，文本框等。以下是具有**LinearLayout**的XML文件的简单示例-
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
      android:layout_width="fill_parent"
@@ -26,18 +26,18 @@
      <!-- More GUI components go here  -->
   
   </LinearLayout>
-  ```
+```
   
   复制
   
   创建布局后，您可以在Activity.onCreate()回调实现中从应用程序代码加载布局资源，如下所示-
   
-  ```java
+```java
   public void onCreate(Bundle savedInstanceState) {
      super.onCreate(savedInstanceState);
      setContentView(R.layout.activity_main);  // activity_main 为布局文件的文件名
   }
-  ```
+```
   
   复制
   
@@ -112,9 +112,9 @@
   
   **View** 对象可能具有分配给它的唯一ID，该ID将在树中唯一标识视图。XML标记内的ID的语法是-
   
-  ```xml
+```xml
   android:id="@+id/my_button"
-  ```
+```
   
   复制
   
@@ -123,6 +123,6 @@
   - 字符串开头的符号（@）表示XML解析器应解析并扩展ID字符串的其余部分，并将其标识为ID资源。
   - 加号（+）表示这是必须创建并添加到我们资源中的新资源名称。要创建视图对象的实例并从布局中捕获它，请使用以下命令：
   
-  ```java
+```java
   Button myButton = (Button) findViewById(R.id.my_button);
-  ```
+```

@@ -8,19 +8,19 @@
   
   为了使用内部存储在文件中写入一些数据，请使用文件名和模式调用openFileOutput()方法。该模式可以是private，public等，其语法如下-
   
-  ```java
+```java
   FileOutputStream fOut = openFileOutput("file name here",MODE_WORLD_READABLE);
-  ```
+```
   
   复制
   
   方法openFileOutput()返回FileOutputStream的实例。因此，您可以在FileInputStream对象中接收它。之后，您可以调用write方法在文件上写入数据。其语法如下-
   
-  ```java
+```java
   String str = "data";
   fOut.write(str.getBytes());
   fOut.close();
-  ```
+```
   
   复制
 
@@ -30,15 +30,15 @@
   
   为了从刚刚创建的文件中读取，请使用文件名调用openFileInput()方法。它返回FileInputStream的实例。其语法如下-
   
-  ```java
+```java
   FileInputStream fin = openFileInput(file);
-  ```
+```
   
   复制
   
   之后，您可以调用read方法从文件中一次读取一个字符，然后进行打印。其语法如下-
   
-  ```java
+```java
   int c;
   String temp="";
   while( (c = fin.read()) != -1){
@@ -47,7 +47,7 @@
   
   //string temp contains all the data of the file.
   fin.close();
-  ```
+```
   
   复制
   

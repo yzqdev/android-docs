@@ -8,7 +8,7 @@
   
   使用此简单脚本可以轻松创建MYSQL数据库。用**CREATE DATABASE**语句创建数据库。
   
-  ```php
+```php
   <?php
      $con=mysqli_connect("example.com","username","password");
      $sql="CREATE DATABASE my_db";
@@ -16,7 +16,7 @@
         echo "数据库 my_db 建立成功";
      }
   ?>
-  ```
+```
   
   复制
   
@@ -24,7 +24,7 @@
   
   创建数据库后，就该在数据库中创建一些表了。用**CREATE TABLE**语句创建表。
   
-  ```php
+```php
   <?php
     $con=mysqli_connect("example.com","username","password","my_db");
      $sql="CREATE TABLE table1(Username CHAR(30),Password CHAR(30),Role CHAR(30))";
@@ -32,7 +32,7 @@
         echo "表已成功创建";
      }
   ?>
-  ```
+```
   
   复制
   
@@ -40,7 +40,7 @@
   
   创建数据库和表时。现在是时候在表中插入一些数据了。用**INSERT INTO**语句创建数据库。
   
-  ```php
+```php
   <?php
      $con=mysqli_connect("example.com","username","password","my_db");
      $sql="INSERT INTO table1 (Username, Password, Role) VALUES ('admin', 'admin','adminstrator')";
@@ -48,7 +48,7 @@
         echo "值已成功插入";
      }
   ?>
-  ```
+```
   
   复制
   
@@ -56,7 +56,7 @@
   
   创建记录后，PHP还可用于从mysql数据库中获取记录。为了获取记录，必须将一些有关要获取的记录的信息传递到PHP页面。第一种传递信息的方法是通过使用$ _GET命令的GET方法。变量在url中传递，并获取记录。其语法如下-
   
-  ```php
+```php
   <?php
      $con=mysqli_connect("example.com","username","password","database name");
   
@@ -75,7 +75,7 @@
      }
      mysqli_close($con);
   ?>
-  ```
+```
   
   复制
   
@@ -111,23 +111,23 @@
   
   有两种方法可以通过PHP页面连接到MYSQL。第一个称为Get方法。他们的语法如下-
   
-  ```java
+```java
   OkHttpClient client = new OkHttpClient();
   Request request = new Request.Builder()
           .url(path)
           .get()  // 默认get 不显式调用也可以
           .build();
   Call call = client.newCall(request);
-  ```
+```
   
   复制
   
   之后，您需要调用**Call**类的execute方法并将其接收到**Response**对象中。之后，接收数据。
   
-  ```java
+```java
   Response response = call.execute();
   String returnMsg = response.body().string();
-  ```
+```
   
   复制
   
@@ -135,7 +135,7 @@
   
   在Post方法中，将使用**OkHttpClient**，**RequestBody**类。它的语法在下面给出-
   
-  ```java
+```java
   OkHttpClient okHttpClient = new OkHttpClient();
   RequestBody requestBody = new FormBody.Builder()
           .add("username", username)
@@ -147,16 +147,16 @@
           .build();
   
   Call call = okHttpClient.newCall(request);
-  ```
+```
   
   复制
   
   您需要接收响应的数据。
   
-  ```java
+```java
   Response response = call.execute();
   String returnMsg = response.body().string();
-  ```
+```
   
   复制
 
@@ -170,7 +170,7 @@
   
   在此示例中，已在000webhost.com中创建了名称为temp的数据库。在该数据库中，已创建一个名为table1的表。该表具有三个字段。（Username, Password, Role）。该表只有一条记录（“admin”，“admin”，“administrator”）。下面给出了php页面，该页面通过post方法获取参数。
   
-  ```php
+```php
   <?php
      $con=mysqli_connect("example.com","username","password","db_name");
   
@@ -188,7 +188,7 @@
      }
              mysqli_close($con);
   ?>
-  ```
+```
   
   复制
   
@@ -206,7 +206,7 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。
   
-  ```java
+```java
   package com.jc2182.demo;
   
   import android.app.Activity;
@@ -218,7 +218,7 @@
   import android.widget.TextView;
   
   import java.io.IOException;
-  ```
+```
 
   public class MainActivity extends Activity {
 

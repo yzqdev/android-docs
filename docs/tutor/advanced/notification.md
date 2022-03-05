@@ -16,9 +16,9 @@
   
   第一步是使用 **Notification.Builder()**创建一个通知生成器。您将使用**Notification Builder**设置各种**Notification**属性，例如其大小图标，标题，优先级等。
   
-  ```java
+```java
    Notification.Builder builder = new Notification.Builder(this);
-  ```
+```
   
   复制
   
@@ -31,7 +31,7 @@
   - 详细信息文本，由**setContentText()**设置
   - .............
   
-  ```java
+```java
   builder.setContentInfo("内容信息")
                   .setContentText("通知内容")//设置通知内容
                   .setContentTitle("通知标题")//设置通知标题
@@ -40,7 +40,7 @@
                   .setSubText("Subtext")
                   .setTicker("滚动消息......")
                   .setWhen(System.currentTimeMillis());//设置通知时间，默认为系统发出通知的时间，通常不用设置
-  ```
+```
   
   复制
   
@@ -50,11 +50,11 @@
   
   最后，通过调用**NotificationManager.notify()**发送通知，将**Notification**对象传递给系统。通知它之前，请确保对构建器对象调用**NotificationCompat.Builder.build()**方法。此方法合并所有已设置的选项，并返回一个新的**Notification**对象。
   
-  ```java
+```java
   Notification n = builder.build();
           //3、manager.notify()
   manager.notify(NOTIFICATION_ID,n);
-  ```
+```
   
   复制
   

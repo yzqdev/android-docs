@@ -4,23 +4,23 @@
   
   向上导航将使我们的应用程序可以从下一个活动移至上一个活动。可以这样做。要实现向上导航，第一步是声明哪个活动是每个活动的适当父项。您可以通过在活动中指定**parentActivityName**属性来实现。其语法如下-
   
-  ```xml
+```xml
   android:parentActivityName = "com.example.test.MainActivity" 
-  ```
+```
   
-  复制
+  
   
   之后，您需要在活动的onCreate方法中调用getActionBar()的**setDisplayHomeAsUpEnabled**方法。这将启用顶部操作栏中的后退按钮。
   
-  ```java
+```java
   getActionBar().setDisplayHomeAsUpEnabled(true);
-  ```
+```
   
-  复制
+  
   
   您需要做的最后一件事是重写**onOptionsItemSelected**方法。当用户按下它时，您的活动将收到对**onOptionsItemSelected()**的调用。该操作的ID为android.R.id.home，其语法如下-
   
-  ```java
+```java
   public boolean onOptionsItemSelected(MenuItem item) {
   
      switch (item.getItemId()) {
@@ -29,9 +29,9 @@
         return true;
      }    
   }
-  ```
+```
   
-  复制
+  
 
 
   
@@ -41,15 +41,15 @@
   
   可以通过重写**onBackPressed**，然后调用moveTaskToBack和finish方法来完成。其语法如下-
   
-  ```java
+```java
   @Override
   public void onBackPressed() {
      moveTaskToBack(true); 
      MainActivity2.this.finish();
   }
-  ```
+```
   
-  复制
+  
   
   除了此**setDisplayHomeAsUpEnabled**方法之外，ActionBar API类中还提供了其他方法。它们在下面列出-
   
@@ -77,7 +77,7 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。
   
-  ```java
+```java
   package com.jc2182.demo;
   
   import android.app.Activity;
@@ -85,7 +85,7 @@
   import android.os.Bundle;
   import android.view.View;
   import android.widget.Button;
-  ```
+  
 
   public class MainActivity extends Activity {
 
@@ -109,7 +109,7 @@
   }
 
 ```
-复制
+
 
 这是src/SecondMain.java的内容。
 
@@ -149,7 +149,7 @@ public class SecondMain extends Activity{
 }
 ```
 
-  复制
+  
 
   以下是res/layout/activity_main.xml文件的内容-
 
@@ -204,7 +204,7 @@ public class SecondMain extends Activity{
 </RelativeLayout>
 ```
 
-  复制
+  
 
   以下是res/layout/activity_main_activity2.xml文件的内容-
 
@@ -225,7 +225,7 @@ public class SecondMain extends Activity{
 </LinearLayout>
 ```
 
-  复制
+  
 
   以下是AndroidManifest.xml文件的内容-
 
@@ -258,7 +258,7 @@ public class SecondMain extends Activity{
 </manifest>
 ```
 
-  复制
+  
 
   让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

@@ -2,22 +2,22 @@
   
   Android允许您将文本转换为语音。您不仅可以转换它，还可以用多种不同的语言说文本。Android 为此提供了**TextToSpeech**类。为了使用此类，您需要实例化此类的对象并指定initListener。其语法如下-
   
-  ```java
+```java
   private EditText write;
   ttobj=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
      @Override
      public void onInit(int status) {
      }
   });
-  ```
+```
   
   复制
   
   在此侦听器中，您必须指定**TextToSpeech**对象的属性，例如其语言，音高等。可以通过调用setLanguage()方法来设置语言。其语法如下-
   
-  ```java
+```java
   ttobj.setLanguage(Locale.UK);
-  ```
+```
   
   复制
   
@@ -34,9 +34,9 @@
   
   设置语言后，您可以调用该类的**speak**方法讲文本。其语法如下-
   
-  ```java
+```java
   ttobj.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
-  ```
+```
   
   复制
   
@@ -65,7 +65,7 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。
   
-  ```java
+```java
   package com.jc2182.demo;
   
   import android.app.Activity;
@@ -117,13 +117,13 @@
           super.onPause();
       }
   }
-  ```
+```
   
   复制
   
   以下是res/layout/activity_main.xml文件的内容-
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:tools="http://schemas.android.com/tools"
@@ -183,7 +183,7 @@
           android:text="文字转语音" />
   
   </RelativeLayout>
-  ```
+```
   
   复制
   

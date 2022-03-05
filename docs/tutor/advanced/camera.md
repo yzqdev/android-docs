@@ -10,9 +10,9 @@
   
   您将使用**MediaStore.ACTION_IMAGE_CAPTURE**来启动手机上安装的现有相机应用程序。其语法如下
   
-  ```java
+```java
   Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-  ```
+```
   
   
   
@@ -29,9 +29,9 @@
   
   现在，您将使用函数**startActivityForResult()**启动此活动并等待其结果。其语法如下
   
-  ```java
+```java
   startActivityForResult(intent,0)
-  ```
+```
   
   
   

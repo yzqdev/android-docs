@@ -18,7 +18,7 @@
   
   在res/values文件夹中创建以下属性文件attrs.xml。
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <resources xmlns:tools="http://schemas.android.com/tools">
       <declare-styleable name="TimeView">
@@ -26,19 +26,19 @@
           <attr name="setColor" format="boolean"/>
       </declare-styleable>
   </resources>
-  ```
+```
   
   复制
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。
   
-  ```java
+```java
   package com.jc2182.demo;
   
   import android.app.Activity;
   import android.os.Bundle;
   import android.widget.TextView;
-  ```
+```
   
 
 public class MainActivity extends Activity {

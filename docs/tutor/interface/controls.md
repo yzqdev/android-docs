@@ -4,7 +4,7 @@
   
   View是一个对象，它在屏幕上绘制一些用户可以交互的东西，ViewGroup是一个对象，它保存其他View(和ViewGroup)对象，以定义用户界面的布局。在XML文件中定义布局，XML文件为布局提供了可读的结构，类似于HTML。例如，一个简单的带有文本视图和按钮的垂直布局是这样的
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
      android:layout_width="fill_parent"
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:text="I am a Button" />
   </LinearLayout>
-  ```
+```
   
   复制
   
@@ -49,15 +49,15 @@
   
   输入控件是应用程序用户界面中的交互式组件。Android提供了可在您的UI中使用的各种控件，例如按钮，文本字段，搜索栏，复选框，缩放按钮，切换按钮等等。如上一章所述，视图对象可能具有分配给它的唯一ID，该ID将在树中唯一标识视图。XML标记内的ID的语法是-
   
-  ```t4
+```t4
   android:id="@+id/text_id"
-  ```
+```
   
   复制
   
   要创建UI控件/视图/小部件，您将必须在布局文件中定义视图/小部件并为其分配唯一的ID，如下所示：
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
      android:layout_width="fill_parent"    android:layout_height="fill_parent"
@@ -68,14 +68,14 @@
         android:layout_height="wrap_content"
         android:text="I am a TextView" />
   </LinearLayout>
-  ```
+```
   
   复制
   
   然后最终创建控制对象的实例并从布局中捕获它，请使用以下命令-
   
-  ```java
+```java
   TextView myText = (TextView) findViewById(R.id.text_id);
-  ```
+```
   
   复制

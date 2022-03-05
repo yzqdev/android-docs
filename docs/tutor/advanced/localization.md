@@ -12,31 +12,31 @@
   
   *意大利，res/values-it/strings.xml*
   
-  ```xml
+```xml
   <resources>
      <string name="hello_world">Ciao mondo!</string>
   </resources>
-  ```
+```
   
   复制
   
   *西班牙，res/values-es/strings.xml*
   
-  ```xml
+```xml
   <resources>
      <string name="hello_world">Hola Mundo!</string>
   </resources>
-  ```
+```
   
   复制
   
   *法语，res/values-fr/strings.xml*
   
-  ```xml
+```xml
   <resources>
      <string name="hello_world">Bonjour le monde !</string>
   </resources>
-  ```
+```
   
   复制
   
@@ -66,12 +66,12 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。
   
-  ```java
+```java
   package com.jc2182.demo;
   
   import android.app.Activity;
   import android.os.Bundle;
-  ```
+```
 
   public class MainActivity extends Activity {
 

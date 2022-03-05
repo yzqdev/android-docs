@@ -8,9 +8,9 @@
   
   补间动画采用一些参数，例如开始值，结束值，大小，持续时间，旋转角度等，并对该对象执行所需的动画。它可以应用于任何类型的对象。因此，为了使用此功能，Android为我们提供了一个名为Animation的类。为了在Android中执行动画，我们将调用AnimationUtils类的静态函数loadAnimation()。我们将在Animation 对象的实例中接收结果。它的语法如下-
   
-  ```java
+```java
   Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.myanimation);
-  ```
+```
   
   
   
@@ -26,10 +26,10 @@
   
   为了将此动画应用于对象，我们将只调用对象的**startAnimation()**方法。它的语法是-
   
-  ```java
+```java
   ImageView image1 = (ImageView)findViewById(R.id.imageView1);
   image.startAnimation(animation);
-  ```
+```
   
   
   

@@ -2,18 +2,18 @@
   
   您可以在Android中轻松控制铃声的音量和铃声配置文件，例如：（静音，振动，响亮等）。Android提供了AudioManager类，该类提供对这些控件的访问。为了使用**AndroidManager**类，您必须首先通过调用getSystemService()方法创建AudioManager类的对象。其语法如下。
   
-  ```java
+```java
   private AudioManager myAudioManager;
   myAudioManager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);  
-  ```
+```
   
   复制
   
   实例化AudioManager类的对象后，就可以使用setRingerMode方法设置设备的音频或铃声配置文件。其语法如下。
   
-  ```java
+```java
   myAudioManager.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
-  ```
+```
   
   复制
   
@@ -27,9 +27,9 @@
   
   设置模式后，可以调用getRingerMode()方法来获取系统的设置状态。其语法如下。
   
-  ```java
+```java
   int mod = myAudioManager.getRingerMode();
-  ```
+```
   
   复制
   
@@ -59,7 +59,7 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。
   
-  ```java
+```java
   package com.jc2182.demo;
   
   import android.app.Activity;
@@ -69,7 +69,7 @@
   import android.view.View;
   import android.widget.Button;
   import android.widget.Toast;
-  ```
+```
 
   public class MainActivity extends Activity {
       Button mode,ring,vibrate,silent;

@@ -2,7 +2,7 @@
   
   登录应用程序是询问您的凭据以登录某些特定应用程序的屏幕。登录微信，QQ，淘宝等时，您可能已经看到了本章介绍了如何创建登录屏幕以及在进行错误尝试时如何管理安全性。首先，您必须定义两个TextView询问用户名和用户密码。密码TextView必须将inputType设置为password。其语法如下-
   
-  ```xml
+```xml
   <EditText
      android:id = "@+id/editText2"
      android:layout_width = "wrap_content"
@@ -14,13 +14,13 @@
      android:layout_width = "wrap_content"
      android:layout_height = "wrap_content"
   />
-  ```
+```
   
   
   
   定义一个带有登录文本的按钮并设置其onClick属性。之后，定义java文件中onClick属性中提到的函数。
   
-  ```xml
+```xml
   <Button
      android:id = "@+id/button1"
      android:layout_width = "wrap_content"
@@ -28,13 +28,13 @@
      android:onClick = "login"
      android:text = "@string/Login" 
   />
-  ```
+```
   
   
   
   在java文件中，在onClick方法内部，使用getText()和toString()方法获取用户名和密码文本，并使用equals()函数将其与文本匹配。
   
-  ```java
+```java
   EditText username = (EditText)findViewById(R.id.editText1);
   EditText password = (EditText)findViewById(R.id.editText2);             
   
@@ -45,20 +45,20 @@
      }else{
      //验证错误处理
   }       
-  ```
+```
   
   
   
   您需要做的最后一件事是提供一种安全机制，以便避免不必要的尝试。为此，初始化变量，并在每次错误尝试时将其减小。当它达到0时，禁用登录按钮。
   
-  ```java
+```java
   int counter = 3;
   counter--;
   
   if(counter==0){
      //关闭按钮，关闭应用程序
   }
-  ```
+```
   
   
 

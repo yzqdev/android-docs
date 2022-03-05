@@ -18,14 +18,14 @@
   
   广播接收器实现为**BroadcastReceiver**类的子类，并且重写**onReceive()**方法，在该方法中，每个消息均作为**Intent**对象参数接收。
   
-  ```java
+```java
   public class MyReceiver extends BroadcastReceiver {
      @Override
      public void onReceive(Context context, Intent intent) {
         Toast.makeText(context, "Intent Detected.", Toast.LENGTH_LONG).show();
      }
   }
-  ```
+```
   
   
   
@@ -37,7 +37,7 @@
   
   ![service](https://www.jc2182.com/images/android/broadcastreceiver.jpg)
   
-  ```xml
+```xml
   <application
      android:icon="@drawable/ic_launcher"
      android:label="@string/app_name"
@@ -51,7 +51,7 @@
   
      </receiver>
   </application>
-  ```
+```
   
   
   
@@ -75,19 +75,19 @@
   
   如果您希望应用程序本身应生成并发送自定义意图，则必须使用Activity类中的sendBroadcast()方法来创建并发送这些意图(Indent)。如果您使用sendStickyBroadcast(Intent)方法，则该Intent是粘性的，这意味着您要发送的Intent在广播完成后仍然存在。
   
-  ```java
+```java
   public void broadcastIntent(View view) {
      Intent intent = new Intent();
      intent.setAction("com.jc2182.demo.CUSTOM_INTENT");
      sendBroadcast(intent);
   }
-  ```
+```
   
   
   
   这个意图com.jc2182.demo.CUSTOM_INTENT也可以通过类似于我们重新注册系统生成的意图的方式进行注册。
   
-  ```xml
+```xml
   <application
      android:icon="@drawable/ic_launcher"
      android:label="@string/app_name"
@@ -101,7 +101,7 @@
   
      </receiver>
   </application>
-  ```
+```
   
   
   
@@ -120,7 +120,7 @@
   
   以下是修改后的主要活动文件MainActivity.java的内容。该文件可以包括每个基本生命周期方法。我们添加了broadcastIntent()方法以广播自定义意图。
   
-  ```java
+```java
   package com.jc2182.helloworld;
   
   import androidx.appcompat.app.AppCompatActivity;
@@ -131,7 +131,7 @@
   import android.view.View;
   
   public class MainActivity extends AppCompatActivity {
-  ```
+```
   
 
 ```

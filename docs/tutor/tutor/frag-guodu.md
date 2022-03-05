@@ -19,7 +19,7 @@
   
   以下是包含TextView 的res.layout/activity_main.xml的内容
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <LinearLayout
       xmlns:android="http://schemas.android.com/apk/res/android"
@@ -40,13 +40,13 @@
           android:text="添加新片段" />
   
   </LinearLayout>
-  ```
+```
   
   复制
   
   以下是res/layout/fragment_stack.xml文件的内容。它包含框架布局和按钮
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
       android:orientation="vertical" android:layout_width="match_parent"
@@ -57,13 +57,13 @@
           android:layout_height="match_parent"
           android:gravity="center"/>
   </LinearLayout>
-  ```
+```
   
   复制
   
   以下是res/animator/fragment_slide_left_enter.xml文件的内容。它包含set和objectAnimator标签
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <set xmlns:android="http://schemas.android.com/apk/res/android">
       <objectAnimator
@@ -80,13 +80,13 @@
           android:propertyName="alpha"
           android:duration="@android:integer/config_mediumAnimTime" />
   </set>
-  ```
+```
   
   复制
   
   以下是res/animator/fragment_slide_left_exit.xml文件的内容。它包含set和objectAnimator标签。
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <set xmlns:android="http://schemas.android.com/apk/res/android">
       <objectAnimator
@@ -103,13 +103,13 @@
           android:propertyName="alpha"
           android:duration="@android:integer/config_mediumAnimTime" />
   </set>
-  ```
+```
   
   复制
   
   以下是res/animator/fragment_slide_right_enter.xml文件的内容。它包含set和objectAnimator标签
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <set xmlns:android="http://schemas.android.com/apk/res/android">
       <objectAnimator
@@ -126,13 +126,13 @@
           android:propertyName="alpha"
           android:duration="@android:integer/config_mediumAnimTime" />
   </set>
-  ```
+```
   
   复制
   
   以下是res/animator/fragment_slide_right_exit.xml文件的内容，其中包含set和objectAnimator标签
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <set xmlns:android="http://schemas.android.com/apk/res/android">
       <objectAnimator
@@ -149,13 +149,13 @@
           android:propertyName="alpha"
           android:duration="@android:integer/config_mediumAnimTime" />
   </set>
-  ```
+```
   
   复制
   
   以下代码将是src/main/java/MainActivity.java文件的内容。它包含按钮侦听器，堆栈片段和onCreateView
   
-  ```java
+```java
   package com.jc2182.helloworld;
   
   import android.app.Activity;
@@ -252,13 +252,13 @@
           }
       }
   }
-  ```
+```
   
   复制
   
   以下将是AndroidManifest.xml的内容
   
-  ```xml
+```xml
   <?xml version="1.0" encoding="utf-8"?>
   <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.jc2182.helloworld">
@@ -283,7 +283,7 @@
       </application>
   
   </manifest>
-  ```
+```
   
   复制
   

@@ -6,9 +6,9 @@
   
   您将使用**ACTION_CALL**操作来触发Android设备中可用的内置电话功能。以下是使用**ACTION_CALL**动作创建意图的简单语法
   
-  ```java
+```java
   Intent phoneIntent = new Intent(Intent.ACTION_CALL);
-  ```
+```
   
   复制
   
@@ -18,9 +18,9 @@
   
   要拨打给定号码91-000-000-0000的电话，您需要使用setData()方法将tel：指定为URI，如下所示-
   
-  ```java
+```java
   phoneIntent.setData(Uri.parse("tel:91-000-000-0000"));
-  ```
+```
   
   复制
   

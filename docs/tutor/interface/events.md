@@ -50,15 +50,15 @@
   - **isFocusable()** - 返回true或false
   - **isFocusableInTouchMode()** -检查在触摸模式下视图是否可聚焦。（使用硬件键时，视图可能是可聚焦的，但设备处于触摸模式时则不能。）
   
-  ```xml
+```xml
   android:foucsUp="@=id/button_l"
-  ```
+```
   
   复制
   
   *onTouchEvent()*
   
-  ```java
+```java
   public boolean onTouchEvent(motionEvent event){
      switch(event.getAction()){
         case TOUCH_DOWN:
@@ -75,7 +75,7 @@
      }
      return super.onTouchEvent(event) ;
   }
-  ```
+```
   
   复制
   
@@ -92,7 +92,7 @@
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。
   
-  ```java
+```java
   package com.jc2182.demo;
   
   import android.app.Activity;
@@ -101,7 +101,7 @@
   import android.view.View;
   import android.widget.Button;
   import android.widget.TextView;
-  ```
+```
   
 
 public class MainActivity extends Activity {

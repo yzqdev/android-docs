@@ -10,32 +10,32 @@
   
   Android提供了**SensorManager**和**Sensor**类，以在我们的应用程序中使用传感器。为了使用传感器，您需要做的第一件事是实例化**SensorManager**类的对象。可以如下实现。
   
-  ```java
+```java
   SensorManager sMgr;
   sMgr = (SensorManager)this.getSystemService(SENSOR_SERVICE);
-  ```
+```
   
   复制
   
   接下来需要做的是通过调用SensorManager类的getDefaultSensor()方法来实例化Sensor类的对象。其语法如下-
   
-  ```java
+```java
   Sensor light;
   light = sMgr.getDefaultSensor(Sensor.TYPE_LIGHT);
-  ```
+```
   
   复制
   
   声明该传感器后，您需要注册其侦听器并重写onAccuracyChanged和onSensorChanged这两个方法。它的语法如下-
   
-  ```java
+```java
   sMgr.registerListener(this, light,SensorManager.SENSOR_DELAY_NORMAL);
   public void onAccuracyChanged(Sensor sensor, int accuracy) {
   }
   
   public void onSensorChanged(SensorEvent event) {
   }
-  ```
+```
   
   复制
 
@@ -45,12 +45,12 @@
   
   您可以通过调用getSensorList方法获取设备支持的传感器列表，该方法将返回包含传感器名称和版本号以及更多信的传感器列表。然后，您可以遍历列表以获取信息。其语法如下-
   
-  ```java
+```java
   sMgr = (SensorManager)this.getSystemService(SENSOR_SERVICE);
   List<Sensor> list = sMgr.getSensorList(Sensor.TYPE_ALL);
   for(Sensor sensor: list){
   }
-  ```
+```
   
   复制
   

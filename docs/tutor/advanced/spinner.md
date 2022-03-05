@@ -2,32 +2,32 @@
   
   您可以通过加载进度条在android中显示任务的进度。进度条有两种形状。加载栏和加载微调器。在本章中，我们将讨论微调器。微调框用于显示总完成时间未知的那些任务的进度。为了使用它，您只需要像这样在xml中定义它。
   
-  ```xml
+```xml
   <ProgressBar
      android:id="@+id/progressBar1"
      style="?android:attr/progressBarStyleLarge"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:layout_centerHorizontal="true" />
-  ```
+```
   
   复制
   
   在xml中定义它之后，您必须通过ProgressBar类在java文件中获取它的引用。其语法如下-
   
-  ```java
+```java
   private ProgressBar spinner;
   spinner = (ProgressBar)findViewById(R.id.progressBar1);
-  ```
+```
   
   复制
   
   之后，您可以使其消失，并在需要时通过setVisibility方法将其恢复。其语法如下-
   
-  ```java
+```java
   spinner.setVisibility(View.GONE);
   spinner.setVisibility(View.VISIBLE);
-  ```
+```
   
   复制
   
