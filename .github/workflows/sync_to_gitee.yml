@@ -15,6 +15,6 @@ jobs:
       - name: sync-gitee-mirror
         uses: abersheeran/sync-gitee-mirror@v1-beta
         with:
-          repository: abersheeran/sync-gitee-mirror
+          repository: yzqdev/android-docs
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
