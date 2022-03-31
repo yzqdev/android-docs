@@ -6,6 +6,7 @@ import { navbar } from "./navbar";
 import { sidebar } from "./sidebar";
 export default defineHopeConfig({
     base: "/android-docs/",
+    dest: "./dist",
     locales: {
         "/": {
             // 设置正在使用的语言

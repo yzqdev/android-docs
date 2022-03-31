@@ -6,6 +6,7 @@ export const sidebar = {
             text: "指南",
             collapsable: true,
             children: [
+                "/tutor/tutor/README.md",
                 "/tutor/tutor/application.md",
                 "/tutor/tutor/helloworld.md",
 
