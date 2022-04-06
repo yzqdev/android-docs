@@ -5,6 +5,8 @@
     "docs:dev": "vuepress dev docs  "
   },
   "devDependencies": {
+
+
     "@vuepress/plugin-register-components": "next",
     "@vuepress/plugin-search": "next",
     "vuepress": "next"
