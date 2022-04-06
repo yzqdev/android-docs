@@ -5,12 +5,11 @@
     "docs:dev": "vuepress dev docs  "
   },
   "devDependencies": {
-    "@vuepress/plugin-git": "^2.0.0-beta.36",
-    "@vuepress/plugin-register-components": "^2.0.0-beta.35",
-    "@vuepress/plugin-search": "^2.0.0-beta.35",
-    "vuepress": "^2.0.0-beta.36"
+    "@vuepress/plugin-register-components": "next",
+    "@vuepress/plugin-search": "next",
+    "vuepress": "next"
   },
   "dependencies": {
-    "vuepress-theme-hope": "^2.0.0-beta.24"
+    "vuepress-theme-hope": "next"
   }
 }
