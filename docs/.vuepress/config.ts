@@ -19,20 +19,11 @@ export default defineHopeConfig({
             "link",
             {
                 rel: "icon",
-                type: "image/png",
-                sizes: "16x16",
-                href: `/images/logo.png`,
+
+                href: `/images/android.svg`,
             },
         ],
-        [
-            "link",
-            {
-                rel: "icon",
-                type: "image/png",
-                sizes: "32x32",
-                href: `/images/logo.png`,
-            },
-        ],
+
         [
             "link",
             {
@@ -55,7 +46,7 @@ export default defineHopeConfig({
     // site-level locales config
 
     lang: "zh-CN",
-    title: "android-tutor",
+    title: "安卓学习笔记",
     description: "A simple android tutorial",
 
     themeConfig: themeConfig,
@@ -109,13 +100,5 @@ export default defineHopeConfig({
                 },
             },
         ],
-
-        [
-            "@vuepress/plugin-register-components",
-            {
-                componentsDir: path.resolve(__dirname, "./components"),
-            },
-        ],
-        // only enable shiki plugin in production mode
     ],
 });

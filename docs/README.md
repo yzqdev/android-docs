@@ -1,7 +1,7 @@
 ---
 home: true
 title: 首页
-heroImage: /images/hero.png
+heroImage: /images/android.png
 actions:
   - text: 快速上手
     link: /tutor/
@@ -32,7 +32,10 @@ features:
     details: 一个简单的安卓教程
     icon: android
     link: https://yzqdev.github.io/android-docs
-  
+  - title: 网道教程
+    details: 互联网技术教程
+    icon: android
+    link: https://yzqbooks.github.io/wangdoc
 footer: MIT Licensed | Copyright © 2022-present yzqdev
 ---
 ## 🛠开始

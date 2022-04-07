@@ -3,7 +3,7 @@ import { navbar } from "./navbar";
 import { sidebar } from "./sidebar";
 
 export default defineThemeConfig({
-    logo: "/images/hero.png",
+    logo: "/images/android.svg",
 
     repo: "yzqbooks/android-docs",
 

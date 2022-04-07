@@ -15,7 +15,8 @@ export const navbar = [
     },
     {
         text: "hack",
+        icon: "operate",
         activeMatch: "^/hack/",
-        link: "/hack/readme.md",
+        link: "/hack/",
     },
 ];

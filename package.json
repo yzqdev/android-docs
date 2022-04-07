@@ -1,12 +1,14 @@
 {
+  "name": "android-tutor",
+  "version": "1.0.0",
+  "description": "pc documents",
+  "license": "MIT",
   "scripts": {
     "docs:build": "vuepress build docs",
     "docs:clean-dev": "vuepress dev docs --clean-cache",
     "docs:dev": "vuepress dev docs  "
   },
   "devDependencies": {
-
-
     "@vuepress/plugin-register-components": "next",
     "@vuepress/plugin-search": "next",
     "vuepress": "next"
