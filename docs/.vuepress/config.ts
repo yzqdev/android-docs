@@ -20,7 +20,7 @@ export default defineHopeConfig({
             {
                 rel: "icon",
 
-                href: `/images/android.svg`,
+                href: `/android-docs/images/android.svg`,
             },
         ],
 
