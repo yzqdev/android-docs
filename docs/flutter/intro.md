@@ -45,13 +45,29 @@ flutter build windows
 flutter build web
 # 升级flutter
 flutter upgrade
-# 加入flutter linux支持
+# 加入flutter windows支持
+flutter create --platforms=windows
 flutter config --enable-windows-desktop 
 flutter config --enable-linux-desktop
 # 查看设备
 flutter devices
 # 查看是否有问题
 flutter doctor
+```
+
+## 依赖管理
+
+```shell
+flutter pub get
+# pub get命令
+
+# 用于检索当前 Package 所依赖的其它 Package。如果 pubspec.lock 文件已经存在，则根据该文件中保存的依赖项版本获取对应的依赖项。如有必要，将会创建或更新该文件。
+flutter pu outdated
+# pub outdated命令
+# 查看当前软件包所依赖的每个 package，确定哪些 package 的依赖项已过时，并为您提供有关如何更新它们的建议。当您要更新 package 的依赖性时，请使用此命令。
+flutter pub upgrade
+# pub upgrade命令
+# 用于检索当前 Package 所依赖的其它 Package 的最新版本。如果 pubspec.lock 文件已经存在，则忽略其保存的版本并以 pubspec 文件中指定的最新版本为主。如有必要，将会创建或更新该文件。
 ```
 
 ## 注意事项
