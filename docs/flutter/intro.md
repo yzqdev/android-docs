@@ -57,6 +57,16 @@ flutter doctor
 
 ## 依赖管理
 
+安装插件(from github)
+
+```yml
+  window_size:
+    git:
+      url: https://github.com/google/flutter-desktop-embedding.git
+      path: plugins/window_size
+      ref: "master"
+```
+
 ```shell
 flutter pub get
 # pub get命令
