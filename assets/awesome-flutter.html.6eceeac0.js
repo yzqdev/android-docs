@@ -1,1 +1,0 @@
-const e={key:"v-b1f0221a",path:"/flutter/awesome-flutter.html",title:"awesome-flutter",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{createdTime:1650296761e3,updatedTime:1650296761e3,contributors:[{name:"yzqdev",email:"yzqdev@outlook.com",commits:1}]},readingTime:{minutes:.1,words:29},filePathRelative:"flutter/awesome-flutter.md"};export{e as data};
