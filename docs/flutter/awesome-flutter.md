@@ -9,6 +9,7 @@ flutter中文教程
 
 - dio(网络请求)
 - [json_serializable](https://pub.flutter-io.cn/packages/json_serializable)
+- [file_selector](https://pub.flutter-io.cn/packages/file_selector)
 
 ### ui库
 
@@ -23,3 +24,4 @@ flutter中文教程
 
 [https://flutterawesome.com/](https://flutterawesome.com/)
 [https://github.com/leanflutter](https://github.com/leanflutter)
+[https://flutter.github.io/samples/#](https://flutter.github.io/samples/#)
