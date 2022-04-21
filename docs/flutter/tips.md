@@ -33,3 +33,12 @@
 ### 其他方式
 
 可以使用Xcode打开ios文件夹下的`Runner.xcworkspace`项目，像原生项目一样修改。
+
+## 查看数据库和shared_references
+
+> 查看数据库
+
+点在android studio下面的`App Inspecttion`,找到连接的设备就可以看到sqlite数据库
+![图片](./img/database.png)
+
+点开android studio右侧的`Device File Explorer`,找到 `data => data => 包名`,下面有一个`shared_prefs`文件夹,就是shared_preference数据

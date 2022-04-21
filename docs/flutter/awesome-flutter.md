@@ -10,6 +10,7 @@ flutter中文教程
 - dio(网络请求)
 - [json_serializable](https://pub.flutter-io.cn/packages/json_serializable)
 - [file_selector](https://pub.flutter-io.cn/packages/file_selector)
+- bloc  [bloc8用法](https://github.com/felangel/bloc/issues/2526)
 
 ### ui库
 

@@ -45,10 +45,10 @@ flutter build windows
 flutter build web
 # 升级flutter
 flutter upgrade
-# 加入flutter windows支持
-flutter create --platforms=windows
-flutter config --enable-windows-desktop 
-flutter config --enable-linux-desktop
+# 加入flutter windows支持(注意最后一个点)
+flutter create --platforms=windows .
+flutter config --enable-windows-desktop . 
+flutter config --enable-linux-desktop .
 # 查看设备
 flutter devices
 # 查看是否有问题
