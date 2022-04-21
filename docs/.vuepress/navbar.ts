@@ -1,6 +1,6 @@
-import type { NavbarConfig } from "@vuepress/theme-default";
+import { defineNavbarConfig } from "vuepress-theme-hope";
 
-export const navbar = [
+export const navbar = defineNavbarConfig([
     {
         text: "指南",
         icon: "creative",
@@ -19,4 +19,10 @@ export const navbar = [
         activeMatch: "^/hack/",
         link: "/hack/",
     },
-];
+    {
+        text: "flutter",
+        icon: "stack",
+        activeMatch: "^/flutter/",
+        link: "/flutter/",
+    },
+]);

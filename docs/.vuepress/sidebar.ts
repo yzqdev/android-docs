@@ -1,6 +1,6 @@
-import type { SidebarConfig } from "@vuepress/theme-default";
+import { defineSidebarConfig } from "vuepress-theme-hope";
 
-export const sidebar = {
+export const sidebar = defineSidebarConfig({
     "/tutor/": [
         {
             text: "指南",
@@ -83,4 +83,5 @@ export const sidebar = {
             children: ["/hack/phone-flash.md"],
         },
     ],
-};
+    "/flutter/": "structure",
+});
