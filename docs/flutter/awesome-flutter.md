@@ -11,6 +11,8 @@ flutter中文教程
 - [json_serializable](https://pub.flutter-io.cn/packages/json_serializable)
 - [file_selector](https://pub.flutter-io.cn/packages/file_selector)
 - bloc  [bloc8用法](https://github.com/felangel/bloc/issues/2526)
+- 一个很多好用的库 [https://github.com/leanflutter](https://github.com/leanflutter)
+- [https://pub.flutter-io.cn/publishers/mixin.dev/packages](https://pub.flutter-io.cn/publishers/mixin.dev/packages)
 
 ### ui库
 
