@@ -13,6 +13,12 @@ flutter中文教程
 - bloc  [bloc8用法](https://github.com/felangel/bloc/issues/2526)
 - 一个很多好用的库 [https://github.com/leanflutter](https://github.com/leanflutter)
 - [https://pub.flutter-io.cn/publishers/mixin.dev/packages](https://pub.flutter-io.cn/publishers/mixin.dev/packages)
+- [判断更新](https://github.com/xuexiangjys/flutter_xupdate)
+- [https://pub.flutter-io.cn/packages/permission_handler](https://pub.flutter-io.cn/packages/permission_handler)
+- [https://www.baseflow.com/open-source/flutter](https://www.baseflow.com/open-source/flutter)
+- [百度地图](https://pub.flutter-io.cn/packages/flutter_bmflocation)
+- [高德地图](https://pub.flutter-io.cn/packages/amap_flutter_location)
+- [通知](https://pub.flutter-io.cn/packages/flutter_local_notifications)
 
 ### ui库
 
