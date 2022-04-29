@@ -19,6 +19,7 @@ flutter中文教程
 - [百度地图](https://pub.flutter-io.cn/packages/flutter_bmflocation)
 - [高德地图](https://pub.flutter-io.cn/packages/amap_flutter_location)
 - [通知](https://pub.flutter-io.cn/packages/flutter_local_notifications)
+- [命令行参数](https://pub.flutter-io.cn/packages/args)
 
 ### ui库
 
