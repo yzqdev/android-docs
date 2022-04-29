@@ -32,6 +32,6 @@ flutter中文教程
 
 ## 一些文档
 
-[https://flutterawesome.com/](https://flutterawesome.com/)
-[https://github.com/leanflutter](https://github.com/leanflutter)
-[https://flutter.github.io/samples/#](https://flutter.github.io/samples/#)
+- [https://flutterawesome.com/](https://flutterawesome.com/)
+- [https://github.com/leanflutter](https://github.com/leanflutter)
+- [https://flutter.github.io/samples/#](https://flutter.github.io/samples/#)
