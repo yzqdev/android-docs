@@ -3,7 +3,7 @@ import { defineClientAppEnhance } from "@vuepress/client";
 import hope from "vuepress-theme-hope/package.json";
 import vuePkg from "vue/package.json";
 import search from "@vuepress/plugin-search/package.json";
-import vp from "vuepress-vite/package.json";
+import vp from "vuepress/package.json";
 function showBadge(name, version, nameStyle, versionStyle) {
     console.log(
         "%c ".concat(name, " %c ").concat(version, " "),
