@@ -1,6 +1,6 @@
-import { defineSidebarConfig } from "vuepress-theme-hope";
+import {  sidebar} from "vuepress-theme-hope";
 
-export const sidebar = defineSidebarConfig({
+export default sidebar({
     "/tutor/": [
         {
             text: "指南",
