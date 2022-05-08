@@ -34,8 +34,12 @@ features:
     link: https://yzqdev.github.io/android-docs
   - title: 网道教程
     details: 互联网技术教程
-    icon: android
+    icon: document
     link: https://yzqbooks.github.io/wangdoc
+  - title: cg教程
+    details: cg教程
+    icon: document
+    link: https://yzqdev.github.io/cg-tutor
 footer: MIT Licensed | Copyright © 2022-present yzqdev
 ---
 ## 🛠开始

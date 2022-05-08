@@ -20,3 +20,4 @@ yarn  docs:build
 - [nodejs教程](https://yzqdev.github.io/node-tutor)
 - [网道教程](https://yzqbooks.github.io/wangdoc)
 - [安卓教程](https://yzqdev.github.io/android-docs)
+- [cg教程](https://yzqdev.github.io/cg-tutor)
