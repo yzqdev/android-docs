@@ -61,63 +61,6 @@
 
 定义好标准后，第三方库做的无非就是定义一些widget wrapper，(包装类)。一些定义设置值得方法。仅此而已。
 
-## 获取文件的md5
-
-js
-
-```js
-const path = require('path');
-const fs = require('fs');
-const crypto = require('crypto');
-const buffer = fs.readFileSync(path.join(__dirname, 'app.apk'));
-const hash = crypto.createHash('md5');
-hash.update(buffer, 'utf8');
-const md5 = hash.digest('hex');
-console.log(md5);
-```
-
-dart
-
-```powershell
-运行
-dart run bin\md5.dart
-编译exe
-dart compile exe bin\md5.dart
-```
-
-```dart
-import 'dart:io';
-import 'package:crypto/crypto.dart' as crypto;
-import 'dart:typed_data';
-
-bool isPhone(String input) {
-  RegExp pathReg = RegExp(r"\.\\");
-  return pathReg.hasMatch(input);
-}
-
-void main(List<String> arguments) async {
-
-  var filePath = arguments[0] ;
-  if(isPhone(filePath)){
-    filePath=arguments[0].substring(2);
-
-  }
-  print(filePath);
-  File file = File(filePath);
-
-  try {
-    final fileStream = file.openRead();
-    var md5 = crypto.md5;
-    final checksum = (await md5.bind(fileStream).first).toString();
-    print(checksum);
-  } catch (e) {
-    print(e);
-    print("找不到文件");
-  }
-}
-
-```
-
 ## app更新
 
 使用[https://github.com/xuexiangjys/flutter_xupdate](https://github.com/xuexiangjys/flutter_xupdate)
@@ -205,7 +148,7 @@ void initXUpdate() {
       updateMessage('ios暂不支持XUpdate更新');
     }
   }
-  ```
+```
 
 ## flutter瘦身
 
