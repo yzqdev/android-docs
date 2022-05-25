@@ -1,7 +1,7 @@
 import { defineUserConfig } from "@vuepress/cli";
 
 import theme from "./themeConfig";
-import {searchPlugin} from "@vuepress/plugin-search";
+import SearchPlugin from "vuepress2-plugin-full-text-search";
 export default defineUserConfig({
     base: "/android-docs/",
     dest: "./dist",
@@ -42,16 +42,12 @@ export default defineUserConfig({
     theme: theme,
 
     plugins: [
-        searchPlugin(
-
-            {
-                locales: {
-                    "/": {
-                        placeholder: "搜索文档",
-                    },
+        SearchPlugin({
+            locales: {
+                "/": {
+                    placeholder: "搜索文档",
                 },
             },
-        )
-
+        }),
     ],
 });
