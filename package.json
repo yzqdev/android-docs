@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "vuepress": "next",
-    "vuepress2-plugin-full-text-search": "^0.2.0",
+    "vuepress2-plugin-full-text-search": "latest",
     "vuepress-theme-hope": "next"
   }
 }
