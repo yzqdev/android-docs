@@ -29,7 +29,7 @@
   </resources>
 ```
   
-  复制
+  
   
   > `<item>`的值可以是关键字字符串，十六进制颜色，对另一种资源类型的引用或其他值，具体取决于style属性。
   
@@ -54,7 +54,7 @@
   </LinearLayout>
 ```
   
-  复制
+  
   
   [查看安卓样式示例](https://www.jc2182.com/andriod/andriod-style-example.html)
   
@@ -74,7 +74,7 @@
   </resources>
 ```
   
-  复制
+  
   
   在您的AndroidManifest.xml中，将主题应用于您要设置样式的活动-
   
@@ -86,7 +86,7 @@
      />
 ```
   
-  复制
+  
   
   您的新主题将应用于您的活动，并且文本现在变为鲜红色。
   
@@ -109,7 +109,7 @@
   </resources>
 ```
   
-  复制
+  
   
 
   
@@ -135,7 +135,7 @@
   </resources>
 ```
   
-  复制
+  
   
   套用主题
   
@@ -150,7 +150,7 @@
   </resources>
 ```
   
-  复制
+  
   
 
   
@@ -162,7 +162,7 @@
   <application android:theme="@style/CustomFontStyle">
 ```
   
-  复制
+  
   
   但是，如果要将主题仅应用到应用程序中的一个Activity，则将android：theme属性仅添加到`<activity>`标签。例如-
   
@@ -170,7 +170,7 @@
   <activity android:theme="@style/CustomFontStyle">
 ```
   
-  复制
+  
   
   Android定义了许多默认主题，您可以直接使用它们，也可以使用parent属性继承它们，如下所示：
   
@@ -180,7 +180,7 @@
   </style>
 ```
   
-  复制
+  
   
   要了解与Android主题相关的概念，可以查看[主题演示示例](https://www.jc2182.com/andriod/andriod-theme-example.html)。
   
@@ -204,7 +204,7 @@
   <resource>
 ```
   
-  复制
+  
   
 
   

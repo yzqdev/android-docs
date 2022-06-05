@@ -7,7 +7,7 @@
   AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 ```
   
-  复制
+  
   
   现在，您必须使用AlertDialogBu​​ilder类的对象设置正（是）或负（否）按钮。它的语法是
   
@@ -18,7 +18,7 @@
      DialogInterface.OnClickListener listener)
 ```
   
-  复制
+  
   
   除此之外，您还可以使用builder类提供的其他功能来自定义警报对话框。这些在下面列出
   
@@ -38,7 +38,7 @@
   alertDialog.show();
 ```
   
-  复制
+  
   
   这将创建警报对话框，并将其显示在屏幕上。
   
@@ -70,7 +70,7 @@
   }
 ```
   
-  复制
+  
   
 
   
@@ -90,7 +90,7 @@
   }
 ```
   
-  复制
+  
   
 
   
@@ -141,7 +141,7 @@
   }
 ```
   
-  复制
+  
   
 
   
@@ -201,7 +201,7 @@ public class MainActivity extends Activity {
 }
 
 ```
-复制
+
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -259,7 +259,7 @@ public class MainActivity extends Activity {
 </RelativeLayout>
 ````
 
-复制
+
 
 让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

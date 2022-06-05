@@ -33,8 +33,6 @@ dependencies:
   package_info: ^0.4.3+4
 ```
 
-复制
-
 在pubspec.yaml中配置保存后，在VS Code环境中会自动下载依赖包。
 
 如果无法正常下载，执行 flutter pub get 。
@@ -61,8 +59,6 @@ print("version:${version}");
 print("buildNumber:${buildNumber}");
 ```
 
-复制
-
 ### 4. 获取[文件存储](https://cloud.tencent.com/product/cfs?from=10680)路径
 
 <https://pub.flutter-io.cn/packages/path_provider>
@@ -73,8 +69,6 @@ print("buildNumber:${buildNumber}");
 dependencies:
   path_provider: ^1.6.27
 ```
-
-复制
 
 在pubspec.yaml中配置保存后，在VS Code环境中会自动下载依赖包。
 
@@ -103,8 +97,6 @@ print("appDocDir:${appDocPath}");
 print("StorageDirectory:${storageDirectory}");
 ```
 
-复制
-
 ### 5. 文件下载
 
 <https://pub.flutter-io.cn/packages/flutter_downloader>
@@ -115,8 +107,6 @@ print("StorageDirectory:${storageDirectory}");
 dependencies:
   flutter_downloader: ^1.5.2
 ```
-
-复制
 
 在pubspec.yaml中配置保存后，在VS Code环境中会自动下载依赖包。
 
@@ -135,8 +125,6 @@ dependencies:
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 ```
-
-复制
 
 其它配置：
 
@@ -171,8 +159,6 @@ dependencies:
 </provider>
 ```
 
-复制
-
 \3. 引入并使用
 
 ```javascript
@@ -203,8 +189,6 @@ FlutterDownloader.registerCallback((id, status, progress){
 });
 ```
 
-复制
-
 ### 6.  打开文件
 
 <https://pub.flutter-io.cn/packages/open_file>
@@ -215,8 +199,6 @@ FlutterDownloader.registerCallback((id, status, progress){
 dependencies:
   open_file: ^3.0.3
 ```
-
-复制
 
 在pubspec.yaml中配置保存后，在VS Code环境中会自动下载依赖包。
 
@@ -238,8 +220,6 @@ String _localPath = directory.path;
 OpenFile.open("${_localPath}/shop.apk");
 ```
 
-复制
-
 ### 7. 替换版本
 
 安装包下载安装后，默认会生成一个新的版本，并不会覆盖原有的应用程序，为此，需要提前做一些版本号的配置。
@@ -257,8 +237,6 @@ OpenFile.open("${_localPath}/shop.apk");
 </manifest>
 ```
 
-复制
-
 上面的代码在打包时，注意事项如下：
 
 \1. package的值不能变，即包名不能变；
@@ -273,8 +251,6 @@ OpenFile.open("${_localPath}/shop.apk");
 # pubspec.yaml
 version: 0.0.2+2
 ```
-
-复制
 
 上面的代码中0.0.2对应的是android:versionName的值，+2对应的是android:versionCode的值。
 

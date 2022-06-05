@@ -6,9 +6,7 @@
   
   要查看通知的详细信息，您将必须选择图标，该图标将显示包含有关通知的详细信息的通知面板。在虚拟设备上使用模拟器时，您必须单击屏幕顶部并向下拖动状态栏以展开它，这将为您提供以下详细信息。这将只有64 dp高，称为正常视图。
   
-
-  
-  ## 创建和发送通知
+## 创建和发送通知
   
   您可以通过简单的方法来创建通知。在您的应用程序中按照以下步骤创建通知
   
@@ -20,16 +18,14 @@
    Notification.Builder builder = new Notification.Builder(this);
 ```
   
-  复制
-  
   *第2步-设置通知属性*
   
   拥有**Builder**对象后，可以根据需要使用**Builder**对象设置其**Notification**属性。但这是强制性的，至少应设置-
   
-  - 一个小图标，由**setSmallIcon()**设置
-  - 标题，由**setContentTitle()**设置
-  - 详细信息文本，由**setContentText()**设置
-  - .............
+- 一个小图标，由**setSmallIcon()**设置
+- 标题，由**setContentTitle()**设置
+- 详细信息文本，由**setContentText()**设置
+- .............
   
 ```java
   builder.setContentInfo("内容信息")
@@ -41,8 +37,6 @@
                   .setTicker("滚动消息......")
                   .setWhen(System.currentTimeMillis());//设置通知时间，默认为系统发出通知的时间，通常不用设置
 ```
-  
-  复制
   
   您有很多可选属性，可以为通知设置。要了解有关它们的更多信息，请参阅**Notification.Builder**的参考文档。
   
@@ -56,11 +50,7 @@
   manager.notify(NOTIFICATION_ID,n);
 ```
   
-  复制
-  
-
-  
-  ## NotificationCompat.Builder类
+## NotificationCompat.Builder类
   
   **NotificationCompat.Builder**类可让您更轻松地控制所有标志，并有助于构造典型的通知布局。以下是一些作为**NotificationCompat.Builder**类的一部分可用的重要且最常用的方法。
   
@@ -83,9 +73,7 @@
   | **NotificationCompat.Builder setVibrate (long[] pattern)**               | 设置要使用的振动模式。                                             |
   | **NotificationCompat.Builder setWhen (long when)**                       | 设置事件发生的时间。面板中的通知此时已排序。                       |
   
-
-  
-  ## 通知示例演示
+## 通知示例演示
   
   1. 您将使用Android Studio IDE创建一个Android应用程序，并在com.example.demo包下将其命名为Demo。
   2. 修改src/MainActivity.java文件并添加一些组件
@@ -162,7 +150,6 @@ public class MainActivity extends Activity {
 }
 
 ```
-复制
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -214,8 +201,6 @@ public class MainActivity extends Activity {
 
 </RelativeLayout>
 ````
-
-复制
 
 让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

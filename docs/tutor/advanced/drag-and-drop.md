@@ -68,7 +68,7 @@
   
   1. 您将使用Android Studio IDE创建一个Android应用程序，并在com.example.demo包下将其命名为Demo。
   2. 修改src/MainActivity.java文件并添加代码以定义事件侦听器，以及示例中使用的徽标图像的回调方法。
-  3. 将图像logo.png复制到res/drawable-*文件夹中。如果要为不同的设备提供图像，则可以使用不同分辨率的图像。
+  3. 将图像logo.png到res/drawable-*文件夹中。如果要为不同的设备提供图像，则可以使用不同分辨率的图像。
   4. 修改布局XML文件res/layout / activity_main.xml来定义徽标图像的默认视图。
   5. 运行该应用程序以启动Android模拟器并验证在该应用程序中所做更改的结果。
   
@@ -198,7 +198,7 @@ public class MainActivity extends Activity {
 }
 
 ```
-复制
+
 
 以下是res/layout/activity_main.xml文件的内容-
 ```xml
@@ -251,7 +251,7 @@ public class MainActivity extends Activity {
 </RelativeLayout>
 ```
 
-复制
+
 
 让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

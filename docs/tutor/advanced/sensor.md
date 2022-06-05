@@ -2,9 +2,9 @@
   
   大多数android设备都有内置的传感器，可以测量运动，方向和各种环境条件。android平台支持三大类传感器。
   
-  - 运动传感器
-  - 环境传感器
-  - 位置传感器
+- 运动传感器
+- 环境传感器
+- 位置传感器
   
   有些传感器是基于硬件的传感器，有些是基于软件的传感器。无论传感器是什么，android都允许我们从这些传感器获取原始数据，并将其用于我们的应用程序中。为此，android为我们提供了一些类。
   
@@ -15,16 +15,12 @@
   sMgr = (SensorManager)this.getSystemService(SENSOR_SERVICE);
 ```
   
-  复制
-  
   接下来需要做的是通过调用SensorManager类的getDefaultSensor()方法来实例化Sensor类的对象。其语法如下-
   
 ```java
   Sensor light;
   light = sMgr.getDefaultSensor(Sensor.TYPE_LIGHT);
 ```
-  
-  复制
   
   声明该传感器后，您需要注册其侦听器并重写onAccuracyChanged和onSensorChanged这两个方法。它的语法如下-
   
@@ -37,11 +33,7 @@
   }
 ```
   
-  复制
-
-
-  
-  ## 获取支持的传感器列表
+## 获取支持的传感器列表
   
   您可以通过调用getSensorList方法获取设备支持的传感器列表，该方法将返回包含传感器名称和版本号以及更多信的传感器列表。然后，您可以遍历列表以获取信息。其语法如下-
   
@@ -51,8 +43,6 @@
   for(Sensor sensor: list){
   }
 ```
-  
-  复制
   
   除了这些方法之外，SensorManager类还提供了其他方法来管理传感器框架。这些方法在下面列出-
   
@@ -67,9 +57,7 @@
   | **getOrientation(float[] R, float[] values)**                        | 此方法根据旋转矩阵计算设备的方向。                     |
   | **getAltitude(float p0, float p)**                                   | 此方法从大气压力和海平面压力计算以米为单位的海拔高度。 |
 
-
-  
-  ## 示例
+## 示例
   
   本示例演示了进度对话框的旋转用法。按下按钮时将显示旋转进度对话框。 要尝试使用此示例，您需要在按照以下步骤开发应用程序后，在实际设备上运行此示例。
   
@@ -117,7 +105,6 @@
   }
 
 ```
-复制
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -172,8 +159,6 @@
 
 </RelativeLayout>
 ```
-
-  复制
 
   让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

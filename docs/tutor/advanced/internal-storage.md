@@ -2,17 +2,13 @@
   
   Android为应用程序提供了多种存储方式来存储其数据。这些存储位置是共享首选项，内部和外部存储，SQLite存储以及通过网络连接的存储。在本章中，我们将研究内部存储。内部存储是私有数据在设备存储器上的存储。默认情况下，这些文件是应用程序私有文件，仅当您删除应用程序时，您的应用程序才能访问它们并删除它们。
 
-
-  
-  ## 写文件
+## 写文件
   
   为了使用内部存储在文件中写入一些数据，请使用文件名和模式调用openFileOutput()方法。该模式可以是private，public等，其语法如下-
   
 ```java
   FileOutputStream fOut = openFileOutput("file name here",MODE_WORLD_READABLE);
 ```
-  
-  复制
   
   方法openFileOutput()返回FileOutputStream的实例。因此，您可以在FileInputStream对象中接收它。之后，您可以调用write方法在文件上写入数据。其语法如下-
   
@@ -22,19 +18,13 @@
   fOut.close();
 ```
   
-  复制
-
-
-  
-  ## 读取文件
+## 读取文件
   
   为了从刚刚创建的文件中读取，请使用文件名调用openFileInput()方法。它返回FileInputStream的实例。其语法如下-
   
 ```java
   FileInputStream fin = openFileInput(file);
 ```
-  
-  复制
   
   之后，您可以调用read方法从文件中一次读取一个字符，然后进行打印。其语法如下-
   
@@ -49,8 +39,6 @@
   fin.close();
 ```
   
-  复制
-  
   除了write和close方法外，FileOutputStream类还提供了其他方法来更好地写入和读取文件。这些方法在下面列出-
   
   | 方法                                                    | 说明                                                                    |
@@ -64,9 +52,7 @@
   | **getFD()**                                             | 此方法返回基础文件描述符                                                |
   | **read(byte[] buffer, int byteOffset, int byteCount)**  | 此方法从此流中读取最大长度的字节，并将其存储在从offset开始的字节数组b中 |
 
-
-  
-  ## 示例
+## 示例
   
   这是一个示例，演示了如何使用内部存储来存储和读取文件。它创建一个基本的存储应用程序，使您可以从内部存储读取和写入。要试验该示例，您可以在实际设备或仿真器上运行它。
   
@@ -239,8 +225,6 @@
 
 </RelativeLayout>
 ```
-
-  复制
 
   让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

@@ -8,7 +8,7 @@
   
   为了对应用程序中使用的字符串进行本地化，请在re下创建一个新文件夹，名称为values-local，其中local将替换为该区域。例如，在意大利，values-it文件夹将在res下创建。
   
-  创建完该文件夹后，将strings.xml从默认文件夹复制到您创建的文件夹中。并更改其内容。例如，我更改了hello_world字符串的值。
+  创建完该文件夹后，将strings.xml从默认文件夹到您创建的文件夹中。并更改其内容。例如，我更改了hello_world字符串的值。
   
   *意大利，res/values-it/strings.xml*
   
@@ -18,7 +18,7 @@
   </resources>
 ```
   
-  复制
+  
   
   *西班牙，res/values-es/strings.xml*
   
@@ -28,7 +28,7 @@
   </resources>
 ```
   
-  复制
+  
   
   *法语，res/values-fr/strings.xml*
   
@@ -38,7 +38,7 @@
   </resources>
 ```
   
-  复制
+  
   
   除了这些语言，下表还提供了其他语言的区域代码-
   
@@ -84,7 +84,7 @@
   }
 
 ```
-复制
+
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -151,7 +151,7 @@
 </RelativeLayout>
 ```
 
-  复制
+  
 
   以下是res/values/strings.xml文件的内容-
 
@@ -166,7 +166,7 @@
 </resources>
 ```
 
-  复制
+  
 
   让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

@@ -42,7 +42,7 @@
   </LinearLayout>
 ```
   
-  复制
+  
   
   以下是res/layout/fragment_stack.xml文件的内容。它包含框架布局和按钮
   
@@ -59,7 +59,7 @@
   </LinearLayout>
 ```
   
-  复制
+  
   
   以下是res/animator/fragment_slide_left_enter.xml文件的内容。它包含set和objectAnimator标签
   
@@ -82,7 +82,7 @@
   </set>
 ```
   
-  复制
+  
   
   以下是res/animator/fragment_slide_left_exit.xml文件的内容。它包含set和objectAnimator标签。
   
@@ -105,7 +105,7 @@
   </set>
 ```
   
-  复制
+  
   
   以下是res/animator/fragment_slide_right_enter.xml文件的内容。它包含set和objectAnimator标签
   
@@ -128,7 +128,7 @@
   </set>
 ```
   
-  复制
+  
   
   以下是res/animator/fragment_slide_right_exit.xml文件的内容，其中包含set和objectAnimator标签
   
@@ -151,7 +151,7 @@
   </set>
 ```
   
-  复制
+  
   
   以下代码将是src/main/java/MainActivity.java文件的内容。它包含按钮侦听器，堆栈片段和onCreateView
   
@@ -254,7 +254,7 @@
   }
 ```
   
-  复制
+  
   
   以下将是AndroidManifest.xml的内容
   
@@ -285,7 +285,7 @@
   </manifest>
 ```
   
-  复制
+  
   
   运行应用程序::
   

@@ -11,15 +11,11 @@
   });
 ```
   
-  复制
-  
   在此侦听器中，您必须指定**TextToSpeech**对象的属性，例如其语言，音高等。可以通过调用setLanguage()方法来设置语言。其语法如下-
   
 ```java
   ttobj.setLanguage(Locale.UK);
 ```
-  
-  复制
   
   setLanguage方法将Locale对象作为参数。下面列出了一些可用的语言环境-
   
@@ -38,8 +34,6 @@
   ttobj.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
 ```
   
-  复制
-  
   除speak方法外，TextToSpeech类中还有其他一些方法可用。它们在下面列出-
   
   | 方法                                        | 说明                                         |
@@ -52,9 +46,7 @@
   | **shutdown()**                              | 此方法释放TextToSpeech引擎使用的资源。       |
   | **stop()**                                  | 这种方法停止说话。                           |
 
-
-  
-  ## 示例
+## 示例
   
   下面的示例演示TextToSpeech类的用法。它创建了一个基本应用程序，可让您设置书写文字并说出来。要试验此示例，您需要在实际设备上运行它。
   
@@ -119,8 +111,6 @@
   }
 ```
   
-  复制
-  
   以下是res/layout/activity_main.xml文件的内容-
   
 ```xml
@@ -184,8 +174,6 @@
   
   </RelativeLayout>
 ```
-  
-  复制
   
   让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
   

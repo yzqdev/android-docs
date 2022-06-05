@@ -28,7 +28,7 @@
   </resources>
 ```
   
-  复制
+  
   
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。
   
@@ -56,7 +56,7 @@ public class MainActivity extends Activity {
 }
 
 ````
-复制
+
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -88,7 +88,7 @@ public class MainActivity extends Activity {
 </RelativeLayout>
 ````
 
-复制
+
 
 为您的复合视图创建以下名为TimeView.java的Java文件。
 
@@ -173,7 +173,7 @@ public class TimeView extends AppCompatTextView {
 }
 ```
 
-复制
+
 
 让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

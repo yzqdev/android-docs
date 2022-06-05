@@ -18,11 +18,7 @@
   </current>
 ```
   
-  复制
-
-
-  
-  ## XML-解析
+## XML-解析
   
   在下一步中，我们将创建XMLPullParser对象，但是为了创建该对象，我们将首先创建XmlPullParserFactory对象，然后调用其newPullParser()方法创建XMLPullParser。其语法如下-
   
@@ -31,15 +27,11 @@
   private XmlPullParser myparser = xmlFactoryObject.newPullParser();
 ```
   
-  复制
-  
   下一步涉及为XmlPullParser指定包含XML的文件。它可以是文件，也可以是流。在我们的例子中它是一个流，其语法如下-
   
 ```java
   myparser.setInput(stream, null);
 ```
-  
-  复制
   
   最后一步是解析XML。XML文件包含事件，名称，文本，AttributesValue等，因此XMLPullParser具有用于解析XML文件的每个组件的单独功能。其语法如下-
   
@@ -61,8 +53,6 @@
   }
 ```
   
-  复制
-  
   方法getEventType返回发生的事件的类型。例如：Document start，tag start等。getName方法返回标签的名称，并且由于我们只对温度感兴趣，因此我们仅在条件语句中检查是否有温度标签，则调用getAttributeValue方法返回给我们。温度标签的值。除了这些方法之外，此类还提供了其他方法来更好地解析XML文件。这些方法在下面列出-
   
   | 方法                              | 说明                                         |
@@ -78,9 +68,7 @@
   | **getText()**                     | 此方法返回该特定元素的文本。                 |
   | **isWhitespace()**                | 此方法检查当前的TEXT事件是否仅包含空格字符。 |
 
-
-  
-  ## 示例
+## 示例
   
   这是一个演示XML DOM分析器用法的示例。它创建一个基本的应用程序，使您可以解析XML。 要试验该示例，您可以在实际设备或仿真器上运行它。
   
@@ -155,8 +143,6 @@
   }
 ```
   
-  复制
-  
   以下是res/layout/activity_main.xml文件的内容-
   
 ```xml
@@ -173,8 +159,6 @@
           android:layout_height="wrap_content" />
   </RelativeLayout>
 ```
-  
-  复制
   
   以下是assets/file.xml文件的内容-
   
@@ -201,8 +185,6 @@
   
   </records>
 ```
-  
-  复制
   
   让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
   

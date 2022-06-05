@@ -18,8 +18,6 @@
   ?>
 ```
   
-  复制
-  
   *创建表*
   
   创建数据库后，就该在数据库中创建一些表了。用**CREATE TABLE**语句创建表。
@@ -34,8 +32,6 @@
   ?>
 ```
   
-  复制
-  
   *在表格中插入值*
   
   创建数据库和表时。现在是时候在表中插入一些数据了。用**INSERT INTO**语句创建数据库。
@@ -49,8 +45,6 @@
      }
   ?>
 ```
-  
-  复制
   
   *PHP-GET和POST方法*
   
@@ -77,13 +71,9 @@
   ?>
 ```
   
-  复制
-  
   第二种方法是使用POST方法。上面脚本中的唯一更改是将$_GET替换为$_POST。在Post方法中，变量不通过URL传递。
 
-
-  
-  ## Android-连接PHP接口获取MySQL数据
+## Android-连接PHP接口获取MySQL数据
   
   我们将使用开源项目**OKHttp**类进行网络连接。下面看下导入OKHttp环境
   
@@ -120,16 +110,12 @@
   Call call = client.newCall(request);
 ```
   
-  复制
-  
   之后，您需要调用**Call**类的execute方法并将其接收到**Response**对象中。之后，接收数据。
   
 ```java
   Response response = call.execute();
   String returnMsg = response.body().string();
 ```
-  
-  复制
   
   *通过Post方法连接*
   
@@ -149,8 +135,6 @@
   Call call = okHttpClient.newCall(request);
 ```
   
-  复制
-  
   您需要接收响应的数据。
   
 ```java
@@ -158,11 +142,7 @@
   String returnMsg = response.body().string();
 ```
   
-  复制
-
-
-  
-  ## 示例
+## 示例
   
   以下示例是通过PHP页面将android应用程序与MYSQL数据库连接的完整示例。它创建一个基本的应用程序，允许您使用GET和POST方法登录。
   
@@ -189,8 +169,6 @@
              mysqli_close($con);
   ?>
 ```
-  
-  复制
   
   *Android 部分*
   
@@ -293,7 +271,7 @@
   }
 
 ```
-复制
+
 
 以下是修改后的主要活动文件src/com.jc2182.demo/DoRequest.java的内容。
 
@@ -368,8 +346,6 @@ public class DoRequest  {
 
 }
 ```
-
-  复制
 
   以下是res/layout/activity_main.xml文件的内容-
 
@@ -532,8 +508,6 @@ public class DoRequest  {
 </RelativeLayout>
 ```
 
-  复制
-
   以下是AndroidManifest.xml文件的内容-
 
 ```xml
@@ -564,8 +538,6 @@ public class DoRequest  {
 
 </manifest>
 ```
-
-  复制
 
   让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

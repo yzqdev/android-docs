@@ -2,9 +2,9 @@
   
   在许多方法中，蓝牙是一种在两个不同设备之间发送或接收数据的方法。Android平台包括对蓝牙框架的支持，该框架允许设备与其他蓝牙设备无线交换数据。Android提供了蓝牙API来执行这些不同的操作。
   
-  - 扫描其他蓝牙设备
-  - 获取已配对设备的列表
-  - 通过服务发现连接到其他设备
+- 扫描其他蓝牙设备
+- 获取已配对设备的列表
+- 通过服务发现连接到其他设备
   
   Android提供了**BluetoothAdapter**类来与蓝牙通信。通过调用静态方法**getDefaultAdapter()**创建此调用的对象。其语法如下。
   
@@ -13,16 +13,12 @@
   BA = BluetoothAdapter.getDefaultAdapter(); 
 ```
   
-  复制
-  
   为了启用设备的蓝牙，请使用以下蓝牙常量**ACTION_REQUEST_ENABLE**调用该意图。它的语法是。。
   
 ```java
   Intent turnOn = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
   startActivityForResult(turnOn, 0);       
 ```
-  
-  复制
   
   除了此常量之外，API还提供了其他常量来支持不同的任务。它们在下面列出。
   
@@ -39,8 +35,6 @@
   pairedDevices = BA.getBondedDevices();
 ```
   
-  复制
-  
   除了被阻止的设备外，API中还有其他方法可以更好地控制蓝牙。它们在下面列出。
   
   | 方法                     | 说明                                  |
@@ -53,9 +47,7 @@
   | **getState()**           | 此方法返回蓝牙适配器的当前状态。      |
   | **startDiscovery()**     | 此方法将在120秒内启动蓝牙的发现过程。 |
   
-
-  
-  ## 示例
+## 示例
   
   此示例演示了BluetoothAdapter类的知识，该类可操作蓝牙并显示由蓝牙配对的设备的列表。要试验此示例，您需要在实际设备上运行它。
   
@@ -281,8 +273,6 @@ public class MainActivity extends Activity {
 </RelativeLayout>
 ````
 
-复制
-
 以下是res/layout/activity_main.xml文件的内容-
 
 ```xml
@@ -312,8 +302,6 @@ public class MainActivity extends Activity {
 
 </manifest>
 ```
-
-复制
 
 让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

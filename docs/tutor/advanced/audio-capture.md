@@ -6,8 +6,6 @@
   MediaRecorder myAudioRecorder = new MediaRecorder();
 ```
   
-  复制
-  
   现在，您将设置source，输出和编码格式以及输出文件。它们的语法在下面给出。
   
 ```java
@@ -17,16 +15,12 @@
   myAudioRecorder.setOutputFile(outputFile);
 ```
   
-  复制
-  
   在指定音频源和格式及其输出文件之后，我们可以调用两种基本方法准备并开始开始录制音频。
   
 ```java
   myAudioRecorder.prepare();
   myAudioRecorder.start();
 ```
-  
-  复制
   
   除了这些方法之外，MediaRecorder类中还列出了其他方法，这些方法使您可以更好地控制音频和视频记录。
   
@@ -40,9 +34,7 @@
   | **stop()**            | 此方法停止记录过程。                     |
   | **release()**         | 需要记录器实例时应调用此方法。           |
   
-
-  
-  ## 示例
+## 示例
   
   本示例演示MediaRecorder类捕获音频，然后MediaPlayer类播放记录的音频的演示。要试验此示例，您需要在实际设备上运行它。
   
@@ -239,8 +231,6 @@
   }
 ```
   
-  复制
-  
   以下是res/layout/activity_main.xml文件的内容-
   
 ```xml
@@ -295,8 +285,6 @@
   </RelativeLayout>
 ```
   
-  复制
-  
   这是 AndroidManifest.xml 的代码。
   
 ```xml
@@ -326,8 +314,6 @@
   
   </manifest>
 ```
-  
-  复制
   
   让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
   

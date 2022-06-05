@@ -1,7 +1,6 @@
 # 内容提供者
 
- ## Android 内容提供者（Content Providers）
-
+## Android 内容提供者（Content Providers）
 
 :::tip
 `内容提供者(Content Providers)`组件应要求将数据从一个应用程序提供给其他应用程序。此类请求由ContentResolver类的方法处理。内容提供者可以使用不同的方式来存储其数据，并且数据可以存储在数据库中，文件中，甚至可以通过网络存储。
@@ -17,19 +16,13 @@
   }
 ```
   
-  
-  
-
-  
-  ## 内容URI
+## 内容URI
   
   要查询内容提供者，您可以以URI的形式指定查询字符串，其格式如下：
   
 ```xml
   <prefix>://<authority>/<data_type>/<id>
 ```
-  
-  
   
   这是URI各个部分的详细信息-
   
@@ -40,9 +33,7 @@
   | **data_type** | 这表明该特定提供程序提供的数据类型。 例如，如果您要从“联系人”内容提供者获取所有联系人，则数据路径将为“people”，而URI看起来应为 content://contacts/people |
   | **id**        | 这指定了请求的特定记录。 例如，如果您要在“联系人”内容提供者中查找联系人号码5，则URI看起来应类似于此 content://contacts/people/5                          |
   
-
-  
-  ## 创建内容提供者
+## 创建内容提供者
   
   这涉及创建您自己的内容提供程序的简单步骤。
   
@@ -54,15 +45,14 @@
   
   这是您需要在Content Provider类中重写的方法列表，以使Content Provider工作-
   
-  - **onCreate()** - 在提供程序启动时调用此方法。
-  - **query()** - 此方法从客户端接收请求。结果作为Cursor对象返回。
-  - **insert()** - 此方法将新记录插入到内容提供程序中。
-  - **delete()** - 此方法从内容提供者删除现有记录。
-  - **update()** - 此方法更新内容提供者提供的现有记录。
-  - **getType()** - 此方法返回给定URI处数据的MIME类型。
+- **onCreate()** - 在提供程序启动时调用此方法。
+- **query()** - 此方法从客户端接收请求。结果作为Cursor对象返回。
+- **insert()** - 此方法将新记录插入到内容提供程序中。
+- **delete()** - 此方法从内容提供者删除现有记录。
+- **update()** - 此方法更新内容提供者提供的现有记录。
+- **getType()** - 此方法返回给定URI处数据的MIME类型。
 
-  
-  ## 示例
+## 示例
   
   本示例将向您说明如何创建自己的ContentProvider(内容提供者)。因此，让我们按照以下步骤进行操作，类似于创建[Hello World 例子](https://www.jc2182.com/andriod/android-hello-world.html)时遵循的步骤-
   
@@ -127,8 +117,6 @@
       }
   }
  ```
-  
-  
   
   在com.jc2182.helloworld包下创建新文件StudentsProvider.java ，以下是src/com.jc2182.helloworld/StudentsProvider.java的内容 -
   
@@ -317,8 +305,6 @@
   }
 ```
   
-  
-  
   以下将修改AndroidManifest.xml文件的内容 。在这里，我们添加了<provider ... />标签以包括我们的内容提供者：
   
 ```xml
@@ -348,8 +334,6 @@
   
   </manifest>
 ```
-  
-  
   
   以下是res/layout/activity_main.xml文件的内容 -
   
@@ -477,8 +461,6 @@
 
 </RelativeLayout>
 ```
-
-
 
 让我们尝试运行修改后的Hello World！我们刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后点击Android StudioRun图标工具栏中的“运行” 图标。Android Studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

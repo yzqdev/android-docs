@@ -1,4 +1,5 @@
 # 单帧片段（Single frame fragment）
+
 ## Android 单帧片段
   
 :::tip
@@ -6,7 +7,7 @@
   
 :::
   
-  ## 示例
+## 示例
   
   本示例将向您说明如何创建自己的片段。在这里，我们将创建两个片段，其中一个片段将在设备处于横向模式时使用，另一个片段将在竖屏模式下使用。因此，让我们按照以下步骤进行操作，类似于创建[Hello World 例子](https://www.jc2182.com/andriod/android-hello-world.html)时遵循的步骤-
   
@@ -61,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
-
 创建两个片段文件LM_Fragement.java和PM_Fragment.java
 
 以下是LM_Fragement.java文件的内容-
@@ -90,8 +90,6 @@ public class LM_Fragement extends Fragment {
 }
 ```
 
-
-
 以下是PM_Fragement.java文件的内容-
 
 ```java
@@ -115,8 +113,6 @@ public class PM_Fragement extends Fragment {
     }
 }
 ```
-
-
 
 在res/layout目录下创建两个布局文件lm_fragement.xml和pm_fragment.xml。
 
@@ -142,8 +138,6 @@ public class PM_Fragement extends Fragment {
 </LinearLayout>
 ```
 
-
-
 以下是pm_fragment.xml文件的内容-
 
 ```xml
@@ -164,8 +158,6 @@ public class PM_Fragement extends Fragment {
 
 </LinearLayout>
 ```
-
-
 
 以下是res/layout/activity_main.xml文件的内容 -
 
@@ -199,8 +191,6 @@ public class PM_Fragement extends Fragment {
 </RelativeLayout>
 ```
 
-
-
 确保您具有以下res/values/strings.xml文件的内容-
 
 ```xml
@@ -211,8 +201,6 @@ public class PM_Fragement extends Fragment {
     <string name="portrait_message">这是竖屏模式片段</string>
 </resources>
 ```
-
-
 
 让我们尝试运行刚刚创建的修改后的HelloWorld应用程序。我假设您是在进行环境设置时创建的AVD。要从Android Studio运行该应用，请打开您项目的Activity文件之一，然后从工具栏中单击“运行”图标。Android Studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示“模拟器”窗口。请耐心等待，因为这可能需要花费一些时间，具体取决于您的计算机速度，出现以下内容-
 

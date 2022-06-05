@@ -1,4 +1,3 @@
-# 服务
 
 # Android 服务（Services）
   
@@ -26,9 +25,7 @@
   | **onCreate()**       | 首次使用onStartCommand()或onBind()创建服务时，系统会调用此方法。进行一次设置需要此呼叫。                                                                                                                         |
   | **onDestroy()**      | 当不再使用该服务并将其销毁时，系统将调用此方法。您的服务应实现此功能，以清理所有资源，例如线程，注册的侦听器，接收器等。                                                                                         |
   
-
-  
-  ## 实例
+## 实例
   
   以下框架服务演示了每种生命周期方法
   
@@ -87,8 +84,6 @@
   }
 ```
   
-   
-  
   本示例将引导您完成一些简单的步骤，以展示如何创建自己的Android服务。请按照以下步骤修改我们在[Hello World示例](https://www.jc2182.com/andriod/android-hello-world.html)一章中创建的Android应用程序-
   
   1. 您将使用Android Studio IDE创建一个Android应用程序，并将其命名为HelloWrold，位于 com.jc2182.helloworld 程序包下。
@@ -133,7 +128,6 @@
       }
   }
 ```
-  
   
   以下是HellowService.java的内容。该文件可以根据要求实现与服务相关联的一种或多种方法。现在，我们将仅实现两种方法onStartCommand()和onDestroy() -
   
@@ -199,7 +193,6 @@
   
   </manifest>
 ```
-  
   
 以下是res/layout/activity_main.xml文件的内容，其中包括两个按钮-
   
@@ -294,7 +287,6 @@
 
 </RelativeLayout>
 ```
-
 
 让我们尝试运行修改后的Hello World！我们刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后点击Android StudioRun图标工具栏中的“运行” 图标。Android Studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

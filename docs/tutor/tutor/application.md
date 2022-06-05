@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
 }
 ```
 
-复制
+
 
 ## Services
 
@@ -35,7 +35,7 @@ public class MyService extends Service {
 }
 ```
 
-复制
+
 
 ## Broadcast Receivers(广播接收器)
 
@@ -49,7 +49,7 @@ public class MyReceiver  extends  BroadcastReceiver {
 }
 ```
 
-复制
+
 
 ## Content Providers(内容提供者)
 
@@ -61,7 +61,7 @@ public class MyContentProvider extends  ContentProvider {
 }
 ```
 
-复制
+
 
 我们将在各个章节中详细介绍这些标签，同时涵盖应用程序组件。
 

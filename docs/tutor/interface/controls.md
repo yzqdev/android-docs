@@ -23,7 +23,7 @@
   </LinearLayout>
 ```
   
-  复制
+  
   
   Android提供了许多UI控件，可让您为应用程序构建图形用户界面。
   
@@ -53,7 +53,7 @@
   android:id="@+id/text_id"
 ```
   
-  复制
+  
   
   要创建UI控件/视图/小部件，您将必须在布局文件中定义视图/小部件并为其分配唯一的ID，如下所示：
   
@@ -70,7 +70,7 @@
   </LinearLayout>
 ```
   
-  复制
+  
   
   然后最终创建控制对象的实例并从布局中捕获它，请使用以下命令-
   
@@ -78,4 +78,4 @@
   TextView myText = (TextView) findViewById(R.id.text_id);
 ```
   
-  复制
+  

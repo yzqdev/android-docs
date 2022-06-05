@@ -1,4 +1,4 @@
-  # 发送短信
+# 发送短信
   
   在Android中，您可以使用SmsManager API或设备内置的SMS应用程序来发送SMS。在本教程中，我们向您展示了两个发送SMS消息的基本示例-
   
@@ -9,8 +9,6 @@
   smsManager.sendTextMessage("phoneNo", null, "sms message", null, null);
 ```
   
-  复制
-  
   *内置短信应用*
   
 ```java
@@ -20,15 +18,11 @@
   startActivity(sendIntent);
 ```
   
-  复制
-  
   当然，两者都需要**SEND_SMS**权限。
   
 ```xml
   <uses-permission android:name="android.permission.SEND_SMS" />
 ```
-  
-  复制
   
   除了上述方法外，SmsManager类中还有一些其他重要函数可用。这些方法在下面列出-
   
@@ -40,9 +34,7 @@
   | **void sendMultipartTextMessage(String destinationAddress, String scAddress, ArrayList`<String>` parts, ArrayList`<PendingIntent>` sentIntents, ArrayList`<PendingIntent>` deliveryIntents)** | 发送基于文本的多部分短信。                                           |
   | **void sendTextMessage(String destinationAddress, String scAddress, String text, PendingIntent sentIntent, PendingIntent deliveryIntent)**                                                    | 发送基于文本的SMS。                                                  |
   
-
-  
-  ## 发送短信示例
+## 发送短信示例
   
   以下示例向您实际展示如何使用**SmsManager**对象将SMS发送到给定的手机号码。
   
@@ -140,7 +132,6 @@ public class MainActivity extends Activity {
 }
 
 ```
-复制
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -220,8 +211,6 @@ public class MainActivity extends Activity {
 </RelativeLayout>
 ```
 
-复制
-
 以下是AndroidManifest.xml文件的内容-
 
 ```xml
@@ -251,17 +240,13 @@ public class MainActivity extends Activity {
 </manifest>
 ```
 
-复制
-
 让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 
 ![](https://www.jc2182.com/images/android/sms1.png)
 
 现在，您可以输入所需的手机号码，并在该号码上发送短信。最后，点击发送短信按钮发送您的短信。确保您的GSM/CDMA连接正常，可以将SMS传送给接收者。您可以用逗号分隔多个SMS，然后在程序内部将它们解析为数组字符串，最后可以使用循环将消息发送给所有给定数字。这样便可以编写自己的SMS客户端。下一节将向您展示如何使用现有的SMS客户端发送SMS。
 
-
-  
-  ## 使用内置意图发送短信
+## 使用内置意图发送短信
   
   您可以通过调用Android的内置SMS功能，使用Android Intent发送SMS。下一节说明了发送SMS所需的Intent对象的不同部分。
   
@@ -273,8 +258,6 @@ public class MainActivity extends Activity {
   Intent smsIntent = new Intent(Intent.ACTION_VIEW);
 ```
   
-  复制
-  
   *意图对象-发送短信的数据/类型*
   
   要发送短信，您需要使用setData() 方法将smsto ：指定为URI，并且使用setType() 方法将数据类型设置为vnd.android-dir/mms-sms，如下所示-
@@ -284,8 +267,6 @@ public class MainActivity extends Activity {
   smsIntent.setType("vnd.android-dir/mms-sms");
 ```
   
-  复制
-  
   *意图对象-附加数据发送短信*
   
   Android内置支持添加电话号码和短信以发送短信，如下所示：
@@ -294,8 +275,6 @@ public class MainActivity extends Activity {
   smsIntent.putExtra("address"  , new String("0123456789;3393993300"));
   smsIntent.putExtra("sms_body"  , "Test SMS to Angilla");
 ```
-  
-  复制
   
   > 这里的address和sms_body区分大小写，并且只能以小写字母指定。您可以在单个字符串中指定多个数字，但以分号（;）分隔。
   
@@ -364,7 +343,6 @@ public class MainActivity extends Activity {
 
 }
 ```
-复制
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -423,8 +401,6 @@ public class MainActivity extends Activity {
 </RelativeLayout>
 ```
 
-复制
-
 以下是AndroidManifest.xml文件的内容-
 
 ```xml
@@ -453,7 +429,5 @@ public class MainActivity extends Activity {
 
 </manifest>
 ```
-
-复制
 
 > 您可以在真实设备上测试此例！

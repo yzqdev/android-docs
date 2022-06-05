@@ -11,8 +11,6 @@
      android:layout_centerHorizontal="true" />
 ```
   
-  复制
-  
   在xml中定义它之后，您必须通过ProgressBar类在java文件中获取它的引用。其语法如下-
   
 ```java
@@ -20,16 +18,12 @@
   spinner = (ProgressBar)findViewById(R.id.progressBar1);
 ```
   
-  复制
-  
   之后，您可以使其消失，并在需要时通过setVisibility方法将其恢复。其语法如下-
   
 ```java
   spinner.setVisibility(View.GONE);
   spinner.setVisibility(View.VISIBLE);
 ```
-  
-  复制
   
   除了这些方法外，ProgressBar类中还定义了其他方法，可用于更有效地处理微调器。
   
@@ -42,9 +36,7 @@
   | **incrementSecondaryProgressBy(int diff)**  | 将进度条的辅助进度增加指定的数量         |
   | **getProgressDrawable()**                   | 获取用于在进度模式下绘制进度条的drawable |
 
-
-  
-  ## 示例
+## 示例
   
   这是一个演示使用ProgressBar处理微调器的示例。它创建了一个基本应用程序，可让您在单击按钮时打开微调器。要试验此示例，可以在实际设备或仿真器中运行它。
   
@@ -155,8 +147,6 @@
 </RelativeLayout>
 ```
 
-  复制
-
   以下是res/xml/circular_progress_bar.xml文件的内容-
 
 ```xml
@@ -184,8 +174,6 @@
 
 </rotate>
 ```
-
-  复制
 
   让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

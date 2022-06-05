@@ -27,11 +27,7 @@
   }
 ```
   
-  复制
-
-
-  
-  ## JSON-解析
+## JSON-解析
   
   为了解析JSON对象，我们将创建一个**JSONObject**类的对象，并指定一个包含JSON数据的字符串。它的语法是-
   
@@ -42,8 +38,6 @@
   JSONObject main  = reader.getJSONObject("main");
   temperature = main.getString("temp");
 ```
-  
-  复制
   
   方法getJSONObject返回JSON对象。方法getString返回指定键的字符串值。 除了这些方法之外，此类还提供了其他方法来更好地解析JSON文件。这些方法在下面列出-
   
@@ -57,9 +51,7 @@
   | **length()**                | 此方法返回此对象中名称/值映射的数量。      |
   | **names()**                 | 此方法返回一个包含此对象中字符串名称的数组 |
 
-
-  
-  ## 示例
+## 示例
   
   要试验该示例，您可以在实际设备或仿真器上运行它。
   
@@ -199,7 +191,6 @@
   }
 
 ```
-复制
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -219,8 +210,6 @@
 </RelativeLayout>
 ```
 
-  复制
-
   以下是res/xml/network-security-config.xml文件的内容-
 
 ```xml
@@ -229,8 +218,6 @@
     <base-config cleartextTrafficPermitted="true" />
 </network-security-config>
 ```
-
-  复制
 
   以下是res/layout/list_item.xml文件的内容-
 
@@ -255,8 +242,6 @@
         android:textStyle="bold" />
 </LinearLayout>
 ```
-
-  复制
 
   以下是AndroidManifest.xml文件-
 
@@ -285,8 +270,6 @@
 
 </manifest>
 ```
-
-  复制
 
   让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

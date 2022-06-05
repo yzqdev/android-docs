@@ -7,11 +7,7 @@
   myClipboard = (ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
 ```
   
-  
-  
-
-  
-  ## 数据
+## 数据
   
   您需要做的下一件事是通过调用ClipData类的相应数据方法类型来实例化ClipData对象。对于文本数据，将调用**newPlainText**方法。之后，您必须将该数据设置为Clipboard Manager对象的剪辑，其语法如下所示-
   
@@ -22,8 +18,6 @@
   myClipboard.setPrimaryClip(myClip);
 ```
   
-  
-  
   ClipData对象可以采用这三种形式，以下函数用于创建这些形式。
   
   | 形式 | 方法                             | 说明                                                                |
@@ -32,9 +26,7 @@
   | URI  | **newUri(resolver, label, URI)** | 返回一个ClipData对象，该对象的单个ClipData.Item对象包含一个URI。    |
   | 意图 | **newIntent(label, intent)**     | 返回一个ClipData对象，其单个ClipData.Item对象包含一个Intent。       |
   
-
-  
-  ## 粘贴数据
+## 粘贴数据
   
   为了粘贴数据，我们将首先通过调用getPrimaryClip()方法获取剪贴板。然后从该单击中，我们将在ClipData.Item对象中获得该项目。然后从对象中获取数据。其语法如下-
   
@@ -43,8 +35,6 @@
   ClipData.Item item = abc.getItemAt(0);
   String text = item.getText().toString();
 ```
-  
-  
   
   除了这些方法之外，ClipboardManager类还提供了其他方法来管理剪贴板框架。这些方法在下面列出-
   
@@ -57,9 +47,7 @@
   | **setText(CharSequence text)**    | 此方法可以直接用于将文本到剪贴板                           |
   | **getText()**                     | 此方法可以直接用于从剪贴板获取的文本                       |
   
-
-  
-  ## 示例
+## 示例
   
   这是一个演示**ClipboardManager**类的用法的示例。它创建一个基本的粘贴应用程序，该应用程序允许您文本，然后通过剪贴板将其粘贴。要试验此示例，可以在实际设备或仿真器中运行它。
   
@@ -137,7 +125,6 @@ public class MainActivity extends Activity {
 }
 
 ```
-
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -219,8 +206,6 @@ public class MainActivity extends Activity {
 
 </RelativeLayout>
 ````
-
-
 
 让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

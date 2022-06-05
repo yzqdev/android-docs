@@ -8,15 +8,11 @@
   android:parentActivityName = "com.example.test.MainActivity" 
 ```
   
-  
-  
   之后，您需要在活动的onCreate方法中调用getActionBar()的**setDisplayHomeAsUpEnabled**方法。这将启用顶部操作栏中的后退按钮。
   
 ```java
   getActionBar().setDisplayHomeAsUpEnabled(true);
 ```
-  
-  
   
   您需要做的最后一件事是重写**onOptionsItemSelected**方法。当用户按下它时，您的活动将收到对**onOptionsItemSelected()**的调用。该操作的ID为android.R.id.home，其语法如下-
   
@@ -31,11 +27,7 @@
   }
 ```
   
-  
-
-
-  
-  ## 处理设备后退按钮
+## 处理设备后退按钮
   
   由于已启用后退按钮在应用程序中导航，因此您可能希望将应用程序关闭功能置于设备的后退按钮中。
   
@@ -49,8 +41,6 @@
   }
 ```
   
-  
-  
   除了此**setDisplayHomeAsUpEnabled**方法之外，ActionBar API类中还提供了其他方法。它们在下面列出-
   
   | 方法                                               | 说明                                                                         |
@@ -61,9 +51,7 @@
   | **removeAllTabs()**                                | 此方法从操作栏中删除所有标签，然后取消选择当前标签                           |
   | **selectTab(ActionBar.Tab tab)**                   | 此方法选择指定的选项卡                                                       |
 
-
-  
-  ## 示例
+## 示例
   
   下面的示例演示了导航的用法。它创建了一个基本应用程序，使您可以在应用程序中导航。要试验该示例，您需要在实际设备或仿真器上运行它。
   
@@ -110,7 +98,6 @@
 
 ```
 
-
 这是src/SecondMain.java的内容。
 
 ```java
@@ -148,8 +135,6 @@ public class SecondMain extends Activity{
     }
 }
 ```
-
-  
 
   以下是res/layout/activity_main.xml文件的内容-
 
@@ -204,8 +189,6 @@ public class SecondMain extends Activity{
 </RelativeLayout>
 ```
 
-  
-
   以下是res/layout/activity_main_activity2.xml文件的内容-
 
 ```xml
@@ -224,8 +207,6 @@ public class SecondMain extends Activity{
 
 </LinearLayout>
 ```
-
-  
 
   以下是AndroidManifest.xml文件的内容-
 
@@ -257,8 +238,6 @@ public class SecondMain extends Activity{
 
 </manifest>
 ```
-
-  
 
   让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

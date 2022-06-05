@@ -3,10 +3,8 @@
   Android位置API使您可以轻松构建可识别位置的应用程序，而无需关注基础定位技术的细节。
 
   借助Google Play服务，这将成为可能，该服务可通过自动的位置跟踪，地理围栏和活动识别功能，为您的应用添加位置感知功能。本教程向您展示如何在APP中使用定位服务来获取当前位置，获取定期的位置更新，查找地址等。
-
-
   
-  ## 位置对象
+## 位置对象
   
   位置对象表示的地理位置，其可以由纬度，经度，时间戳，和其他信息，诸如轴承，海拔高度和速度。您可以将以下重要方法与Location对象一起使用，以获取特定于位置的信息-
   
@@ -32,14 +30,12 @@
   | **void setSpeed(float speed)**          | 设置速度（以米/秒为单位）。                        |
   | **String toString()**                   | 返回一个字符串，其中包含该对象的简明易懂的描述。   |
 
-
-  
-  ## 获取当前位置
+## 获取当前位置
   
   要获取当前位置，请创建一个位置客户端（即**LocationClient**对象），使用**connect()**方法将其连接到Location Services ，然后调用其**getLastLocation()**方法。此方法以Location对象的形式返回最近的位置，该对象包含纬度和经度坐标以及其他信息，如上所述。要在您的活动中具有基于位置的功能，您将必须实现两个接口-
   
-  - GooglePlayServicesClient.ConnectionCallbacks
-  - GooglePlayServicesClient.OnConnectionFailedListener
+- GooglePlayServicesClient.ConnectionCallbacks
+- GooglePlayServicesClient.OnConnectionFailedListener
   
   这些接口提供以下重要的回调方法，您需要在活动类中实现它们-
   
@@ -51,9 +47,7 @@
   
   > 您应该在活动类的onCreate()方法中创建位置客户端，然后在onStart()中将其连接，以便位置服务在您的活动完全可见时维护当前位置。您应该使用onStop()方法断开客户端连接，以便在看不到您的应用程序时，Location Services不会维护当前位置。这样可以最大程度地节省电池电量。
 
-
-  
-  ## 获取更新的位置
+## 获取更新的位置
   
   如果您愿意进行位置更新，那么除了上述接口外，您还需要实现LocationListener接口。该接口提供以下回调方法，您需要在活动类中实现该方法-
   
@@ -61,9 +55,7 @@
   | ------------------------------------------------------ | ---------------------------------------------------- |
   | **abstract void onLocationChanged(Location location)** | 位置更改后，此回调方法用于从LocationClient接收通知。 |
 
-
-  
-  ## 位置服务质量
+## 位置服务质量
   
   所述LocationRequest对象用于请求的服务质量（QoS），用于从所述的位置更新一个质量LocationClient。您可以使用以下有用的设置方法来处理QoS。您可以在Android官方文档中查看等效的getter方法。
   
@@ -80,9 +72,7 @@
   
   > 活动应该强烈考虑在进入后台时删除所有位置请求（例如，在onPause()处），或者至少将请求交换为较大的间隔和较低的质量以节省功耗。
 
-
-  
-  ## 显示位置地址
+## 显示位置地址
   
   一旦有了**Location**对象，就可以使用**Geocoder.getFromLocation()**方法来获取给定纬度和经度的地址。此方法是同步的，可能需要很长时间才能完成工作，因此您应该从**AsyncTask**类的**doInBackground()**方法中调用该方法。该**AsyncTask**必须被继承使用和子类将覆盖doInBackground（参数...）方法在后台执行任务onPostExecute（结果）方法被调用的后台计算结束后的UI线程，并在时间显示结果。AyncTask中还有一个更重要的方法execute（Params ... params），该方法使用指定的参数执行任务。
   
@@ -173,7 +163,7 @@ public class MainActivity extends Activity {
 }
 
 ```
-复制
+
 
 以下是文件src/com.jc2182.demo/GPSTracker.java
 
@@ -360,7 +350,7 @@ public class GPSTracker extends Service implements LocationListener {
 }
 ```
 
-复制
+
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -381,7 +371,7 @@ public class GPSTracker extends Service implements LocationListener {
 </LinearLayout>
 ```
 
-复制
+
 
 让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

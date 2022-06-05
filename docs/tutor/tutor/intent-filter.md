@@ -15,7 +15,7 @@
   startActivity(Intent.createChooser(email, "Choose an email client from..."));
 ```
   
-  复制
+  
   
   上面的语法正在调用startActivity方法来启动电子邮件activity，结果应如下所示-
   
@@ -30,7 +30,7 @@
   startActivity(intent);
 ```
   
-  复制
+  
   
   上面的示例将在android搜索引擎上搜索为“蝴蝶教程”，并在您的活动中提供了“蝴蝶教程”的结果
   
@@ -131,7 +131,7 @@
   startActivity(i);
 ```
   
-  复制
+  
   
   *Implicit Intents(隐示意图)*
   
@@ -144,7 +144,7 @@
   startActivity(read1);
 ```
   
-  复制
+  
   
   上面的代码将给出如下所示的结果调出联系人列表:
   
@@ -161,7 +161,7 @@
   String value2 = extras.getString("Key2");
 ```
   
-  复制
+  
   
 
   
@@ -223,7 +223,7 @@ public class MainActivity extends Activity {
 }
 
 ````
-复制
+
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -311,7 +311,7 @@ public class MainActivity extends Activity {
 </RelativeLayout>
 ````
 
-复制
+
 
 以下是AndroidManifest.xml的默认内容 -
 
@@ -337,7 +337,7 @@ public class MainActivity extends Activity {
 </manifest>
 ```
 
-复制
+
 
 让我们尝试运行您的“我的应用程序”应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用程序，请打开项目的活动文件之一，然后运行图标从工具栏中单击“运行” 图标。AndroidStudio会将其安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在模拟器上窗口-
 
@@ -368,7 +368,7 @@ public class MainActivity extends Activity {
   </activity>
 ```
   
-  复制
+  
   
   当活动被上面的过滤器所定义，其他活动就可以通过下面的方式来调用这个活动。使用 **android.intent.action.VIEW**，使用 **com.jc2182.helloworld.LAUNCH** 动作，并提供**android.intent.category.DEFAULT**类别。元素指定要被调用的活动所期望的数据类型。上面的实例中，自定义活动期望的数据由"https://"开头。有这样的情况，通过过滤器，意图将被传递到多个的活动或者服务，用户将被询问启动哪个组件。如果没有找到目标组件，将发生一个异常。在调用活动之前，有一系列的 Android 检查测试：
   
@@ -445,7 +445,7 @@ public class MainActivity extends Activity {
 }
 
 ````
-复制
+
 
 以下是修改后的主要活动文件src/com.jc2182.helloworld/CustomActivity.java的内容。
 
@@ -470,7 +470,7 @@ public class CustomActivity extends Activity {
 }
 ````
 
-复制
+
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -569,7 +569,7 @@ public class CustomActivity extends Activity {
 </RelativeLayout>
 ```
 
-复制
+
 
 以下将是res/layout/custom_view.xml文件的内容-
 
@@ -584,7 +584,7 @@ public class CustomActivity extends Activity {
 </LinearLayout>
 ```
 
-复制
+
 
 以下将是AndroidManifest.xml的内容
 
@@ -622,7 +622,7 @@ public class CustomActivity extends Activity {
 </manifest>
 ```
 
-复制
+
 
 运行应用程序::
 

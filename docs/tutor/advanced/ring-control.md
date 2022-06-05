@@ -1,4 +1,4 @@
-  # 铃声控制
+# 铃声控制
   
   您可以在Android中轻松控制铃声的音量和铃声配置文件，例如：（静音，振动，响亮等）。Android提供了AudioManager类，该类提供对这些控件的访问。为了使用**AndroidManager**类，您必须首先通过调用getSystemService()方法创建AudioManager类的对象。其语法如下。
   
@@ -7,15 +7,11 @@
   myAudioManager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);  
 ```
   
-  复制
-  
   实例化AudioManager类的对象后，就可以使用setRingerMode方法设置设备的音频或铃声配置文件。其语法如下。
   
 ```java
   myAudioManager.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
 ```
-  
-  复制
   
   setRingerMode方法采用整数作为参数。对于每种模式，分配一个整数，以区分不同的模式。可能的模式是。
   
@@ -31,8 +27,6 @@
   int mod = myAudioManager.getRingerMode();
 ```
   
-  复制
-  
   除了getRingerMode方法外，AudioManager类中还有其他方法可用于控制音量和其他模式。它们在下面列出。
   
   | 方法                                       | 说明                                   |
@@ -47,7 +41,7 @@
 
 - **
   
-  ## 示例
+## 示例
   
   下面的示例演示AudioManager类的用法。它创建了一个应用程序，可让您为设备设置不同的铃声模式。要试验此示例，您需要在实际设备上运行它。
   
@@ -135,7 +129,7 @@
   }
 
 ```
-复制
+
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -222,8 +216,6 @@
         android:text="静音" />
 </RelativeLayout>
 ```
-
-  复制
 
   让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

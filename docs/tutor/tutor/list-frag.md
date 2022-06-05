@@ -44,7 +44,7 @@
   </resources>
 ```
   
-  复制
+  
   
   以下是res/layout/activity_main.xml文件的内容。它包含线性布局和片段标签。
   
@@ -70,7 +70,7 @@
 </RelativeLayout>
 ```
 
-复制
+
 
 以下是res/layout/list_fragment.xml文件的内容。它包含线性布局，列表视图和文本视图
 
@@ -96,7 +96,7 @@
 </LinearLayout>
 ```
 
-复制
+
 
 以下是src/main/java/myListFragment.java文件的内容。在编写代码之前，需要遵循以下几个步骤
 
@@ -170,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ````
 
-复制
+
 
 运行应用程序::
 

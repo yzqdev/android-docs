@@ -1,4 +1,4 @@
-  # 发送电子邮件
+# 发送电子邮件
   
   电子邮件是通过电子方式从一个系统用户通过网络分发给一个或多个收件人的消息。
   
@@ -6,9 +6,7 @@
   
   下一节说明了发送电子邮件所需的Intent对象的不同部分。
   
-
-  
-  ## Indent 对象-发送电子邮件的数据/类型
+## Indent 对象-发送电子邮件的数据/类型
   
   要发送电子邮件，您需要使用setData()方法将mailto：指定为URI，并且使用setType()方法将数据类型转换为text/plain，如下所示-
   
@@ -17,11 +15,7 @@
   emailIntent.setType("text/plain");
 ```
   
-  复制
-  
-
-  
-  ## Indent 对象-发送电子邮件的动作 ACTION_SEND
+## Indent 对象-发送电子邮件的动作 ACTION_SEND
   
   您将使用**ACTION_SEND**操作启动安装在Android设备上的电子邮件客户端。以下是使用ACTION_SEND操作创建意图的简单语法。
   
@@ -29,11 +23,7 @@
   Intent emailIntent = new Intent(Intent.ACTION_SEND);
 ```
   
-  复制
-  
-
-  
-  ## Indent 对象-附加额外数据电子邮件到意图发送
+## Indent 对象-附加额外数据电子邮件到意图发送
   
   Android内置支持添加TO，SUBJECT，CC，TEXT等字段，这些字段可以在将意图发送到目标电子邮件客户端之前附加到该意图。您可以在电子邮件中使用以下额外字段-
   
@@ -55,15 +45,11 @@
   emailIntent.putExtra(Intent.EXTRA_TEXT   , "Message Body");
 ```
   
-  复制
-  
   上面代码的输出类似如下图所示
   
   ![](https://www.jc2182.com/images/android/email1.jpg)
   
-
-  
-  ## 发送电子邮件示例
+## 发送电子邮件示例
   
   下面的示例实际向您展示了如何使用Intent对象启动Email客户端以将电子邮件发送给给定的收件人。
   
@@ -131,9 +117,9 @@ public class MainActivity extends Activity {
 }
 
 ```
-复制
 
 以下是res/layout/activity_main.xml文件的内容-
+
 ```xml
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -177,8 +163,6 @@ public class MainActivity extends Activity {
 
 </LinearLayout>
 ```
-
-复制
 
 让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 
