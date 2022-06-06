@@ -2,12 +2,13 @@
 
 ## 版本管理
 
-[https://dart.dev/tools/pub/versioning](https://dart.dev/tools/pub/versioning)
+[官网](https://dart.dev/tools/pub/versioning)
 
 配置环境变量
 
 flutter默认的cache在`D:\flutter\.pub-cache`
 dart默认的cache在`%LOCALAPPDATA%\Pub\Cache`
+所以要想让dart使用flutter的cache路径,需要设置环境变量`PUB_CACHE`
 
 ```text
 PUB_CACHE
@@ -16,6 +17,8 @@ PUB_CACHE
 PUB_HOSTED_URL
 这个变量了指定 pub get 从哪里下载依赖包的资源，默认为 pub.dev，但国内经常出现无法访问的情况，因此可以通过设置环境变量指定镜像地址。
 ```
+
+比如我设置的`PUB_CACHE`就是`D:\flutter\.pub-cache`,这样下载依赖就不会下载到`%LOCALAPPDATA%\Pub\Cache`去了
 
 ## 编译为exe
 
@@ -41,9 +44,9 @@ console.log(md5);
 dart
 
 ```powershell
-运行
+# 运行
 dart run bin\md5.dart
-编译exe
+# 编译exe
 dart compile exe bin\md5.dart
 ```
 
@@ -79,5 +82,3 @@ void main(List<String> arguments) async {
 }
 
 ```
-
- 
