@@ -1,1 +1,0 @@
-const t={key:"v-6cdd762b",path:"/tutor/tutor/",title:"tutor",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{createdTime:1651850231e3,updatedTime:1651850231e3,contributors:[{name:"yzqdev",email:"yzqdev@outlook.com",commits:1}]},readingTime:{minutes:0,words:1},filePathRelative:"tutor/tutor/README.md"};export{t as data};
