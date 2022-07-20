@@ -4,6 +4,14 @@ import hope from "vuepress-theme-hope/package.json";
 import vuePkg from "vue/package.json";
 
 import vp from "vuepress/package.json";
+/**
+ * *显示版本
+ *
+ * @param name
+ * @param version
+ * @param nameStyle
+ * @param versionStyle
+ */
 function showBadge(name, version, nameStyle, versionStyle) {
     console.log(
         "%c ".concat(name, " %c ").concat(version, " "),
