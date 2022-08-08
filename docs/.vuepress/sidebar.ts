@@ -1,0 +1,88 @@
+import {  sidebar} from "vuepress-theme-hope";
+
+export default sidebar({
+    "/tutor/": [
+        {
+            text: "指南",
+            collapsable: true,
+            children: [
+                "/tutor/tutor/README.md",
+                "/tutor/tutor/application.md",
+                "/tutor/tutor/helloworld.md",
+
+                "/tutor/tutor/resources.md",
+                "/tutor/tutor/activity.md",
+                "/tutor/tutor/service.md",
+                "/tutor/tutor/boardcast.md",
+                "/tutor/tutor/content.md",
+                "/tutor/tutor/fragment.md",
+                "/tutor/tutor/single-frame.md",
+                "/tutor/tutor/list-frag.md",
+                "/tutor/tutor/frag-guodu.md",
+                "/tutor/tutor/intent-filter.md",
+            ],
+        },
+        {
+            text: "界面",
+            collapsable: true,
+            children: ["/tutor/interface/ui.md", "/tutor/interface/controls.md", "/tutor/interface/events.md", "/tutor/interface/styles.md", "/tutor/interface/custom-components.md"],
+        },
+        {
+            text: "高级",
+            collapsable: true,
+            children: [
+                "/tutor/advanced/drag-and-drop.md",
+                "/tutor/advanced/notification.md",
+                "/tutor/advanced/location.md",
+                "/tutor/advanced/send-email.md",
+                "/tutor/advanced/sms.md",
+                "/tutor/advanced/phone-call.md",
+                "/tutor/advanced/publish-app.md",
+                "/tutor/advanced/alert-dialog.md",
+                "/tutor/advanced/animation.md",
+                "/tutor/advanced/ring-control.md",
+                "/tutor/advanced/audio-capture.md",
+                "/tutor/advanced/bluetooth.md",
+                "/tutor/advanced/camera.md",
+                "/tutor/advanced/clipboard.md",
+                "/tutor/advanced/fonts.md",
+                "/tutor/advanced/gestures.md",
+                "/tutor/advanced/image-effects.md",
+                "/tutor/advanced/internal-storage.md",
+                "/tutor/advanced/json-parse.md",
+                "/tutor/advanced/spinner.md",
+                "/tutor/advanced/localization.md",
+                "/tutor/advanced/login.md",
+                "/tutor/advanced/media-player.md",
+                "/tutor/advanced/multi-touch.md",
+                "/tutor/advanced/navigation.md",
+                "/tutor/advanced/network-connection.md",
+                "/tutor/advanced/php-mysql.md",
+                "/tutor/advanced/progress-circle.md",
+                "/tutor/advanced/sensor.md",
+                "/tutor/advanced/session.md",
+                "/tutor/advanced/spell-check.md",
+
+                "/tutor/advanced/sqlite.md",
+                "/tutor/advanced/text-to-speech.md",
+                "/tutor/advanced/xml.md",
+            ],
+        },
+    ],
+    "/tips/": [
+        {
+            text: "技巧",
+            collapsable: true,
+            children: ["/tips/as-plugins.md", "/tips/gradle-conf.md", "/tips/migrate-to-androidx.md", "/tips/faqs.md", "/tips/software.md", "/tips/sites.md"],
+        },
+    ],
+    "/hack/": [
+        {
+            text: "hack",
+            collapsable: true,
+            children: ["/hack/phone-flash.md"],
+        },
+    ],
+    "/flutter/": "structure",
+    "/dart/": "structure",
+});
