@@ -1,22 +1,11 @@
-#  gradle 配置
+# gradle 配置
 
-:::tip 
+:::tip
 对单个项目生效，在项目中的build.gradle修改内容
 :::
 
 ```groovy
-buildscript {
-    repositories {
-        maven { url 'https://maven.aliyun.com/repository/google/' }
-        maven { url 'https://maven.aliyun.com/repository/jcenter/'}
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }        
-}
+ 
 
 allprojects {
     repositories {
@@ -25,8 +14,11 @@ allprojects {
     }
 }
 
+
 ```
-# 对所有项目生效，在${USER_HOME}/.gradle/下创建init.gradle文件
+
+## 对所有项目生效，在${USER_HOME}/.gradle/下创建init.gradle文件
+
 ```groovy
 allprojects{
     repositories {

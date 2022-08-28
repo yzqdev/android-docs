@@ -69,13 +69,7 @@ export default sidebar({
             ],
         },
     ],
-    "/tips/": [
-        {
-            text: "技巧",
-            collapsable: true,
-            children: ["/tips/as-plugins.md", "/tips/gradle-conf.md", "/tips/migrate-to-androidx.md", "/tips/faqs.md", "/tips/software.md", "/tips/sites.md"],
-        },
-    ],
+    "/tips/":  'structure',
     "/hack/": [
         {
             text: "hack",
