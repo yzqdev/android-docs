@@ -28,6 +28,14 @@ export default defineUserConfig({
                 href: "//at.alicdn.com/t/font_2410206_mfj6e1vbwo.css",
             },
         ],
+        //my iconfont
+        [
+            "link",
+            {
+                rel: "stylesheet",
+                href: "//at.alicdn.com/t/c/font_3267094_jf6xwe51a2.css",
+            },
+        ],
 
         ["meta", { name: "msapplication-TileColor", content: "#3eaf7c" }],
         ["meta", { name: "theme-color", content: "#3eaf7c" }],

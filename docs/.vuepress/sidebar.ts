@@ -70,6 +70,7 @@ export default sidebar({
         },
     ],
     "/tips/":  'structure',
+    "/kotlin/":  'structure',
     "/hack/": [
         {
             text: "hack",

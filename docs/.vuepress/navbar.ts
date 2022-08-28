@@ -24,10 +24,17 @@ export default navbar([
         icon: "stack",
         activeMatch: "^/flutter/",
         link: "/flutter/",
-    },{
+    },
+    {
         text: "dart",
         icon: "dart",
         activeMatch: "^/dart/",
         link: "/dart/",
+    },
+    {
+        text: "kotlin",
+        icon: "kotlin",
+        activeMatch: "^/kotlin/",
+        link: "/kotlin/",
     },
 ]);
