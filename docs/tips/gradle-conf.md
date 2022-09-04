@@ -55,3 +55,14 @@ allprojects{
 }
 
 ```
+
+## gradle添加ext
+
+**注意**
+
+```kotlin
+ext{
+    set("development",true)
+}
+
+```

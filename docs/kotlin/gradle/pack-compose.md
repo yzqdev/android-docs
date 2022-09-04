@@ -18,3 +18,5 @@
 # 打包jar
 .\gradlew.bat packageUberJarForCurrentOS
 ```
+
+idea的compose预览插件(使用@preview)[https://plugins.jetbrains.com/plugin/16541-compose-multiplatform-ide-support](https://plugins.jetbrains.com/plugin/16541-compose-multiplatform-ide-support)
