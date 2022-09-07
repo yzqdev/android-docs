@@ -43,6 +43,10 @@ flutter run -d chrome
 # 发布
 flutter build windows
 flutter build web
+flutter build apk 
+
+# 分开打包
+flutter build apk --split-per-abi
 # 升级flutter
 flutter upgrade
 # 加入flutter windows支持(注意最后一个点)

@@ -79,7 +79,7 @@ md5可以用上面的md5工具判断
   "VersionName": "1.0.1",
   "UploadTime": "2020-04-10 17:28:41",
   "ModifyContent": "\r\n1、优化api接口。\r\n2、添加使用demo演示。\r\n3、新增自定义更新服务API接口。\r\n4、优化更新提示界面。",
-  "DownloadUrl": "http://49.234.131.170:5244/d/app-release.apk",
+  "DownloadUrl": "http://localhost:5244/d/app-release.apk",
   "ApkSize": 2048,
   "ApkMd5": "03beecef824fb7e274bd858d39689fb4"
 }
