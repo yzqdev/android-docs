@@ -34,6 +34,9 @@ flutter create --platforms=windows,macos,linux .
 
 # 创建flutter应用
 flutter create my_app
+# 创建包名
+flutter create --org com.yzqdev --project-name flutter_sample --platforms android .
+flutter create --org com.yourdomain your_app_name
 # 运行程序
 flutter run 
 flutter run -d windows

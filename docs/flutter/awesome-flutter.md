@@ -36,3 +36,4 @@ flutter中文教程
 - [https://github.com/leanflutter](https://github.com/leanflutter)
 - [https://flutter.github.io/samples/#](https://flutter.github.io/samples/#)
 - [https://github.com/tortuvshin/open-source-flutter-apps](https://github.com/tortuvshin/open-source-flutter-apps)
+- <https://www.fluttercampus.com/guide/215/shuffle-list-dart-flutter/>
