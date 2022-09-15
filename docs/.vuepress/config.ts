@@ -1,7 +1,7 @@
 import { defineUserConfig } from "@vuepress/cli";
 
 import theme from "./themeConfig";
-import SearchPlugin from "vuepress2-plugin-full-text-search";
+import SearchPlugin from "@vuepress/plugin-search";
 export default defineUserConfig({
     base: "/android-docs/",
     dest: "./dist",
