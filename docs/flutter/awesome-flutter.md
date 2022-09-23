@@ -21,6 +21,13 @@ flutter中文教程
 - [通知](https://pub.flutter-io.cn/packages/flutter_local_notifications)
 - [命令行参数](https://pub.flutter-io.cn/packages/args)
 
+### 路由库
+
+- <https://pub.flutter-io.cn/packages/auto_route>
+- <https://pub.flutter-io.cn/packages/go_router#go_router>
+- <https://pub.flutter-io.cn/packages/vrouter>
+- <https://pub.flutter-io.cn/packages/get> 推荐
+
 ### ui库
 
 - [https://gallery.flutter.dev/#/](https://gallery.flutter.dev/#/)
