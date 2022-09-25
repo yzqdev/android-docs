@@ -80,4 +80,5 @@ export default sidebar({
     ],
     "/flutter/": "structure",
     "/dart/": "structure",
+    "/uniapp/": "structure",
 });

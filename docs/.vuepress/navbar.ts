@@ -36,5 +36,10 @@ export default navbar([
         icon: "kotlin",
         activeMatch: "^/kotlin/",
         link: "/kotlin/",
+    }, {
+        text: "uniapp",
+        icon: "kotlin",
+        activeMatch: "^/uniapp/",
+        link: "/uniapp/",
     },
 ]);
