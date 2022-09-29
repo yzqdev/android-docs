@@ -59,3 +59,42 @@ dependencyResolutionManagement {
 }
 
 ```
+## 安卓打包修改名字
+
+### 关于打包的定义
+```text
+Make Project:- Means you create a real aplication which is working on device and has a executable file like apk.
+
+Make Module:- means you create a library project for you aplication which is executed with that project and has no executable file like apk but has jar files which work as a library.
+
+Build apk: when you normally run your application an apk file is generated locally which is like a zipfile and is easily unzipable no security is implemented and you can get the code from that apk file. It is used basically for local testing.
+
+Signed apk: it is that apk you can create with a password and security and it is not easily unzipable and is used for production.
+```
+### 定义打包名称
+```groovy
+    // 打包 用来打包修改名字的 跟defaultConfig是同一级的
+    applicationVariants.all { variant ->
+        variant.outputs.all { output -> // 这里和2.0的不一样 2.0是each 3.0是all
+            def outputFile = output.outputFile
+            def fileName;
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                if (variant.buildType.name.equals('release')) {
+                    fileName = "[项目名]${releaseTime()}_${defaultConfig.versionName}_release.apk"
+                } else if (variant.buildType.name.equals('debug')) {
+                    fileName = "[项目名]${releaseTime()}_${defaultConfig.versionName}_debug.apk"
+                }
+                outputFileName = fileName // 这里和2.0不一样
+            }
+        }
+    }
+```
+### 定义一个时间
+```groovy
+//打包 打包版本需要的当前时间名字 跟 Android 是同一级的
+def releaseTime() {
+    //注意时间不对 请注意时区问题 时区在小时分钟的时候不一样
+    return new Date().format("yyyy-MM-dd-HH-mm", TimeZone.getTimeZone("Asia/Shanghai"))
+}
+```
+
