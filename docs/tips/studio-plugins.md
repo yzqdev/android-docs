@@ -2,12 +2,13 @@
 
 ## jrebel for android 配置
 
-
 添加私服厂库
-添加的url 
+添加的url
+
 ```bash
 http://dl.zeroturnaround.com/jrebel-android/plugins/ide-studio/updatePlugins.xml
 ```
+
 ​
 
 ## GsonFormat
@@ -42,6 +43,7 @@ codota是一个强大的搜索开源库及代码的插件，它搜集了大量�
 ## Android ButterKnife Zelezny
 
 配合 butterknife 实现注解，不用再手动实现 findViewById 了
+
 ## CodeGlance
 
 与Sublime或Xcode相似，此插件在你的编辑器中嵌入了代码的缩略图。如下图所示，右边是代码的缩略小图，滚动条也变大了。 使用Codeglance预览代码模式，让你 快速导航至所需部分
@@ -53,3 +55,11 @@ codota是一个强大的搜索开源库及代码的插件，它搜集了大量�
 ## smali解析
 
 [https://github.com/JesusFreke/smalidea](https://github.com/JesusFreke/smalidea)
+
+## flutter_intl
+
+[flutter-intl](https://plugins.jetbrains.com/plugin/13666-flutter-intl/reviews)
+
+- <https://marketplace.visualstudio.com/items?itemName=jeroen-meijer.pubspec-assist>
+- <https://plugins.jetbrains.com/plugin/12400-flutter-pub-version-checker/versions>
+- <https://plugins.jetbrains.com/plugin/14442-flutter-toolkit>

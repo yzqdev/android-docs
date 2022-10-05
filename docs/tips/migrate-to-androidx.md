@@ -45,7 +45,7 @@ distributionUrl=https\://services.gradle.org/distributions/gradle-4.6-all.zip
 - compileSdkVersion 版本升级到 **28**及以上；
 - buildToolsVersion 版本改为 **28.0.2**及以上。
 
-![](https:////upload-images.jianshu.io/upload_images/4625401-92ed6de990f27533.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/546/format/webp#align=left&display=inline&height=261&id=Kdgqq&margin=%5Bobject%20Object%5D&originHeight=261&originWidth=546&status=done&style=none&width=546)
+![](https://upload-images.jianshu.io/upload_images/4625401-92ed6de990f27533.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/546/format/webp#align=left&display=inline&height=261&id=Kdgqq&margin=%5Bobject%20Object%5D&originHeight=261&originWidth=546&status=done&style=none&width=546)
 
 插件更新提示
 
@@ -79,7 +79,7 @@ import android.support.v7.app.AppCompatActivity; → import androidx.appcompat.a
 **5）一键迁移AndroidX库**
 AS 3.2 及以上版本提供了更加方便快捷的方法一键迁移到 AndroidX。选择菜单上的**ReFactor —— Migrate to AndroidX...** 即可。（如果迁移失败，就需要重复上面1，2，3，4步手动去修改迁移）
 
-![](https:////upload-images.jianshu.io/upload_images/4625401-b9524e8fa789d620.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/316/format/webp#align=left&display=inline&height=423&id=yiTs2&margin=%5Bobject%20Object%5D&originHeight=423&originWidth=316&status=done&style=none&width=316)
+![](https://upload-images.jianshu.io/upload_images/4625401-b9524e8fa789d620.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/316/format/webp#align=left&display=inline&height=423&id=yiTs2&margin=%5Bobject%20Object%5D&originHeight=423&originWidth=316&status=done&style=none&width=316)
 
 AndroidX 迁移
 
