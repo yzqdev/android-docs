@@ -67,6 +67,7 @@ ext{
 
 ```
 
+<https://juejin.cn/post/6979872825561579533>
 <https://developer.android.google.cn/studio/build/migrate-to-kts?hl=zh-cn>
 
 Google 官方推荐的一个 Gradle 配置[最佳实践](https://developer.android.google.cn/studio/build/gradle-tips?hl=zh-cn)是在项目最外层 build.gradle 文件的`ext`代码块中定义项目范围的属性，然后在所有模块间共享这些属性，比如我们通常会这样存放依赖的版本号。
@@ -80,7 +81,7 @@ ext {
     supportLibVersion = "28.0.0"
     ...
 }
-复制代码
+ 
 ```
 
 但是由于缺乏IDE的辅助(跳转查看、全局重构等都不支持)，实际使用体验欠佳。
@@ -111,10 +112,17 @@ dependencies {
     implementation("com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}")
     ...
 }
-复制代码
+ 
 ```
 
 > `build.gralde`中的`ext`数据是可以在`build.gradle.kts`中使用`extra`进行访问的。
+使用
+
+```kotlin
+ minSdk=rootProject.extra["minSdk"] as Int
+targetSdk=rootProject.extra["targetSdk"] as Int
+
+```
 
 ### 修改生成apk名称和BuildConfig中添加apk支持的cpu架构
 
@@ -142,4 +150,19 @@ android.applicationVariants.all {
     }
 }
  
+```
+
+## 使用java8的timeapi不生效
+
+添加
+
+```KotlinDSL
+   compileOptions {
+      isCoreLibraryDesugaringEnabled=true
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+dependencies{
+     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.2.2")
+}
 ```

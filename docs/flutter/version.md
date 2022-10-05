@@ -7,3 +7,4 @@
 
 - <https://marketplace.visualstudio.com/items?itemName=jeroen-meijer.pubspec-assist>
 - <https://plugins.jetbrains.com/plugin/12400-flutter-pub-version-checker/versions>
+- <https://plugins.jetbrains.com/plugin/14442-flutter-toolkit>
