@@ -59,9 +59,11 @@ dependencyResolutionManagement {
 }
 
 ```
+
 ## 安卓打包修改名字
 
 ### 关于打包的定义
+
 ```text
 Make Project:- Means you create a real aplication which is working on device and has a executable file like apk.
 
@@ -71,7 +73,9 @@ Build apk: when you normally run your application an apk file is generated local
 
 Signed apk: it is that apk you can create with a password and security and it is not easily unzipable and is used for production.
 ```
+
 ### 定义打包名称
+
 ```groovy
     // 打包 用来打包修改名字的 跟defaultConfig是同一级的
     applicationVariants.all { variant ->
@@ -89,7 +93,9 @@ Signed apk: it is that apk you can create with a password and security and it is
         }
     }
 ```
+
 ### 定义一个时间
+
 ```groovy
 //打包 打包版本需要的当前时间名字 跟 Android 是同一级的
 def releaseTime() {
@@ -97,4 +103,3 @@ def releaseTime() {
     return new Date().format("yyyy-MM-dd-HH-mm", TimeZone.getTimeZone("Asia/Shanghai"))
 }
 ```
-

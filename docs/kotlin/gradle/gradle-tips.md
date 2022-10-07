@@ -158,3 +158,15 @@ dependencies {
     }
 }
 ```
+
+## 让debug和release不冲突
+
+添加下面的,包名会改变
+
+```kotlin
+buildTypes{
+     named("debug"){
+            applicationIdSuffix=".debug"
+        }
+}
+```

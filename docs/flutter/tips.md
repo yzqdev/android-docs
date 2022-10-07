@@ -240,3 +240,18 @@ Flutter的App版本号设置在pubspec.yaml中，+号前面是版本名称，后
 ```txt
 version: 1.0.0+1
 ```
+
+## The argument type 'Function' can't be assigned to the parameter type 'void Function()?' after null safety
+
+Instead of
+
+```dart
+final Function? onPressed; // Bad
+```
+
+use
+
+```dart
+final void Function()? onPressed; // Good
+final VoidCallback? onPressed; // Good
+```
