@@ -148,19 +148,25 @@ android {
         //bundle的入参分别为，alias（别名），需要依赖的别名集合
         bundle("kotlin", listOf("stdlib", "reflect"))
         
-        bundle(
-                "umsdk", listOf(
-                    "umsdk-common",
-                    "umsdk-asms",
-                    ...
-                    "umsdk-huawei-push",
-                    "umsdk-huawei-umengaccs",
-                    "umsdk-vivo-push",
-                    "umsdk-vivo-umengaccs",
-                    "umsdk-oppo-push",
-                    "umsdk-oppo-umengaccs",
+     create("androidEx") {
+                //------------------------------ androidx start ----------------------------
+                library("core", "androidx.core:core-ktx:1.9.0")
+                library("appcompat", "androidx.appcompat:appcompat:1.5.1")
+                library("fragmentKtx", "androidx.fragment:fragment-ktx:1.5.3")
+                library("material", "com.google.android.material:material:1.6.1")
+                library(
+                    "constraintlayout",
+                    "androidx.constraintlayout:constraintlayout:2.1.4"
                 )
-        )
+                library(
+                    "navigationFragmentKtx",
+                    "androidx.navigation:navigation-fragment-ktx:2.5.2"
+                )
+                library("navigationUiKtx", "androidx.navigation:navigation-ui-ktx:2.5.2")
+
+                bundle("common",listOf("core","appcompat","fragmentKtx","material","constraintlayout","navigationFragmentKtx","navigationUiKtx"))
+            }
+
        
 }
 ```
@@ -172,7 +178,7 @@ dependencies{
  api(lib.bundles.kotlin)
     api(lib.bundles.coroutines)
     //所有module只需要这一句就能依赖所有
-    api(lib.bundles.umeng)
+    api(androidEx.bundles.common)
 }
 ```
 
