@@ -1,4 +1,4 @@
-# 安卓已经启用的
+# 安卓已经弃用的
 
 ## getDrawable(int id)
 
