@@ -348,6 +348,20 @@ buildTypes{
 }
 ```
 
+或者
+
+```kotlin
+productFlavors {
+    free {
+        applicationId "net.company.appname.free"
+    }
+
+    paid {
+        applicationId "net.company.appname.paid"
+    }
+}
+```
+
 ## split api
 
 ```kotlin
