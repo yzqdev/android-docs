@@ -63,7 +63,7 @@
   import android.view.View;
   import android.widget.Button;
   import android.widget.Toast;
-```
+ 
 
   public class MainActivity extends Activity {
       Button mode,ring,vibrate,silent;
@@ -129,7 +129,6 @@
   }
 
 ```
-
 
 以下是res/layout/activity_main.xml文件的内容-
 

@@ -1,10 +1,10 @@
 # 安卓已经弃用的
 
-## getDrawable(int id)
+## `getDrawable(int id)`
 
 虽然getDrawable(int id)已经废弃了，但是依旧还是可以用的。
 
-如果你的Android版本比较高，那就按照官方的提示，可以使用getDrawable(int, Theme)替代。
+如果你的Android版本比较高，那就按照官方的提示，可以使用`getDrawable(int, Theme)`替代。
 使用drawable资源但不为其设置theme主题
 
 ```java

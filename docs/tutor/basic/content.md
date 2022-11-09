@@ -66,7 +66,7 @@
   以下是修改后的主activity文件src/com.jc2182.helloworld/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。我们添加了两个新方法onClickAddName()和onClickRetrieveStudents()来处理用户与应用程序的交互。
   
 ```java
-  package com.jc2182.helloworld;
+  
   
   import androidx.appcompat.app.AppCompatActivity;
   
@@ -121,7 +121,7 @@
   在com.jc2182.helloworld包下创建新文件StudentsProvider.java ，以下是src/com.jc2182.helloworld/StudentsProvider.java的内容 -
   
 ```java
-  package com.jc2182.helloworld;
+  
   
   import android.content.ContentProvider;
   import android.content.ContentUris;

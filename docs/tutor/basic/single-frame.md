@@ -3,7 +3,7 @@
 ## Android 单帧片段
   
 :::tip
- **单帧片段（Single frame fragment）**是为小屏幕设备（例如手持设备（手机））设计的，并且应高于android 3.0版本。
+ **单帧片段（Single frame fragment)** 是为小屏幕设备（例如手持设备（手机））设计的，并且应高于android 3.0版本。
   
 :::
   
@@ -22,7 +22,7 @@
   以下是修改后的主要Activity文件MainActivity.java的内容 -
   
 ```java
-  package com.jc2182.helloworld;
+  
   
 
 import android.app.FragmentManager;
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
 ```java
 
-package com.jc2182.helloworld;
+
 
 import android.os.Bundle;
 
@@ -93,7 +93,7 @@ public class LM_Fragement extends Fragment {
 以下是PM_Fragement.java文件的内容-
 
 ```java
-package com.jc2182.helloworld;
+
 
 import android.os.Bundle;
 

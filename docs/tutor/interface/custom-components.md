@@ -6,9 +6,7 @@
   
   ![](https://www.jc2182.com/images/android/customcomponents.jpg)
   
-
-  
-  ## 创建一个简单的自定义组件
+## 创建一个简单的自定义组件
   
   1. 您将使用Android Studio创建一个Android应用程序，并将其命名为Demo，位于com.jc2182.demo包下，如[Hello World示例](https://www.jc2182.com/andriod/android-hello-world.html)一章中所述。
   2. 创建XML res/values/attrs.xml文件以定义新属性及其数据类型。
@@ -28,8 +26,6 @@
   </resources>
 ```
   
-  
-  
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。该文件可以包括每个基本生命周期方法。
   
 ```java
@@ -38,7 +34,7 @@
   import android.app.Activity;
   import android.os.Bundle;
   import android.widget.TextView;
-```
+ 
   
 
 public class MainActivity extends Activity {
@@ -47,16 +43,17 @@ public class MainActivity extends Activity {
  super.onCreate(savedInstanceState);
  setContentView(R.layout.activity_main);
 
-```
+ 
+
       TextView simpleText = (TextView) findViewById(R.id.simple);
       simpleText.setText("这是一个简单的TextView");
   }
-```
+
+ 
 
 }
 
-````
-
+```
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -86,9 +83,7 @@ public class MainActivity extends Activity {
         android:layout_below="@id/timeView"
         android:layout_marginTop="10dp" />
 </RelativeLayout>
-````
-
-
+```
 
 为您的复合视图创建以下名为TimeView.java的Java文件。
 
@@ -172,8 +167,6 @@ public class TimeView extends AppCompatTextView {
     }
 }
 ```
-
-
 
 让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

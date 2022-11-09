@@ -105,7 +105,7 @@
   以下是修改后的主要活动文件MainActivity.java的内容。该文件可以包括每个基本生命周期方法。我们添加了broadcastIntent()方法以广播自定义意图。
   
 ```java
-  package com.jc2182.helloworld;
+  
   
   import androidx.appcompat.app.AppCompatActivity;
   
@@ -147,7 +147,7 @@
 
 ```java
 
-package com.jc2182.helloworld;
+
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

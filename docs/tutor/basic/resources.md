@@ -30,7 +30,7 @@
   | layout/   | 定义用户界面布局的XML文件。它们保存在res/layout/中，并可以从R.layout类访问。                                                                                                                                                                                                                                                                                                                                                                                                    |
   | menu/     | 定义应用程序菜单的XML文件，例如选项菜单，上下文菜单或子菜单。它们保存在res/menu/中，并可以从R.menu类访问。                                                                                                                                                                                                                                                                                                                                                                      |
   | raw/      | 以原始格式保存的任意文件。您需要使用资源ID（即R.raw.filename）调用Resources.openRawResource()来打开此类原始文件。                                                                                                                                                                                                                                                                                                                                                               |
-  | values/   | `包含简单值（例如字符串，整数和颜色）的XML文件。例如，以下是您可以在此目录中创建的资源的一些文件名约定-<br><br>- 用于资源数组的arrays.xml，可从R.array类访问。<br>- 用于资源整数的integers.xml，可从R.integer类访问。<br>- 用于布尔值资源的bools.xml，并从R.bool类进行访问。<br>- colors.xml获取颜色值，并从R.color类访问。<br>- 尺寸值的dimens.xml，可从R.dimen类访问。<br>- strings.xml获取字符串值，并从R.string类进行访问。<br>- 用于样式的styles.xml，可从R.style类访问`。 |
+  | values/   |  包含简单值（例如字符串，整数和颜色）的XML文件。例如，以下是您可以在此目录中创建的资源的一些文件名约定   用于资源数组的arrays.xml，可从R.array类访问。   用于资源整数的integers.xml，可从R.integer类访问。   用于布尔值资源的bools.xml，并从R.bool类进行访问。   colors.xml获取颜色值，并从R.color类访问。   尺寸值的dimens.xml，可从R.dimen类访问。  strings.xml获取字符串值，并从R.string类进行访问。   用于样式的styles.xml，可从R.style类访问 。 |
   | xml/      | 可以在运行时通过调用Resources.getXML()读取任意XML文件。 您可以在此处保存各种配置文件，这些文件将在运行时使用。                                                                                                                                                                                                                                                                                                                                                                  |
   
 ## 替代资源
@@ -121,7 +121,9 @@
 ```xml
   <?xml version="1.0" encoding="utf-8"?>
   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-     android:layout_width="fill_parent"    android:layout_height="fill_parent"    android:orientation="vertical" >
+     android:layout_width="fill_parent"    
+     android:layout_height="fill_parent"    
+     android:orientation="vertical" >
   
      <TextView android:id="@+id/text"
         android:layout_width="wrap_content"

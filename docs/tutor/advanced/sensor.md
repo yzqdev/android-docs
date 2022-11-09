@@ -69,7 +69,7 @@
   以下是修改后的主要活动文件src/com.jc2182.demo/MainActivity.java的内容。
   
 ```java
-  package com.jc2182.helloworld;
+  
 
   import android.app.Activity;
   import android.hardware.Sensor;

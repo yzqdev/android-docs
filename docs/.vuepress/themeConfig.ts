@@ -5,7 +5,7 @@ import sidebar from "./sidebar";
 export default hopeTheme({
     logo: "/images/android.svg",
 
-    repo: "yzqbooks/android-docs",
+    repo: "yzqdev/android-docs",
 
     docsDir: "docs",
     iconPrefix: "iconfont icon-",

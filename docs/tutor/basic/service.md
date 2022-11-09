@@ -30,7 +30,7 @@
   以下框架服务演示了每种生命周期方法
   
 ```java
-  package com.jc2182.helloworld;
+  
   
   import android.app.Service;
   import android.content.Intent;
@@ -97,7 +97,7 @@
   以下是修改后的主要活动文件MainActivity.java的内容。该文件可以包括每个基本生命周期方法。我们添加了startService()和stopService()方法来启动和停止服务。
   
 ```java
-  package com.jc2182.helloworld;
+  
   
   import androidx.appcompat.app.AppCompatActivity;
   
@@ -132,7 +132,7 @@
   以下是HellowService.java的内容。该文件可以根据要求实现与服务相关联的一种或多种方法。现在，我们将仅实现两种方法onStartCommand()和onDestroy() -
   
 ```java
-  package com.jc2182.helloworld;
+  
   
   import android.app.Service;
   import android.content.Intent;

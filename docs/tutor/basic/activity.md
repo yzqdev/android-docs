@@ -1,6 +1,5 @@
 # activity
 
-
 # Android Activity
   
   > Activity 代表具有用户界面的单个屏幕，就像Java的窗口或框架一样。Android Activity是ContextThemeWrapper类的子类。
@@ -21,9 +20,7 @@
   | **onDestroy()** | 在Activity销毁系统之前，将调用此回调。                                                                             |
   | **onRestart()** | Activity停止后重新启动时，将调用此回调。                                                                           |
   
-
-  
-  ## 实例
+## 实例
   
   本示例将带您通过简单的步骤来展示Android应用程序活动的生命周期。请按照以下步骤修改我们在[Hello World示例](https://www.jc2182.com/andriod/android-hello-world.html)一章中创建的Android应用程序-
   
@@ -34,7 +31,7 @@
   以下是修改后的主要活动文件src/com.jc2182.helloworld/MainActivity.java的内容。该文件包括每种基本生命周期方法。所述Log.d方法已经被用来生成日志消息-
   
 ```java
-  package com.jc2182.helloworld;
+  
   
   import androidx.appcompat.app.AppCompatActivity;
   
@@ -90,15 +87,11 @@
   }
 ```
   
-  
-  
   Activity类使用项目的res/layout文件夹中可用的XML文件加载所有UI组件。以下语句从res/layout/activity_main.xml文件加载UI组件：
   
 ```java
   setContentView(R.layout.activity_main);
 ```
-  
-  
   
   一个应用程序可以具有一个或多个activity，而没有任何限制。您为应用程序定义的每个activity都必须在AndroidManifest.xml文件中声明，并且应用程序的main activity必须在清单中使用`<intent-filter>`声明，其中包括MAIN操作和LAUNCHER类别，如下所示：
   
@@ -126,8 +119,6 @@
   </manifest>
 ```
   
-  
-  
   如果未为您的activity之一声明MAIN操作或LAUNCHER类别，则您的应用程序图标将不会出现在主屏幕的应用程序列表中。让我们尝试运行修改后的Hello World！我们刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的activity文件之一，然后Android Studio运行图标从工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示Emulator窗口，并且您应该在Android studio的LogCat窗口中看到以下日志消息-
   
 ```t4
@@ -135,8 +126,6 @@
   2020-07-07 16:21:59.671 8407-8407/com.jc2182.helloworld D/Android :: onStart() 事件
   2020-07-07 16:21:59.672 8407-8407/com.jc2182.helloworld D/Android :: onResume() 事件
 ```
-  
-  
   
   ![activity](https://www.jc2182.com/images/android/activity1.jpg)
   
@@ -147,16 +136,12 @@
   2020-07-07 16:24:25.042 8407-8407/com.jc2182.helloworld D/Android ::  onStop() 事件
 ```
   
-  
-  
   让我们再次尝试在Android模拟器上解锁屏幕，它将在Android Studio的LogCat窗口中生成以下事件消息：
   
 ```t4
   2020-07-07 16:25:59.671 8407-8407/com.jc2182.helloworld D/Android :: onStart() 事件
   2020-07-07 16:25:59.672 8407-8407/com.jc2182.helloworld D/Android :: onResume() 事件
 ```
-  
-  
   
   接下来，让我们再次尝试Android后退按钮在Android仿真器上单击“后退”按钮，它将在Android Studio的LogCat窗口中生成以下事件消息，从而完成了Android应用程序的活动生命周期。
   

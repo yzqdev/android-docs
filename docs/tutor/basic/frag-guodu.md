@@ -2,11 +2,10 @@
   
   切换中的Activity和片段（Fragment）过渡是建立在Android中一个相对较新的功能（称为过渡）之上的。在KitKat中引入的过渡框架为在应用程序中的不同UI状态之间进行动画处理提供了便捷的API。该框架围绕两个关键概念构建：场景和过渡。场景定义了应用程序UI的给定状态，而过渡则定义了两个场景之间的动画更改。 当场景改变时，过渡有两个主要职责-
   
-  - 在开始和结束场景中捕获每个视图的状态。
-  - 根据差异创建一个动画器，以动画化一个场景到另一个场景的视图。
+- 在开始和结束场景中捕获每个视图的状态。
+- 根据差异创建一个动画器，以动画化一个场景到另一个场景的视图。
 
-  
-  ## 示例
+## 示例
   
   本示例将向您说明如何使用片段过渡创建自定义动画。因此，让我们按照以下步骤进行操作，类似于创建[Hello World 例子](https://www.jc2182.com/andriod/android-hello-world.html)时遵循的步骤-
   
@@ -42,8 +41,6 @@
   </LinearLayout>
 ```
   
-  
-  
   以下是res/layout/fragment_stack.xml文件的内容。它包含框架布局和按钮
   
 ```xml
@@ -58,8 +55,6 @@
           android:gravity="center"/>
   </LinearLayout>
 ```
-  
-  
   
   以下是res/animator/fragment_slide_left_enter.xml文件的内容。它包含set和objectAnimator标签
   
@@ -82,8 +77,6 @@
   </set>
 ```
   
-  
-  
   以下是res/animator/fragment_slide_left_exit.xml文件的内容。它包含set和objectAnimator标签。
   
 ```xml
@@ -104,8 +97,6 @@
           android:duration="@android:integer/config_mediumAnimTime" />
   </set>
 ```
-  
-  
   
   以下是res/animator/fragment_slide_right_enter.xml文件的内容。它包含set和objectAnimator标签
   
@@ -128,8 +119,6 @@
   </set>
 ```
   
-  
-  
   以下是res/animator/fragment_slide_right_exit.xml文件的内容，其中包含set和objectAnimator标签
   
 ```xml
@@ -151,12 +140,10 @@
   </set>
 ```
   
-  
-  
   以下代码将是src/main/java/MainActivity.java文件的内容。它包含按钮侦听器，堆栈片段和onCreateView
   
 ```java
-  package com.jc2182.helloworld;
+  
   
   import android.app.Activity;
   import android.app.Fragment;
@@ -254,8 +241,6 @@
   }
 ```
   
-  
-  
   以下将是AndroidManifest.xml的内容
   
 ```xml
@@ -284,8 +269,6 @@
   
   </manifest>
 ```
-  
-  
   
   运行应用程序::
   

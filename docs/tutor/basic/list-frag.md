@@ -1,6 +1,5 @@
 
- # 列表片段
-  
+# 列表片段
   
   > **列表片段（ListFragment）**静态库支持版本。用于编写在Android 3.0之前的平台上运行的应用程序。在Android 3.0或更高版本上运行时，仍使用此实现。
   
@@ -8,9 +7,7 @@
   
   ![fragmentlist](https://www.jc2182.com/images/android/fragmentlist.jpg)
   
-
-  
-  ## 示例
+## 示例
   
   本示例将向您说明如何基于arrayAdapter创建自己的列表片段。因此，让我们按照以下步骤进行操作，类似于创建[Hello World 例子](https://www.jc2182.com/andriod/android-hello-world.html)时遵循的步骤-
   
@@ -44,8 +41,6 @@
   </resources>
 ```
   
-  
-  
   以下是res/layout/activity_main.xml文件的内容。它包含线性布局和片段标签。
   
 ```xml
@@ -69,8 +64,6 @@
 
 </RelativeLayout>
 ```
-
-
 
 以下是res/layout/list_fragment.xml文件的内容。它包含线性布局，列表视图和文本视图
 
@@ -96,8 +89,6 @@
 </LinearLayout>
 ```
 
-
-
 以下是src/main/java/myListFragment.java文件的内容。在编写代码之前，需要遵循以下几个步骤
 
 - 创建一个类MyListFragment并将其继承ListFragment。
@@ -109,7 +100,7 @@
 - 在OnItemClickListener()方法内部，显示一条正在单击的带有条目名称的祝酒消息。
   
 ```java
-  package com.jc2182.helloworld;
+  
   
   import android.os.Bundle;
   import android.view.LayoutInflater;
@@ -149,12 +140,11 @@
 
 ```
 
-
 以下代码将成为MainActivity.java的内容
 
 ```java
 
-package com.jc2182.helloworld;
+
 
 import android.os.Bundle;
 
@@ -170,10 +160,8 @@ public class MainActivity extends AppCompatActivity {
 }
 ````
 
-
-
 运行应用程序::
 
-让我们尝试运行我们刚刚创建的HelloWorld应用程序。我假设您是在进行环境设置时创建的AVD。要从Android Studio运行该应用，请打开您项目的Activity文件之一，然后运行图标从工具栏中单击运行图标。Android在您的AVD上安装该应用程序并启动它，如果您的设置和应用程序一切正常，它将在“模拟器”窗口中显示 
+让我们尝试运行我们刚刚创建的HelloWorld应用程序。我假设您是在进行环境设置时创建的AVD。要从Android Studio运行该应用，请打开您项目的Activity文件之一，然后运行图标从工具栏中单击运行图标。Android在您的AVD上安装该应用程序并启动它，如果您的设置和应用程序一切正常，它将在“模拟器”窗口中显示
 
 ![aa](https://www.jc2182.com/images/android/listfragment2.png)

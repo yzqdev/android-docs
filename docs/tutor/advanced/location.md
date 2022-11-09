@@ -100,14 +100,15 @@
   import android.widget.Toast;
   
   import androidx.core.app.ActivityCompat;
-```
+ 
 
 public class MainActivity extends Activity {
  Button btnShowLocation;
  private static final int REQUEST_CODE_PERMISSION = 2;
  String mPermission = Manifest.permission.ACCESS_FINE_LOCATION;
 
-```
+ 
+
   // GPSTracker 类
   GPSTracker gps;
 
@@ -158,12 +159,12 @@ public class MainActivity extends Activity {
           }
       });
   }
-```
+
+ 
 
 }
 
 ```
-
 
 以下是文件src/com.jc2182.demo/GPSTracker.java
 
@@ -350,8 +351,6 @@ public class GPSTracker extends Service implements LocationListener {
 }
 ```
 
-
-
 以下是res/layout/activity_main.xml文件的内容-
 
 ```xml
@@ -370,8 +369,6 @@ public class GPSTracker extends Service implements LocationListener {
 
 </LinearLayout>
 ```
-
-
 
 让我们尝试运行刚刚修改的应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用，请打开您项目的活动文件之一，然后工具栏中单击“运行”图标。Android studio将应用程序安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在“模拟器”窗口下面-
 

@@ -15,8 +15,6 @@
   startActivity(Intent.createChooser(email, "Choose an email client from..."));
 ```
   
-  
-  
   上面的语法正在调用startActivity方法来启动电子邮件activity，结果应如下所示-
   
   ![indent](https://www.jc2182.com/images/android/indent1.jpg)
@@ -30,8 +28,6 @@
   startActivity(intent);
 ```
   
-  
-  
   上面的示例将在android搜索引擎上搜索为“蝴蝶教程”，并在您的活动中提供了“蝴蝶教程”的结果
   
   有向每种类型的组件（活动(Activity)，服务(Service)和广播接收器(Broadcast Receivers)）传递意图（Indent）的单独机制。
@@ -42,9 +38,7 @@
   | **Context.startService()**  | Intent对象将传递给此方法以启动服务或将新指令传递给正在进行的服务。 |
   | **Context.sendBroadcast()** | Intent对象将传递给此方法，以将消息传递给所有感兴趣的广播接收者。   |
   
-
-  
-  ## Indent 对象
+## Indent 对象
   
   **Intent** 对象是一组信息，由接收Intent的组件使用，也包括Android系统使用的信息。
   
@@ -62,8 +56,8 @@
   
   这些指定URL格式的属性是可选的，但也相互依赖-
   
-  - 如果未为意图过滤器指定方案，则将忽略所有其他URI属性。
-  - 如果未为过滤器指定主机，则将忽略端口属性和所有路径属性。
+- 如果未为意图过滤器指定方案，则将忽略所有其他URI属性。
+- 如果未为过滤器指定主机，则将忽略端口属性和所有路径属性。
   
   **setData()**方法仅将数据指定为URI，**setType()**仅将数据指定为MIME类型，**setDataAndType()**将其指定为URI和MIME类型。URI由**getData()**读取，类型由**getType()**读取。
   
@@ -107,9 +101,7 @@
   
   这个可选字段是一个android ComponentName对象，代表Activity，Service或BroadcastReceiver类。如果已设置，则将Intent对象传递到指定类的实例，否则Android使用Intent对象中的其他信息来定位合适的目标。组件名称由setComponent()，setClass()或setClassName()设置，并由getComponent()读取。
   
-
-  
-  ## Indent 类型
+## Indent 类型
   
   Android支持以下两种类型的意图
   
@@ -131,8 +123,6 @@
   startActivity(i);
 ```
   
-  
-  
   *Implicit Intents(隐示意图)*
   
   这些意图不会命名目标，并且组件名称的字段保留为空白。隐式意图通常用于激活其他应用程序中的组件。例如-
@@ -143,8 +133,6 @@
   read1.setData(ContactsContract.Contacts.CONTENT_URI);
   startActivity(read1);
 ```
-  
-  
   
   上面的代码将给出如下所示的结果调出联系人列表:
   
@@ -161,11 +149,7 @@
   String value2 = extras.getString("Key2");
 ```
   
-  
-  
-
-  
-  ## 示例
+## 示例
   
   以下示例显示了用于启动各种Android内置应用程序的Android Intent的功能。
   
@@ -177,7 +161,7 @@
   以下是修改后的主要活动文件src/com.jc2182.helloworld/MainActivity.java的内容。
   
 ```java
-  package com.jc2182.helloworld;
+  
   
   import android.app.Activity;
   import android.content.Intent;
@@ -185,12 +169,11 @@
   import android.os.Bundle;
   import android.view.View;
   import android.widget.Button;
-```
+ 
   
 
 public class MainActivity extends Activity {
-
-```
+ 
   Button b1,b2;
 
   @Override
@@ -218,12 +201,11 @@ public class MainActivity extends Activity {
           }
       });
   }
-```
+ 
 
 }
 
-````
-
+```
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -311,8 +293,6 @@ public class MainActivity extends Activity {
 </RelativeLayout>
 ````
 
-
-
 以下是AndroidManifest.xml的默认内容 -
 
 ```xml
@@ -337,13 +317,11 @@ public class MainActivity extends Activity {
 </manifest>
 ```
 
-
-
 让我们尝试运行您的“我的应用程序”应用程序。我假设您在进行环境设置时已创建了AVD。要从Android Studio运行该应用程序，请打开项目的活动文件之一，然后运行图标从工具栏中单击“运行” 图标。AndroidStudio会将其安装在您的AVD上并启动它，如果设置和应用程序一切正常，它将显示在模拟器上窗口-
 
 ![indent](https://www.jc2182.com/images/android/indent2.png)
 
-现在单击“启动浏览器”按钮选择Chrome浏览器，这将启动配置的浏览器并显示https://www.jc2182.com，如下所示-
+现在单击“启动浏览器”按钮选择Chrome浏览器，这将启动配置的浏览器并显示<https://www.jc2182.com>，如下所示-
 
 ![indent](https://www.jc2182.com/images/android/indent3.png)
 
@@ -351,9 +329,7 @@ public class MainActivity extends Activity {
 
 ![indent](https://www.jc2182.com/images/android/indent4.png)
 
-
-  
-  ## 意图过滤器
+## 意图过滤器
   
   您已经了解了如何使用Intent调用另一个活动(activity)。Android OS使用过滤器来确定活动，服务和广播接收器的集合，这些接收器可以在指定的一组动作，类别和与Intent相关的数据方案的帮助下处理Intent。您将在清单文件中使用`<intent-filter>`元素列出与任何活动，服务或广播接收者关联的动作，类别和数据类型。以下是AndroidManifest.xml文件的一部分示例，用于指定活动com.jc2182.helloworld.CustomActivity，可以通过上述两个操作（一个类别和一个数据）之一来调用该活动-
   
@@ -368,13 +344,11 @@ public class MainActivity extends Activity {
   </activity>
 ```
   
-  
-  
   当活动被上面的过滤器所定义，其他活动就可以通过下面的方式来调用这个活动。使用 **android.intent.action.VIEW**，使用 **com.jc2182.helloworld.LAUNCH** 动作，并提供**android.intent.category.DEFAULT**类别。元素指定要被调用的活动所期望的数据类型。上面的实例中，自定义活动期望的数据由"https://"开头。有这样的情况，通过过滤器，意图将被传递到多个的活动或者服务，用户将被询问启动哪个组件。如果没有找到目标组件，将发生一个异常。在调用活动之前，有一系列的 Android 检查测试：
   
-  - 过滤器 `<intent-filter>` 需要列出一个或者多个的动作，不能为空；过滤器至少包含一个 元素，否则将阻塞所有的意图。如果多个动作被提到，Android 在调用活动前尝试匹配其中提到的一个动作。
-  - 过滤器 `<intent-filter>` 可能列出0个，1个或者多个类别。如果没有类别被提到，Android 通过这个测试，如果有多个类别被提及，意图通过类型测试，每个意图对象的分类必须匹配过滤器中的一个分类。
-  - 每个 元素可以指定一个 URI 和一个数据类型(元媒体类型)。这里有独立的属性，如 URI 中的每个部分：模式，主机，端口和路径。意图包含有 URI 和类型，只有它的类型匹配了过滤器中列出的某个类型，则通过数据类型部分的测试。
+- 过滤器 `<intent-filter>` 需要列出一个或者多个的动作，不能为空；过滤器至少包含一个 元素，否则将阻塞所有的意图。如果多个动作被提到，Android 在调用活动前尝试匹配其中提到的一个动作。
+- 过滤器 `<intent-filter>` 可能列出0个，1个或者多个类别。如果没有类别被提到，Android 通过这个测试，如果有多个类别被提及，意图通过类型测试，每个意图对象的分类必须匹配过滤器中的一个分类。
+- 每个 元素可以指定一个 URI 和一个数据类型(元媒体类型)。这里有独立的属性，如 URI 中的每个部分：模式，主机，端口和路径。意图包含有 URI 和类型，只有它的类型匹配了过滤器中列出的某个类型，则通过数据类型部分的测试。
   
   *意图过滤器示例*
   
@@ -391,7 +365,7 @@ public class MainActivity extends Activity {
   以下是修改后的主要活动文件src/MainActivity.java的内容。
   
 ```java
-  package com.jc2182.helloworld;
+  
   
   import android.app.Activity;
   import android.content.Intent;
@@ -399,12 +373,10 @@ public class MainActivity extends Activity {
   import android.os.Bundle;
   import android.view.View;
   import android.widget.Button;
-```
   
 
 public class MainActivity extends Activity {
 
-```
   Button b1,b2,b3;
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -440,18 +412,16 @@ public class MainActivity extends Activity {
           }
       });
   }
-```
 
 }
 
-````
-
+```
 
 以下是修改后的主要活动文件src/com.jc2182.helloworld/CustomActivity.java的内容。
 
 ```java
 
-package com.jc2182.helloworld;
+
 
 import android.app.Activity;
 import android.net.Uri;
@@ -468,9 +438,7 @@ public class CustomActivity extends Activity {
         label.setText(url.toString());
     }
 }
-````
-
-
+```
 
 以下是res/layout/activity_main.xml文件的内容-
 
@@ -569,8 +537,6 @@ public class CustomActivity extends Activity {
 </RelativeLayout>
 ```
 
-
-
 以下将是res/layout/custom_view.xml文件的内容-
 
 ```xml
@@ -583,8 +549,6 @@ public class CustomActivity extends Activity {
         android:layout_height="400dp"/>
 </LinearLayout>
 ```
-
-
 
 以下将是AndroidManifest.xml的内容
 
@@ -621,8 +585,6 @@ public class CustomActivity extends Activity {
 
 </manifest>
 ```
-
-
 
 运行应用程序::
 

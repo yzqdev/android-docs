@@ -1,8 +1,11 @@
+---
+ 
+order: 2
+ 
+---
 # helloworld实例
 
 ## Hello World示例
-  
-  让我们开始使用Android Framework进行实际编程。在开始使用Android SDK编写第一个示例之前，必须确保已按照[Android-环境设置教程](https://www.jc2182.com/andriod/android-env.html)中的说明正确设置了Android开发环境。我还假设您对[Android Studio](https://www.jc2182.com/andriod/android-android-studio.html)有所了解。因此，让我们继续编写一个简单的Android应用程序，该应用程序将显示“ Hello World！”。
   
 ## 创建Android应用程序
   
@@ -48,10 +51,7 @@
   Main Activity代码是Java文件MainActivity.java。这是实际的应用程序文件，最终会转换为Dalvik可执行文件并运行您的应用程序。以下是应用程序向导为Hello World生成的默认代码！应用程序-
   
 ```java
-  package com.jc2182.mysecondapplication;
-  
   import androidx.appcompat.app.AppCompatActivity;
-  
   import android.os.Bundle;
   
   public class MainActivity extends AppCompatActivity {
@@ -64,8 +64,6 @@
   }
 ```
   
-  
-  
   在此，**R.layout.activity_main**引用位于res/layout文件夹中的activity_main.xml文件。**onCreate()**方法是当加载一个activity。
   
 ## AndroidManifest.xml
@@ -74,8 +72,7 @@
   
 ```xml
   <?xml version="1.0" encoding="utf-8"?>
-  <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.jc2182.mysecondapplication">
+  <manifest xmlns:android="http://schemas.android.com/apk/res/android" >
   
       <application
           android:allowBackup="true"
@@ -96,8 +93,6 @@
   </manifest>
 ```
   
-  
-  
   在这里，`<application> ... </application>`标记包含与应用程序相关的组件。属性android：icon将指向res/mipmap下可用的应用程序图标。该应用程序使用位于可绘制文件夹中的名为ic_launcher.png的图像 `<activity>`标签用于指定activity，而android:name属性指定Activity子类的完全限定的类名，而android：label属性则指定用作activity标签的字符串。您可以使用`<activity>`标签指定多个activity。 intent-filter被命名为android.intent.action.MAIN，表明这项activtiy作为切入点应用。intent-filter的类别名为android.intent.category.LAUNCHER，指示可以从设备的启动器图标启动应用程序。
   
   以下是清单文件中将使用的标签列表，用于指定不同的Android应用程序组件-
@@ -116,8 +111,6 @@
       <string name="app_name">My Second Application</string>
   </resources>
 ```
-  
-  
   
 ## 布局文件
   
@@ -143,8 +136,6 @@
   
   </androidx.constraintlayout.widget.ConstraintLayout>
 ```
-  
-  
   
 ## 运行应用程序
   
