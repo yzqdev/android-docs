@@ -1,6 +1,12 @@
 
 # androidx迁移
 
+ 
+
+## compose兼容性
+
+<https://developer.android.google.cn/jetpack/androidx/releases/compose-kotlin>
+ 
 迁移文档:     [谷歌开发者迁移文档](https://developer.android.google.cn/jetpack/androidx/migrate)
 Google 2018 IO 大会推出了 Android新的扩展库 AndroidX，用于替换原来的 Android扩展库，将原来的`android.*`替换成`androidx.*`；只有包名和Maven工件名受到影响，原来的类名，方法名和字段名不会更改。接下来我们来看看使用 AndroidX的扩展库需要哪些配置。
 

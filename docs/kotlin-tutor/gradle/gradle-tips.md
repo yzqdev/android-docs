@@ -58,6 +58,8 @@ allprojects{
 
 ## gradle添加ext
 
+## 使用extra
+
 **注意**
 
 ```kotlin
@@ -122,6 +124,131 @@ dependencies {
  minSdk=rootProject.extra["minSdk"] as Int
 targetSdk=rootProject.extra["targetSdk"] as Int
 
+```
+
+## 使用gradle.properties
+
+gradle.properties
+
+```ini
+android.nonTransitiveRClass=true
+compose_version=1.2.1
+compiler_version=1.3.1
+ktor_version=2.1.1
+retrofitVersion=2.9.0
+```
+
+然后在子项目的build.gradle.kts中配置
+
+```kotlin
+val compose_version: String by project
+val compiler_version: String by project
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+}
+
+android {
+    compileSdk = rootProject.extra["compileSdk"] as Int
+    namespace = "com.yzq.mobile.comp.qiqi"
+    defaultConfig {
+        applicationId = "com.yzq.mobile.comp.qiqi"
+        minSdk = rootProject.extra["minSdk"] as Int
+        targetSdk = rootProject.extra["targetSdk"] as Int
+        versionCode = 1
+        versionName = "1.0.1"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary = true
+        }
+    }
+
+    buildTypes {
+        named("release") {
+            isMinifyEnabled = false
+            setProguardFiles(
+                listOf(
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro"
+                )
+            )
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion =  libs.versions.composeVersion.get()//"1.3.2"
+    }
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+}
+
+dependencies {
+
+    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.compose.ui:ui:$compose_version")
+    implementation("androidx.compose.material:material:$compose_version")
+    implementation("androidx.compose.ui:ui-tooling-preview:$compose_version")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+    implementation("androidx.activity:activity-compose:1.6.0")
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.3")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:$compose_version")
+    debugImplementation("androidx.compose.ui:ui-tooling:$compose_version")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:$compose_version")
+}
+```
+
+## 关于gradle插件  
+
+agp(android gradle plugin)的定义
+
+```text
+implementation "com.android.tools.build:gradle:7.3.1"
+```
+
+而为什么我们要在根目录的build.gradle.kts加上`com.android.application`?
+
+`com.android.application`的artifactid是
+
+```kotlin
+// https://mvnrepository.com/artifact/com.android.application/com.android.application.gradle.plugin
+implementation("com.android.application:com.android.application.gradle.plugin:7.3.1")
+
+```
+
+内部含有依赖`com.android.tools.build:gradle`,所以我们只需要引用`com.android.application`就可以了
+同理`com.android.library`
+
+```kotlin
+// https://mvnrepository.com/artifact/com.android.library/com.android.library.gradle.plugin
+implementation("com.android.library:com.android.library.gradle.plugin:7.3.1")
+
+```
+
+也包含了`com.android.tools.build:gradle`
+我们最终只需要在根目录的build.gradle.kts加上
+
+```kotlin
+plugins {
+    id("com.android.application") version "7.3.1" apply false
+    id("com.android.library") version "7.3.1" apply false
+    id("org.jetbrains.kotlin.android") version "1.7.10" apply false
+    id("org.jetbrains.kotlin.jvm") version "1.7.10" apply false
+}
 ```
 
 ### 修改生成apk名称和BuildConfig中添加apk支持的cpu架构
