@@ -39,6 +39,7 @@ export default defineUserConfig({
 
     ['meta', { name: 'msapplication-TileColor', content: '#3eaf7c' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta',{ name:"referrer", content:"no-referrer"  }]
   ],
 
   // site-level locales config

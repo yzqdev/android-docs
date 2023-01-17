@@ -37,3 +37,4 @@ nbdist/
 yarn.lock
 .cache
 .temp
+.obsidian
