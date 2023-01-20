@@ -38,9 +38,9 @@ export default navbar([
     link: '/kotlin-tutor/',
   },
   {
-    text: 'uniapp',
+    text: '混合开发',
     icon: 'kotlin',
-    activeMatch: '^/uniapp/',
-    link: '/uniapp/',
+    activeMatch: '^/hybrid/',
+    link: '/hybrid/',
   },
 ])
