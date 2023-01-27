@@ -1,6 +1,6 @@
 ---
 home: true
-title: 首页
+heroText: 首页
 heroImage: /images/android.png
 actions:
   - text: 快速上手
