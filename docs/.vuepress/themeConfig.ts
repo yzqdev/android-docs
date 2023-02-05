@@ -13,7 +13,7 @@ export default hopeTheme({
 
   // navbar
   navbar: navbar,
-// wideBreakPoint:2000,
+ // wideBreakPoint:2930,
   // sidebar
   sidebar: sidebar,
   footer: `powered by <a href='https://vuepress-theme-hope.github.io/v2/'>vuepress-theme-home</a>`,
