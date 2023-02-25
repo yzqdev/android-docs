@@ -1,8 +1,8 @@
 # Android开发者参考
 
-本文档来源于：http://doc.flutter-dev.cn/flutter-for-android/
+本文档来源于：<http://doc.flutter-dev.cn/flutter-for-android/>
 
-英文原版请查看：https://flutter.io/flutter-for-android/
+英文原版请查看：<https://flutter.io/flutter-for-android/>
 
 由于中文文档都是翻译自英文官网，未必是最新的。建议查看英文原版。
 
@@ -17,58 +17,111 @@
 目录：
 
 > ## 1、View
+>
 > #### Android 中的 View 在 Flutter 中对应什么？
+>
 > #### 如何更新 Widget ？
+>
 > #### 如果使用 Widget 进行布局？是否需要 XML 布局文件？
+>
 > #### 如何在布局中添加或移除部件？
+>
 > #### 在 Android 中可以使用 View.animate() 来让 View 产生动画，在 Flutter 中如何让 Widget 产生动画？
+>
 > #### 如何使用 Canvas 进行绘制？
+>
 > #### 如何构建自定义 Widget ？
+>
 > ## 2、Intents
+>
 > #### Android 中的 Intent 在 Flutter 中对应什么？
+>
 > #### 在 Flutter 中如何处理来自外部的 Intent ？
+>
 > #### startActivityForResult 在 Flutter 中如何实现？
+>
 > ## 3、UI 中的异步
+>
 > #### runOnUiThread 在 Flutter 中对应什么方法？
+>
 > #### Android 中的 AsyncTask 或 IntentService 在 Flutter 对应什么？
+>
 > #### Android 中的 OkHttp 在 Flutter 中对应什么？
+>
 > #### 在 Flutter 中，当有任务在执行时，如何显示进度？
+>
 > ## 4、项目结构与资源
+>
 > #### 分辨率相关的图像资源应存储在哪里（HDPI/XXHDPI）？
+>
 > #### 字符串如何存储，如何存储不同语言的字符串？
+>
 > #### Android 中的 Gradle 文件在 Flutter 中对应什么？
+>
 > ## 5、Activities 和 Fragments
+>
 > #### Android 中的 Activity 和 Fragment 在 Flutter 中对应什么？
+>
 > #### 如何监听 Android Activity 的生命周期？
+>
 > ## 6、布局
+>
 > #### Android 中的 LinearLayout 在 Flutter 中对应什么？
+>
 > #### Android 中的 RelativeLayout 在 Flutter 对应什么？
+>
 > #### Android 中的 ScrollView 在 Flutter 中对应什么？
+>
 > ## 7、手势检测和触摸事件处理
+>
 > #### 如何将一个 onClick 监听添加到 Flutter 中的 Widget 中？
+>
 > #### 如何处理 Widget 上的其他手势？
+>
 > ## 8、Listview 和 Adapter
+>
 > #### Android 中的 ListView 在 Flutter 中对应什么？
+>
 > #### 如何知道 ListView 的子项被点击了？
+>
 > #### 如何动态更新 ListView？
+>
 > ## 9、文本的使用
+>
 > #### 如何给 Text 自定义字体？
+>
 > #### 如何自定义 Text 的显示样式？
+>
 > ## 10、表单
+>
 > #### Android 中的 hint 在 Flutter 中对应什么？
+>
 > #### 如何显示表单验证错误信息？
+>
 > ## 11、Flutter 插件
+>
 > #### 如何使用 GPS ？
+>
 > #### 如何使用相机？
+>
 > #### 如果使用 facebook 登录？
+>
 > #### 如果构建自己的插件？
+>
 > #### 如何在 Flutter 中使用 NDK？
+>
 > ## 12、主题
+>
 > #### 如何定制 Material 风格的应用？
+>
 > ## 13、数据库与本地存储
+>
 > #### 如何在 Flutter 中使用 Shared Preferences？
+>
 > #### 在 Flutter 中如何使用 SQLite ？
+>
 > ## 14、通知
+>
 > #### 如何设置并推送通知？
 
 ----
@@ -350,7 +403,7 @@ class _MyFadeTest extends State<MyFadeTest> with TickerProviderStateMixin {
 在 Flutter 中，`CustomPaint` 和 `CustomPainter` 两个类可以帮助你在 Canvas 上进行绘制。
 
 查看下面链接，可以了解到如何使用上面提到的两个类实现一个签名功能：
-https://stackoverflow.com/questions/46241071/create-signature-area-for-mobile-app-in-dart-flutter
+<https://stackoverflow.com/questions/46241071/create-signature-area-for-mobile-app-in-dart-flutter>
 示例代码：
 
 ```dart
@@ -458,7 +511,7 @@ void main() {
 ```dart
     Navigator.of(context).pushNamed('/b');
 ```
-    
+
 Intent 另外一个比较实用的作用是调用外部组件，如 Camera 或文件选择器，如果要在 Flutter 中实现类似功能，你需要在平台代码中集成现有的库或重新实用。
 
 查看 [开发扩展包](http://doc.flutter-dev.cn/developing-packages/) 章节查看如何集成平台本地功能。
@@ -917,7 +970,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
 在 Flutter 中使用`http`扩展库将使网络通信变得异常简单。
 
 虽然 http 扩展库没有实现 OkHttp 的所有功能，但其抽象出了很多常用的功能，使得原本你要自己实现的网络调用变成一些极为简单的方法。
-可以去pub上面下载，链接：https://pub.dartlang.org/packages/http
+可以去pub上面下载，链接：<https://pub.dartlang.org/packages/http>
 
 你也可以在 pubspec.yaml 添加 http 包的依赖来使用它：
 
@@ -1172,6 +1225,7 @@ class _LifecycleWatcherState extends State<LifecycleWatcher> with WidgetsBinding
 在 Android 中，使用 `LinearLayout` 使你的部件垂直或水平放置。在 Flutter 中，你可以使用 `Row` 或者 `Column` 来实现相同的效果。
 
 注意到这两个代码示例中“Row”和“Column”结构异常相似。它们的 child 完全一致，可以利用这个特性在相同 child 的情况下开发丰富的布局。
+
 ```dart
 //使用Row 横向布局
 @override
@@ -1187,6 +1241,7 @@ Widget build(BuildContext context) {
   );
 }
 ```
+
 ```dart
 //使用Column 纵向布局
 @override
@@ -1667,6 +1722,7 @@ Text 的样式参数需要指定一个 TextStyle 对象，你可以在其中自�
 ## 10、表单
 
 > #### Android 中的 hint 在 Flutter 中对应什么？
+
 在 Flutter 中，可以通过向 TextField 的构造函数 decoration 赋值，来实现 hint 的显示。
 
 ```dart
@@ -1768,7 +1824,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
 
 > #### 如果构建自己的插件？
 
-如果 Flutter 或其社区没有你需要的插件，那么你可以按照 [http://doc.flutter-dev.cn/developing-packages/ .](http://doc.flutter-dev.cn/developing-packages/) 教程构建自己的插件。 
+如果 Flutter 或其社区没有你需要的插件，那么你可以按照 [http://doc.flutter-dev.cn/developing-packages/ .](http://doc.flutter-dev.cn/developing-packages/) 教程构建自己的插件。
 
 简而言之，Flutter 插件的架构就像在 Android 中使用 `Event bus` 一样：你可以发出消息并让接收者进行处理，最后接收者将结果发回给你。在这种情况下，接收者将是 iOS 或 Android 平台。
 

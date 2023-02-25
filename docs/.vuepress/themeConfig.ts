@@ -1,4 +1,4 @@
-import { hopeTheme } from "vuepress-theme-hope";
+import { hopeTheme } from "vuepress-theme-hope/perf";
 import navbar from "./navbar";
 import sidebar from "./sidebar";
 
@@ -13,7 +13,7 @@ export default hopeTheme({
 
   // navbar
   navbar: navbar,
- // wideBreakPoint:2930,
+  // wideBreakPoint:2930,
   // sidebar
   sidebar: sidebar,
   footer: `powered by <a href='https://vuepress-theme-hope.github.io/v2/'>vuepress-theme-home</a>`,
@@ -26,6 +26,10 @@ export default hopeTheme({
   // 404 page
   // a11y
   plugins: {
+    prismjs: {
+      dark: 'tomorrow',
+      light: 'tomorrow',
+    },
     mdEnhance: {
       codetabs: true,
     },

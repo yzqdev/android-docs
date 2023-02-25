@@ -1,4 +1,4 @@
-import { arraySidebar, HopeThemeSidebarArrayConfig, HopeThemeSidebarGroupItem, objectSidebar, sidebar } from 'vuepress-theme-hope'
+import { arraySidebar,   objectSidebar, sidebar } from 'vuepress-theme-hope'
 
 export default sidebar({
   '/tutor/': [
