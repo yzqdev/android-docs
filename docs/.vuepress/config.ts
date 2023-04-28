@@ -1,7 +1,7 @@
-import { defineUserConfig } from "@vuepress/cli";
-
-import theme from "./themeConfig";
-import {searchProPlugin} from "vuepress-plugin-search-pro";
+import { defineUserConfig } from '@vuepress/cli'
+import { autoCatalogPlugin } from 'vuepress-plugin-auto-catalog'
+import theme from './themeConfig'
+import { searchProPlugin } from 'vuepress-plugin-search-pro'
 export default defineUserConfig({
   base: '/android-docs/',
   dest: './dist',
@@ -39,7 +39,7 @@ export default defineUserConfig({
 
     ['meta', { name: 'msapplication-TileColor', content: '#3eaf7c' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-    ['meta',{ name:"referrer", content:"no-referrer"  }]
+    ['meta', { name: 'referrer', content: 'no-referrer' }],
   ],
 
   // site-level locales config
@@ -51,6 +51,7 @@ export default defineUserConfig({
   theme: theme,
 
   plugins: [
+    autoCatalogPlugin(),
     searchProPlugin({
       indexContent: true,
     }),
